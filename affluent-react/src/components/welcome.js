@@ -23,19 +23,46 @@ class Welcome extends React.Component {
     }
     
     renderTopPageInfo2 = () => {
-        return <div style={{width: "100%"}}>
-        <Header as='h3' style={{ "fontSize": "40px", color: "blue", marginRight:"25%" }}>Our Philosophy</Header>
-        
+        return <div style={{width: "100%"}} className="refinance-second-info">
+        <br/>
+        <Header as='h3' style={{ "fontSize": "40px", color: "blue" }}>Our Philosophy</Header>
+        <br/>
+            <Grid divided='vertically'>
+                <Grid.Row columns={2}>
+                    <Grid.Column >
+                        <Header style={{ "fontSize": "30px"}}>You come first</Header>
+                        <div style={{ "fontSize": "18px" }}>
+                            Lorem ipsum dolor sit amet, quo stet viderer necessitatibus te, te graece perfecto adipiscing usu. Invidunt reprimique usu ne. Case facilisis similique sea ad. Te agam minim sententiae qui, te sed primis dissentiet. Te quo homero dignissim, vix ad cetero epicuri. Eos iriure postulant cu, ex eros scaevola liberavisse duo.
+
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column >
+                        <Header style={{ "fontSize": "30px" }}>A force for good</Header>
+                        <div style={{ "fontSize": "18px" }}>
+                            Lorem ipsum dolor sit amet, quo stet viderer necessitatibus te, te graece perfecto adipiscing usu. Invidunt reprimique usu ne. Case facilisis similique sea ad. Te agam minim sententiae qui, te sed primis dissentiet. Te quo homero dignissim, vix ad cetero epicuri. Eos iriure postulant cu, ex eros scaevola liberavisse duo.
+                        </div>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         
         </div>
 
     }
+
+    renderStepByStep = () => {
+
+    }
+    
     render() {
         return <div className="all-info">
                <Header as='h1' style={{"font-size": "50px"}}>Affluent</Header>
             <div className="refinance-info">
+                <br/>
                 {this.renderTopPageInfo()}
+                <br/>
                 {this.renderTopPageInfo2()}
+                <br />
+                {this.renderStepByStep()}
             </div>
         </div>
     }
