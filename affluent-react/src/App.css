@@ -32,10 +32,10 @@
   margin: 0 auto;
 }
 .refinance-info{
-  width: 50%;
-  margin-left: 50px;
-  position: absolute;
-  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  /* display: grid; */
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
   /* background-color: #2196F3; */
@@ -46,10 +46,12 @@
   display:relative;
   background-color: yellow;
 }
-.refinance-left-info{
-  background-color: blue;
-  /* position: relative; */
-  display: inline-block;
-  /* min-width: 100%; */
-  height: 100%;
+.refinance-left-info {
+  /* background-color: blue; */
+  position: relative;
+  /* display: inline-block; */
+  /* width: 100%; */
+  /* height: 100%; */
+  justify-content: center;
+  padding-top: 100px;
 }
