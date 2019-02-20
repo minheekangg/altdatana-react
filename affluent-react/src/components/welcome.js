@@ -2,6 +2,9 @@ import React from 'react'
 import { Header } from 'semantic-ui-react'
 import { Image, Grid, Button } from 'semantic-ui-react'
 class Welcome extends React.Component {
+    state = { activeStep: "step1" }
+
+    handleStepClick = (e, { name }) => this.setState({ activeStep: name })
 
     renderTopPageInfo = () => {
        return <Grid divided='vertically'>
@@ -16,7 +19,7 @@ class Welcome extends React.Component {
                         Simplify your student loans and save money to reach your financial goals faster. Rates start at <strong>2.7% APR</strong>
                     </div>
                     <br/>
-                    <Button basic color='orange' content='Orange'>TAKE THE QUIZ</Button>
+                    <Button basic color='orange'>TAKE THE QUIZ</Button>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -49,13 +52,54 @@ class Welcome extends React.Component {
 
     }
 
-    renderStepByStep = () => {
+    clickButtonStyle = ()=> {
+        console.log(this.state)
+        return {"color": "orange", fontSize: "15px"}
+    }
 
+    renderStepByStep = () => {
+        return <div>
+            <br/>
+        <Header as='h3' style={{ "fontSize": "30px" }}>Smarter Loan in 3 Steps</Header>
+        <Grid divided='vertically'>
+            <Grid.Row columns={2}>
+                <Grid.Column>
+                    <Image src='/images/temp.png' size='large' />
+                </Grid.Column>
+                    <Grid.Column className="refinance-second-info">
+                        <br />
+                <ul>
+                    <div name="step1" style={this.state.activeStep === "step1"? this.clickButtonStyle() : null} >
+                    <Button inverted color='orange' name="step1" onClick={this.handleStepClick} > 1 </Button> 
+                        Check Your Rate in 2 minutes
+                    </div>
+                    Lorem ipsum dolor sit amet, quo stet viderer necessitatibus te, te graece perfecto adipiscing usu. Invidunt reprimique usu ne. 
+                </ul>
+                <br/>
+                <ul>
+                    <div name="step2" style={this.state.activeStep === "step2" ? this.clickButtonStyle() : null} >
+                    <Button inverted color='orange' name="step2" onClick={this.handleStepClick} > 2 </Button> 
+                         Accept your terms and get your money the next day
+                    </div>
+                    Lorem ipsum dolor sit amet, quo stet viderer necessitatibus te, te graece perfecto adipiscing usu. Invidunt reprimique usu ne. 
+                </ul>
+                <br />
+                <ul>
+                    <div name="step3" style={this.state.activeStep === "step3" ? this.clickButtonStyle() : null} >
+                    <Button inverted color='orange' name="step3" onClick={this.handleStepClick} > 3 </Button> 
+                        Repay: set it forward
+                    </div>
+                    Lorem ipsum dolor sit amet, quo stet viderer necessitatibus te, te graece perfecto adipiscing usu. Invidunt reprimique usu ne. 
+                </ul>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+        </div>
     }
     
     render() {
         return <div className="all-info">
-               <Header as='h1' style={{"font-size": "50px"}}>Affluent</Header>
+               <Header as='h1' style={{"fontSize": "50px"}}>Affluent</Header>
             <div className="refinance-info">
                 <br/>
                 {this.renderTopPageInfo()}
