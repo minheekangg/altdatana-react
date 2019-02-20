@@ -57,14 +57,27 @@ class Welcome extends React.Component {
         return {"color": "orange", fontSize: "15px"}
     }
 
+    displayStep = () =>{
+        switch (this.state.activeStep){
+            case "step1":
+                return <Image src='/images/1.png' size='medium' />
+            case "step2":
+                return <Image src='/images/2.png' size='medium' />
+            case "step3":
+                return <Image src='/images/3.png' size='medium' />
+            default:
+                return <Image src='/images/1.png' size='medium' />
+        }
+    }
+
     renderStepByStep = () => {
         return <div>
             <br/>
         <Header as='h3' style={{ "fontSize": "30px" }}>Smarter Loan in 3 Steps</Header>
         <Grid divided='vertically'>
             <Grid.Row columns={2}>
-                <Grid.Column>
-                    <Image src='/images/temp.png' size='large' />
+                    <Grid.Column >
+                    {this.displayStep()}
                 </Grid.Column>
                     <Grid.Column className="refinance-second-info">
                         <br />
@@ -99,7 +112,10 @@ class Welcome extends React.Component {
     
     render() {
         return <div className="all-info">
-               <Header as='h1' style={{"fontSize": "50px"}}>Affluent</Header>
+            <div class="sticky">
+            <Header as='h1' style={{ "fontSize": "35px" }}>Affluent</Header>
+            </div>
+               
             <div className="refinance-info">
                 <br/>
                 {this.renderTopPageInfo()}

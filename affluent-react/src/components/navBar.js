@@ -8,7 +8,7 @@ class NavBar extends React.Component {
 
     render() {
         const { activeItem } = this.state
-        return <div>
+        return <div class="sticky" style={{backgroundColor: "white"}}> 
             <Menu pointing secondary>
                 <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
                 <Menu.Item
