@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react'
 
 class NavBar extends React.Component {
     state = { activeItem: 'home' }
@@ -11,7 +11,7 @@ class NavBar extends React.Component {
         return (
             <nav class="sticky"  id="navbar"> 
                 <Menu secondary>
-                    <Menu.Item active={activeItem === 'home'} onClick={this.handleItemClick} id="home" >
+                    <Menu.Item active={activeItem === 'home'} onClick={this.handleItemClick} id="home" name='home' >
                         <h1>Altdatana</h1>
                     </Menu.Item>
                     <Menu.Item
@@ -30,16 +30,20 @@ class NavBar extends React.Component {
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position='right'>
-                        <Menu.Item
-                            name='login'
+                        <Menu.Item 
+                            name="logout"
                             active={activeItem === 'logout'}
                             onClick={this.handleItemClick}
-                        />
+                        >
+                            <Button>Log In</Button>
+                        </Menu.Item>
                         <Menu.Item
                             name='sign up'
                             active={activeItem === 'logout'}
                             onClick={this.handleItemClick}
-                        />
+                        >
+                            <Button>Sign Up</Button>
+                        </Menu.Item>
                     </Menu.Menu>
                 </Menu>
             </nav>

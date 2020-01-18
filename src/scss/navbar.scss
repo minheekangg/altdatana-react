@@ -2,12 +2,12 @@
 
 #navbar {
 
-    div:first-child {
+    >div:first-child {
         background-color: $background-grey!important;
         border: none;
         max-width: $maxwidth;
         margin: 0 auto;
-        padding: 0 10px;
+        padding: 10px 10px 5px;
 
         #home {
             color: $primary-blue;
@@ -31,6 +31,27 @@
 
         &:hover {
             color: $primary-blue;
+        }
+    }
+
+    .right.menu .item{
+        padding-left: 0;
+        padding-right: 0;
+        
+        button {
+            background-color: $primary-blue;
+            color: white;
+            padding: 8px 20px;
+
+            border-radius: 16px;
+        }
+
+      &:hover, &.active {
+            background-color: $background-grey;
+    
+            button {
+              background-color: $secondary-blue;
+            }
         }
     }
   
