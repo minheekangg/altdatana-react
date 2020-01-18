@@ -23,7 +23,12 @@ class NavBar extends React.Component {
                 />
                 <Menu.Menu position='right'>
                     <Menu.Item
-                        name='logout'
+                        name='login'
+                        active={activeItem === 'logout'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        name='sign up'
                         active={activeItem === 'logout'}
                         onClick={this.handleItemClick}
                     />
