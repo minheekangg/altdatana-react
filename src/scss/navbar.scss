@@ -1,0 +1,46 @@
+@import './library.scss';
+
+#navbar {
+
+    div:first-child {
+        background-color: $background-grey!important;
+        border: none;
+        max-width: $maxwidth;
+        margin: 0 auto;
+        padding: 0 10px;
+
+        #home {
+            color: $primary-blue;
+            background-color: $background-grey;
+            margin-right: 10px;
+
+            h1 {
+                font-size: 20px;
+                text-transform: none;
+            }
+
+            h1:hover {
+                color: $secondary-blue;
+            }
+        }
+      
+    }
+
+    .item  {
+      text-transform: capitalize;
+
+        &:hover {
+            color: $primary-blue;
+        }
+    }
+  
+  &.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        /* background-color:white; */
+        /* padding: 50px; */
+        /* font-size: 20px; */
+        z-index: 2;
+      }
+}

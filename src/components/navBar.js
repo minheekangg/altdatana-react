@@ -8,33 +8,42 @@ class NavBar extends React.Component {
 
     render() {
         const { activeItem } = this.state
-        return <div class="sticky" style={{backgroundColor: "white"}}> 
-            <Menu pointing secondary>
-                <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-                <Menu.Item
-                    name='messages'
-                    active={activeItem === 'messages'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                    name='friends'
-                    active={activeItem === 'friends'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Menu position='right'>
+        return (
+            <nav class="sticky"  id="navbar"> 
+                <Menu secondary>
+                    <Menu.Item active={activeItem === 'home'} onClick={this.handleItemClick} id="home" >
+                        <h1>Altdatana</h1>
+                    </Menu.Item>
                     <Menu.Item
-                        name='login'
-                        active={activeItem === 'logout'}
+                        name='about'
+                        active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name='sign up'
-                        active={activeItem === 'logout'}
+                        name='faq'
+                        active={activeItem === 'friends'}
                         onClick={this.handleItemClick}
                     />
-                </Menu.Menu>
-            </Menu>
-        </div>
+                    <Menu.Item
+                        name='contact us'
+                        active={activeItem === 'friends'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Menu position='right'>
+                        <Menu.Item
+                            name='login'
+                            active={activeItem === 'logout'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name='sign up'
+                            active={activeItem === 'logout'}
+                            onClick={this.handleItemClick}
+                        />
+                    </Menu.Menu>
+                </Menu>
+            </nav>
+        )
     }
 
 }
