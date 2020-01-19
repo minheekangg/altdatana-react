@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         const { activeItem, mobileNavVisible } = this.state;
         return (
             <nav class="sticky" id="navbar">
-                <Menu secondary>
+                <Menu secondary id="primary-menu">
                     <Menu.Item
                         active={activeItem === "home"}
                         onClick={this.handleItemClick}
@@ -24,17 +24,17 @@ class NavBar extends React.Component {
                     </Menu.Item>
                     <Menu.Item
                         name="about"
-                        active={activeItem === "messages"}
+                        active={activeItem === "about"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name="faq"
-                        active={activeItem === "friends"}
+                        name="Questions"
+                        active={activeItem === "questions"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
                         name="contact us"
-                        active={activeItem === "friends"}
+                        active={activeItem === "contact"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position="right">
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
                         </Menu.Item>
                         <Menu.Item
                             name="sign up"
-                            active={activeItem === "logout"}
+                            active={activeItem === "signup"}
                             onClick={this.handleItemClick}
                         >
                             <Button>Sign Up</Button>
@@ -55,9 +55,14 @@ class NavBar extends React.Component {
                         <Menu.Item
                             className="mobile-btn"
                             name="mobile"
-                            onClick={()=>this.setState({
-                                mobileNavVisible: !mobileNavVisible
-                            }, ()=> console.log(mobileNavVisible))}
+                            onClick={() =>
+                                this.setState(
+                                    {
+                                        mobileNavVisible: !mobileNavVisible
+                                    },
+                                    () => console.log(mobileNavVisible)
+                                )
+                            }
                         >
                             <Icon name="bars" />
                         </Menu.Item>
@@ -75,25 +80,34 @@ class NavBar extends React.Component {
                         visible={mobileNavVisible}
                         width="thin"
                     >
-                        <Menu.Item as="a">
-                            <Icon name="home" />
-                            Home
-                        </Menu.Item>
-                        <Menu.Item as="a">
-                            <Icon name="gamepad" />
-                            Games
-                        </Menu.Item>
-                        <Menu.Item as="a">
-                            <Icon name="camera" />
-                            Channels
-                        </Menu.Item>
+                        <Menu.Item
+                            name="about"
+                            active={activeItem === "about"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name="faq"
+                            active={activeItem === "questions"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name="contact us"
+                            active={activeItem === "contact"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name="login"
+                            active={activeItem === "login"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name="signup"
+                            active={activeItem === "signup"}
+                            onClick={this.handleItemClick}
+                        />
                     </Sidebar>
 
                     <Sidebar.Pusher dimmed={mobileNavVisible}>
-                        <Segment basic>
-                            <Header as="h3">Application Content</Header>
-                            <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-                        </Segment>
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>
             </nav>

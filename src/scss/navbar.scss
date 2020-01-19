@@ -66,11 +66,24 @@
     }
 
     @media screen and (max-width: $mobileBP) {
-        .menu .item:not(#home) {
+        #primary-menu .item:not(#home) {
             display: none;
         }
         .menu .item.mobile-btn {
             display: inline-block!important;
+
+        }
+
+        .sidebar.menu {
+            width: 50%;
+        }
+        
+        .ui.segment.pushable {
+            background: none;
+            width: 100%;
+            position: absolute;
+            margin: 0;
+            height: 100vh!important;
         }
     }
 }
