@@ -28,13 +28,13 @@ class NavBar extends React.Component {
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name="Questions"
+                        name="questions"
                         active={activeItem === "questions"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
                         name="contact us"
-                        active={activeItem === "contact"}
+                        active={activeItem === "contact us"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position="right">
@@ -86,12 +86,12 @@ class NavBar extends React.Component {
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name="faq"
+                            name="questions"
                             active={activeItem === "questions"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name="contact us"
+                            name="contact"
                             active={activeItem === "contact"}
                             onClick={this.handleItemClick}
                         />
@@ -107,8 +107,10 @@ class NavBar extends React.Component {
                         />
                     </Sidebar>
 
-                    <Sidebar.Pusher dimmed={mobileNavVisible}>
-                    </Sidebar.Pusher>
+                    <Sidebar.Pusher
+                        dimmed={mobileNavVisible}
+                        onClick={() => this.setState({ mobileNavVisible: false})}
+                    ></Sidebar.Pusher>
                 </Sidebar.Pushable>
             </nav>
         );

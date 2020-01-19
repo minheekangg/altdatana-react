@@ -76,8 +76,17 @@
 
         .sidebar.menu {
             width: 50%;
+
+            .item {
+                padding: 25px 20px;
+
+                &:hover, &.active {
+                    background-color: $secondary-blue;
+                    color: white;
+                }
+            }
         }
-        
+
         .ui.segment.pushable {
             background: none;
             width: 100%;
