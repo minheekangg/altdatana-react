@@ -112,9 +112,6 @@ class Welcome extends React.Component {
     
     render() {
         return <div className="all-info">
-            <div class="sticky">
-            <Header as='h1' style={{ "fontSize": "35px" }}>Affluent</Header>
-            </div>
                
             <div className="refinance-info">
                 <br/>

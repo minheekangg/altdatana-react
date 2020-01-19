@@ -1,0 +1,107 @@
+@import './library.scss';
+
+#navbar {
+
+    >div:first-child {
+        background-color: $background-grey!important;
+        border: none;
+        max-width: $maxwidth;
+        margin: 0 auto;
+        padding: 10px 10px 5px;
+
+        #home {
+            color: $primary-blue;
+            background-color: $background-grey;
+            margin-right: 10px;
+
+            h1 {
+                font-size: 20px;
+                text-transform: none;
+            }
+
+            h1:hover {
+                color: $secondary-blue;
+            }
+        }
+      
+    }
+
+    .item  {
+      text-transform: capitalize;
+
+        &:hover {
+            color: $primary-blue;
+        }
+    }
+
+    .right.menu .item{
+        padding-left: 0;
+        padding-right: 0;
+
+        button {
+            background-color: $primary-blue;
+            color: white;
+            padding: 8px 20px;
+
+            border-radius: 16px;
+        }
+
+      &:hover, &.active {
+            background-color: $background-grey;
+    
+            button {
+              background-color: $secondary-blue;
+            }
+        }
+    }
+  
+    &.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+
+    .ui.segment.pushable {
+        display: none;
+    }
+
+    @media screen and (max-width: $mobileBP) {
+        #primary-menu .item:not(#home) {
+            display: none;
+        }
+        .menu .item.mobile-btn {
+            display: inline-block!important;
+
+        }
+
+        .ui.segment.pushable {
+            display: block;
+        }
+
+        .sidebar.menu {
+            width: 50%;
+
+            .item {
+                padding: 25px 20px;
+
+                &:hover, &.active {
+                    background-color: $secondary-blue;
+                    color: white;
+                }
+            }
+        }
+
+        .ui.segment.pushable {
+            background: none;
+            width: 100%;
+            position: absolute;
+            margin: 0;
+            height: 100vh!important;
+        }
+    }
+}
