@@ -1,6 +1,7 @@
 @import './library.scss';
 
 #navbar {
+
     >div:first-child {
         background-color: $background-grey!important;
         border: none;
@@ -65,6 +66,10 @@
         display: none;
     }
 
+    .ui.segment.pushable {
+        display: none;
+    }
+
     @media screen and (max-width: $mobileBP) {
         #primary-menu .item:not(#home) {
             display: none;
@@ -72,6 +77,10 @@
         .menu .item.mobile-btn {
             display: inline-block!important;
 
+        }
+
+        .ui.segment.pushable {
+            display: block;
         }
 
         .sidebar.menu {
