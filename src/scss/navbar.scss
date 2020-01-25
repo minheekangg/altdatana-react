@@ -1,5 +1,3 @@
-@import './library.scss';
-
 #navbar {
 
     >div:first-child {
@@ -20,7 +18,7 @@
             }
 
             h1:hover {
-                color: $secondary-blue;
+                color: $primary-purple;
             }
         }
       
@@ -50,7 +48,7 @@
             background-color: $background-grey;
     
             button {
-              background-color: $secondary-blue;
+              background-color: $primary-purple;
             }
         }
     }
@@ -90,7 +88,7 @@
                 padding: 25px 20px;
 
                 &:hover, &.active {
-                    background-color: $secondary-blue;
+                    background-color: $primary-purple;
                     color: white;
                 }
             }
