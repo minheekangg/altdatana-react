@@ -3,8 +3,22 @@
     .introduction {
         .left {
             text-align: left;
-
             color: $primary-blue;
+
+            h2 {
+                font-size: 35px;
+                font-weight: 600
+            }
+
+            p {
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px
+            }
+
+            button {
+                margin: 20px 5px;
+            }
         
         }
     }
