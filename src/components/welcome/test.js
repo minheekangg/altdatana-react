@@ -30,23 +30,27 @@ const TweenComponent = () => (
         <div className="section" />
         <div id="trigger" />
         <Controller>
-            <Scene triggerElement="#trigger" duration={600}>
+            <Scene triggerElement="#trigger" duration={600} delay={300}>
                 {progress => (
                     <Tween
                         from={{
-                            top: '100vh',
+                            top: "100vh",
                             opacity: 0,
+                            color: "blue"
                         }}
                         to={{
                             top: 0,
-                            opacity:1,
-                            backgroundColor: 'blue',
+                            opacity: 1,
+                            backgroundColor: "blue",
+                            color: "white"
                         }}
                         ease="Strong.easeOut"
                         totalProgress={progress}
                         paused
                     >
-                        <div className="tween">Pin Test</div>
+                            <h2>End of Predatory Finance</h2>
+                        <div className="tween">
+                        </div>
                     </Tween>
                 )}
             </Scene>
