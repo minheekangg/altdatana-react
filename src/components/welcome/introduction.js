@@ -1,5 +1,5 @@
 import React from 'react';
-
+import tempimg from '../../images/temp.png';
 import { Button } from 'semantic-ui-react';
 
 export default class WelcomeIntroduction extends React.Component {
@@ -13,7 +13,8 @@ export default class WelcomeIntroduction extends React.Component {
                         <Button className="primary-button">Apply Now</Button>
                     </div>
                     <div class="item right">
-
+                        <img src={tempimg} alt="temporary img" /> 
+                        {/* TODO: replace image later */}
                     </div>
                 </section>
         )

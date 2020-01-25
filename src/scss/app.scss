@@ -1,7 +1,7 @@
 .container {
-    max-width: $maxwidth;
+    max-width: 1000px;
     margin: 0 auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 10px;
 }
 
@@ -10,7 +10,7 @@
 
     &.two-items {
         .item {
-            border: 1px solid blue;
+            // border: 1px solid blue;
             flex-basis: 50%;
             flex-grow: 1;
         }

@@ -1,6 +1,8 @@
 #welcome {
 
     .introduction {
+        align-items: center;
+        
         .left {
             text-align: left;
             color: $primary-blue;
@@ -20,6 +22,10 @@
                 margin: 20px 5px;
             }
         
+        }
+
+        .right {
+            img { width: 100%}
         }
     }
 }
