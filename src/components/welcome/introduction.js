@@ -5,7 +5,7 @@ import { Button } from 'semantic-ui-react';
 export default class WelcomeIntroduction extends React.Component {
     render() {
         return (
-                <section class="flex-box two-items header introduction">
+                <section class="flex-box two-items header introduction container">
                     <div class="item left">
                         <h2>Short Term Loans Reinvented</h2>
                         <p>We understand.</p>
