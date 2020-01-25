@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Controller, Scene } from 'react-scrollmagic';
 
 import WelcomeIntroduction from './introduction';
+import TweenComponent from './test';
 
 const SectionWipesStyled = styled.div`
     overflow: hidden;
@@ -45,26 +46,33 @@ const SectionWipesStyled = styled.div`
 
 
 const Welcome = () => (
-        <SectionWipesStyled id="welcome">
-                <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-                        <Scene pin>
-                                <div className="panel first-section">
-                                        <span>
-                                                <WelcomeIntroduction />        
-                                        </span>
-                                </div>
-                        </Scene>
-                        <Scene pin>
-                                <div className="panel purple"><span>Panel</span></div>
-                        </Scene>
-                        <Scene pin>
-                                <div className="panel green"><span>Panel</span></div>
-                        </Scene>
-                        <Scene pin>
-                                <div className="panel bordeaux"><span>Panel</span></div>
-                        </Scene>
-                </Controller>
-        </SectionWipesStyled>
+
+        <div id="welcome">
+                <WelcomeIntroduction /> 
+                <TweenComponent />
+        </div>
+        // <SectionWipesStyled id="welcome">
+        //         <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+        //                 <Scene pin>
+        //                         <div className="panel first-section">
+        //                                 <span>
+        //                                         <WelcomeIntroduction />        
+        //                                 </span>
+        //                         </div>
+        //                 </Scene>
+        //                 <Scene pin>
+        //                         <div className="panel"><span>
+        //                                 <TweenComponent />        
+        //                         </span></div>
+        //                 </Scene>
+        //                 <Scene pin>
+        //                         <div className="panel purple"><span>Panel</span></div>
+        //                 </Scene>
+        //                 <Scene pin>
+        //                         <div className="panel bordeaux"><span>Panel</span></div>
+        //                 </Scene>
+        //         </Controller>
+        // </SectionWipesStyled>
 );
 
 export default Welcome;

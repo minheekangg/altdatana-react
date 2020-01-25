@@ -2,17 +2,23 @@
 
     .introduction {
         align-items: center;
-        
+        height: calc(100vh - 70px);
+
         .left {
             text-align: left;
             color: $primary-blue;
 
             h2 {
-                font-size: 35px;
-                font-weight: 600
+                font-size: 55px;
+                font-weight: 900;
+                
+                span {
+                    padding: 0!important;
+                }
             }
 
             p {
+                font-size: 20px;
                 font-weight: 600;
                 line-height: normal;
                 margin-bottom: 5px
