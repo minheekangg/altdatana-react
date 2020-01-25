@@ -1,5 +1,5 @@
 .container {
-    max-width: 1000px;
+    max-width: $maxwidth;
     margin: 0 auto;
     border: 1px solid red;
     padding: 10px;
@@ -27,4 +27,16 @@ section {
 p {
     line-height: 1.4em;
 
+}
+
+.ui.button.primary-button {
+    background-color: $primary-blue;
+    color: white;
+    padding: 8px 20px;
+
+    border-radius: 16px;
+
+    &:hover, &.active {
+            background-color: $primary-purple;
+    }
 }

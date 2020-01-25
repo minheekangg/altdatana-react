@@ -36,13 +36,6 @@
         padding-left: 0;
         padding-right: 0;
 
-        button {
-            background-color: $primary-blue;
-            color: white;
-            padding: 8px 20px;
-
-            border-radius: 16px;
-        }
 
       &:hover, &.active {
             background-color: $background-grey;
