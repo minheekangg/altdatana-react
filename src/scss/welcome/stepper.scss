@@ -2,14 +2,14 @@
     color: $primary-blue;
 
     .step {
-        border: 5px solid $hover-grey;
+        border: 1px solid $primary-blue;
         display: flex;
         flex-direction: column;
         text-align: left;
 
         padding: 30px 10px;
 
-
+        color: black;
         
         .stepper-img {
             img {
@@ -18,7 +18,8 @@
         }
 
         &:hover {
-            border: 1px solid $primary-blue;
+            
+            box-shadow: 10px 10px 8px $hover-grey;
         }
         
         
