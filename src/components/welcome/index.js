@@ -19,7 +19,7 @@ const SectionWipesStyled = styled.div`
         position: relative;
         display: block;
         overflow: visible;
-        padding: 80px 0;
+        // padding: 80px 0;
     }
 
     .panel.first-section {
@@ -46,33 +46,28 @@ const SectionWipesStyled = styled.div`
 
 
 const Welcome = () => (
-
-        <div id="welcome">
-                <WelcomeIntroduction /> 
-                <TweenComponent />
-        </div>
-        // <SectionWipesStyled id="welcome">
-        //         <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-        //                 <Scene pin>
-        //                         <div className="panel first-section">
-        //                                 <span>
-        //                                         <WelcomeIntroduction />        
-        //                                 </span>
-        //                         </div>
-        //                 </Scene>
-        //                 <Scene pin>
-        //                         <div className="panel"><span>
-        //                                 <TweenComponent />        
-        //                         </span></div>
-        //                 </Scene>
-        //                 <Scene pin>
-        //                         <div className="panel purple"><span>Panel</span></div>
-        //                 </Scene>
-        //                 <Scene pin>
-        //                         <div className="panel bordeaux"><span>Panel</span></div>
-        //                 </Scene>
-        //         </Controller>
-        // </SectionWipesStyled>
+        <SectionWipesStyled id="welcome">
+                <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+                        <Scene pin>
+                                <div className="panel first-section">
+                                        <span>
+                                                <WelcomeIntroduction />        
+                                        </span>
+                                </div>
+                        </Scene>
+                        {/* <Scene pin>
+                                <div className="panel"><span>
+                                        <TweenComponent />        
+                                </span></div>
+                        </Scene> */}
+                        <Scene pin>
+                                <div className="panel purple"><span>Panel</span></div>
+                        </Scene>
+                        <Scene pin>
+                                <div className="panel bordeaux"><span>Panel</span></div>
+                        </Scene>
+                </Controller>
+        </SectionWipesStyled>
 );
 
 export default Welcome;

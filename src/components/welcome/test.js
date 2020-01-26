@@ -48,9 +48,36 @@ const TweenComponent = () => (
                         totalProgress={progress}
                         paused
                     >
-                            <h2>End of Predatory Finance</h2>
-                        <div className="tween">
-                        </div>
+                        <h2>End of Predatory Finance</h2>
+                        <div className="tween"></div>
+                    </Tween>
+                )}
+            </Scene>
+            <Scene triggerElement="#trigger" duration={600} pin={false}>
+                {progress => (
+                    <Tween
+                        from={{
+                            css: {
+                                left: "0px",
+                                rotation: -360,
+                                width: "200px",
+                                height: "200px"
+                            },
+                            ease: "Strong.easeOut"
+                        }}
+                        to={{
+                            css: {
+                                left: "100px",
+                                rotation: -180,
+                                width: "50px",
+                                height: "50px"
+                            },
+                            ease: "Strong.easeOut"
+                        }}
+                        totalProgress={progress}
+                        paused
+                    >
+                        <div className="tween">Pin Test</div>
                     </Tween>
                 )}
             </Scene>
