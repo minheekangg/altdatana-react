@@ -9,7 +9,7 @@ export default class Mission extends React.Component {
     render() {
         return (
             <section className="mission" >
-                <div className="container">
+                <div className="container tight">
                     <div className="mission-header">
                         <Controller>
                             <Scene triggerElement=".mission-header" duration={500} >
