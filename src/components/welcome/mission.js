@@ -51,7 +51,6 @@ export default class Mission extends React.Component {
                         </Controller>
                     </div>
                     <Controller>
-
                         <Scene triggerElement=".mission h2" duration={500}>
                             {progress => (
                                 <Tween

@@ -68,7 +68,7 @@
     }
 
     @media screen and (max-width: 400px) {
-        &.four-items, &.five-items {
+        &.five-items {
             margin-left: 0;
             margin-right: 0;
 
@@ -98,7 +98,7 @@ p {
     border-radius: 16px;
 
     &:hover, &.active {
-            background-color: $primary-purple;
+        background-color: $darken-blue;
     }
 
     &.bigger {

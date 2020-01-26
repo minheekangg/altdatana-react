@@ -19,6 +19,7 @@
 
         @media screen and (max-width: 400px){
             font-size: 30px;
+            margin-bottom: 20px;
         }
     }
 
@@ -98,7 +99,7 @@
 
     .mission {
         height: 100vh;
-        background-color: $primary-purple;
+        background-color: $primary-blue;
 
         display: flex;
         flex-direction: column;
