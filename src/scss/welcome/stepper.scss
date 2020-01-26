@@ -1,0 +1,29 @@
+#stepper {
+    color: $primary-blue;
+
+    .step {
+        border: 1px solid $primary-blue;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        padding: 30px 10px;
+
+        color: black;
+        
+        .stepper-img {
+            img {
+                width: 60px;
+            }
+        }
+
+        &:hover {
+            
+            box-shadow: 10px 10px 8px $hover-grey;
+        }
+        
+        
+    }
+
+    
+}

@@ -1,48 +1,115 @@
-h1.ui-header {
-  margin-top: 15px;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    // border: 1px solid red;
+    padding: 10px;
+
+    &.tight {
+        max-width: 800px;
+    }
+    &.tigher{
+        max-width: 600px;
+    }
 }
 
-/* WELCOME PAGE */
-.all-info{
-  width: 70%;
-  /* background-color: blue; */
-  margin: 0 auto;
-}
-.refinance-info{
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  /* display: grid; */
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-  /* background-color: #2196F3; */
-  padding: 10px;
-}
-.refinance-info img{
-  width: 100%;
-  display:relative;
-  background-color: yellow;
-}
-.refinance-left-info {
-  /* background-color: blue; */
-  position: relative;
-  /* display: inline-block; */
-  /* width: 100%; */
-  /* height: 100%; */
-  justify-content: center;
-  padding-top: 100px;
+.flex-box {
+    display: flex;
+
+    &.two-items {
+        margin-left: -30px;
+        margin-right: -30px;
+
+        .item {
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+        .item {
+            margin: 30px;
+        }
+    }
+    &.four-items {
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .item {
+            flex-basis: 20%;
+            flex-grow: 1;
+        }
+        .item {
+            margin: 20px;
+        }
+
+    }
+    &.five-items {
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .item {
+            flex-basis: 15%;
+            flex-grow: 1;
+        }
+        .item {
+            margin: 15px;
+        }
+    }
+
+
+    @media screen and (max-width: 800px) {
+        &.four-items, &.five-items {
+            margin-left: -10px;
+            margin-right: -10px;
+            flex-wrap: wrap;
+    
+            .item {
+                flex-basis: 40%;
+                margin: 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &.five-items {
+            margin-left: 0;
+            margin-right: 0;
+
+            .item {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
+    
 }
 
-.refinance-second-info{
-  text-align: left
+section {
+    padding: 80px 0;
 }
 
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  /* background-color:white; */
-  /* padding: 50px; */
-  /* font-size: 20px; */
-  z-index: 2;
+p {
+    line-height: 1.4em;
+
+}
+
+.ui.button.primary-button {
+    background-color: $primary-blue;
+    color: white;
+    padding: 8px 20px;
+
+    border-radius: 16px;
+
+    &:hover, &.active {
+        background-color: $darken-blue;
+    }
+
+    &.bigger {
+        margin: 30px 0;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $mobileBP) {
+            width: 80%;
+            font-size: 16px;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Button, Icon, Sidebar, Segment } from 'semantic-ui-react'
+import { Menu, Button, Icon, Sidebar, Segment } from 'semantic-ui-react';
 
 class NavBar extends React.Component {
     state = { 
@@ -43,14 +43,14 @@ class NavBar extends React.Component {
                             active={activeItem === "logout"}
                             onClick={this.handleItemClick}
                         >
-                            <Button>Log In</Button>
+                            <Button className="primary-button">Log In</Button>
                         </Menu.Item>
                         <Menu.Item
                             name="sign up"
                             active={activeItem === "signup"}
                             onClick={this.handleItemClick}
                         >
-                            <Button>Sign Up</Button>
+                            <Button className="primary-button">Sign Up</Button>
                         </Menu.Item>
                         <Menu.Item
                             className="mobile-btn"

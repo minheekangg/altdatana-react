@@ -1,0 +1,144 @@
+#welcome {
+    .introduction , .mission {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    h2 {
+        font-size: 55px;
+        font-weight: 900;
+        display: block;
+        
+        div {
+            padding: 0!important;
+        }
+
+         @media screen and (max-width: 900px) {
+            font-size: 3em;
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .introduction {
+        height: calc(100vh - 80px);
+        background-color: $background-grey;
+        
+        .flex-box {
+            align-items: center;
+            flex-direction: row-reverse;
+            height: 100%;
+            margin: auto;
+        }
+
+        .left {
+            text-align: left;
+            color: $primary-blue;
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px
+            }
+        
+        }
+
+        .right {
+            img { width: 100%}
+        }
+
+        @media screen and (max-width: 900px) {
+            .item.left {
+                flex-basis: 60%;
+
+            }
+            .item.right {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: $mobileBP) {
+            padding-top: 0;
+
+            .flex-box {
+
+                display: block;
+            }
+
+            .item {
+                margin: 0;
+            }
+
+            .item.right {
+                width: 95%;
+                margin: auto;
+
+                img {
+                    max-width: 300px;
+                    margin-top: 50px;
+                }
+            }
+
+            .item.left {
+                text-align: center;
+                width: 100%;
+
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            padding-top: calc(50vh - 200px);
+
+            img { display: none;}
+        }
+    }
+
+    .mission {
+        height: 100vh;
+        background-color: $primary-blue;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+
+        color: white;
+        text-align: left;
+
+        .mission-header {
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 40px;
+
+        }
+        @media screen and (max-width: 900px) {
+            .container {
+                max-width: 600px;
+            }
+            h3 {font-size: 2.5em; }
+        }
+
+        @media screen and (max-width: $mobileBP){
+
+            h2 {
+                margin-bottom: 1em;
+            }
+        }
+        @media screen and (max-width: 400px){
+            h3 {font-size: 20px;}
+
+            .mission-header {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
