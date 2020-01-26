@@ -1,7 +1,9 @@
 @import './variables.scss';
 @import './app.scss';
 @import './navbar.scss';
-@import './welcome.scss';
+
+@import './welcome/main.scss';
+@import './welcome/call-to-action.scss';
 
 body {
   margin: 10px, 40px, 0px;
