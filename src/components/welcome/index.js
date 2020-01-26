@@ -4,7 +4,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 
 import Intro from './introduction';
 import Mission from './mission';
-import TweenComponent from './test';
+import CallToAction from './call-to-action';
 
 const SectionWipesStyled = styled.div`
     overflow: hidden;
@@ -47,22 +47,27 @@ const SectionWipesStyled = styled.div`
 
 
 const Welcome = () => (
-        <SectionWipesStyled id="welcome">
-                <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-                        <Scene pin>
-                                <div className="panel first-section">
-                                        <span>
-                                                <Intro />        
-                                        </span>
-                                </div>
-                        </Scene>
-                        <Scene pin>
-                                <div className="panel purple"><span>
-                                        <Mission />        
-                                </span></div>
-                        </Scene>
-                </Controller>
-        </SectionWipesStyled>
+        <div id="welcome">
+                {/* <SectionWipesStyled >
+                        <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+                                <Scene pin>
+                                        <div className="panel first-section">
+                                                <span>
+                                                        <Intro />        
+                                                </span>
+                                        </div>
+                                </Scene>
+                                <Scene pin>
+                                        <div className="panel purple"><span>
+                                                <Mission />        
+                                        </span></div>
+                                </Scene>
+                        </Controller>
+                </SectionWipesStyled> */}
+                <Intro />
+                <Mission />
+                <CallToAction />
+        </div>
 );
 
 export default Welcome;

@@ -39,4 +39,16 @@ p {
     &:hover, &.active {
             background-color: $primary-purple;
     }
+
+    &.bigger {
+        margin: 30px 0;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $mobileBP) {
+            width: 80%;
+            font-size: 16px;
+        }
+    }
 }

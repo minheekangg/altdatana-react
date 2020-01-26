@@ -12,12 +12,12 @@ export default class Intro extends React.Component {
                 </div>
                 <div class="item left">
                     <h2>
-                        <span style={{ padding: 0 }}>Short Term Loans</span>
-                        <span style={{ padding: 0 }}>Reinvented</span>
+                        <div style={{ padding: 0 }}>Short Term Loans</div>
+                        <div style={{ padding: 0 }}>Reinvented</div>
                     </h2>
                     <p>We understand.</p>
                     <p>Everyone has emergencies</p>
-                    <Button className="primary-button">Apply Now</Button>
+                    <Button className="primary-button bigger">Apply Now</Button>
                 </div>
             </section>
         );
