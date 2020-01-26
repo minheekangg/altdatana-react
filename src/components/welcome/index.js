@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Controller, Scene } from 'react-scrollmagic';
 
-import WelcomeIntroduction from './introduction';
+import Intro from './introduction';
+import Mission from './mission';
 import TweenComponent from './test';
 
 const SectionWipesStyled = styled.div`
@@ -51,20 +52,14 @@ const Welcome = () => (
                         <Scene pin>
                                 <div className="panel first-section">
                                         <span>
-                                                <WelcomeIntroduction />        
+                                                <Intro />        
                                         </span>
                                 </div>
                         </Scene>
-                        {/* <Scene pin>
-                                <div className="panel"><span>
-                                        <TweenComponent />        
+                        <Scene pin>
+                                <div className="panel purple"><span>
+                                        <Mission />        
                                 </span></div>
-                        </Scene> */}
-                        <Scene pin>
-                                <div className="panel purple"><span>Panel</span></div>
-                        </Scene>
-                        <Scene pin>
-                                <div className="panel bordeaux"><span>Panel</span></div>
                         </Scene>
                 </Controller>
         </SectionWipesStyled>
