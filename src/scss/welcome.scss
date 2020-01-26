@@ -8,6 +8,10 @@
         span {
             padding: 0!important;
         }
+
+         @media screen and (max-width: 900px) {
+            font-size: 3em;
+        }
     }
 
     .introduction {
@@ -40,7 +44,6 @@
         }
 
         @media screen and (max-width: 900px) {
-            h2 {font-size: 3em;}
             .item.left {
                 flex-basis: 60%;
 
@@ -88,21 +91,45 @@
     }
 
     .mission {
-        height:calc(100vh - 70px);
-        padding-top: 130px;
+        // height:calc(100vh - 70px);
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         max-width: 800px;
 
         color: white;
         text-align: left;
 
-        h2 {
-            margin-bottom: 30px;
-            border-bottom: 1px dotted;
+        .mission-header {
+            overflow: hidden;
+            margin-bottom: 40px;
         }
 
         h3 {
             font-size: 40px;
+
+        }
+        @media screen and (max-width: 900px) {
+            max-width: 600px;
+            h3 {font-size: 2.5em; }
+        }
+
+        @media screen and (max-width: $mobileBP){
+
+            h2 {
+                margin-bottom: 1em;
+            }
+        }
+        @media screen and (max-width: 400px){
+            h3 {font-size: 20px;}
+            h2 {font-size: 30px;}
+
+            .mission-header {
+                margin-bottom: 0;
+            }
         }
 
     }
