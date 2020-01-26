@@ -16,15 +16,30 @@
     display: flex;
 
     &.two-items {
+        margin-left: -30px;
+        margin-right: -30px;
+
         .item {
-            // border: 1px solid blue;
             flex-basis: 50%;
             flex-grow: 1;
         }
-        .item~.item {
-            margin-left: 30px;
+        .item {
+            margin: 30px;
         }
     }
+    &.four-items {
+        margin-left: -30px;
+        margin-right: -30px;
+
+        .item {
+            flex-basis: 25%;
+            flex-grow: 1;
+        }
+        .item {
+            margin: 30px;
+        }
+    }
+    
 }
 
 section {

@@ -1,0 +1,20 @@
+.stepper {
+    .step {
+        border: 1px solid $primary-purple;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        padding: 20px 10px;
+
+        
+        .stepper-img {
+            margin: auto;
+
+            img {
+                width: 100px;
+            }
+        }
+
+    }
+}

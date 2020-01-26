@@ -7,11 +7,11 @@ export default class Intro extends React.Component {
         return (
             <section className="introduction">
                 <div className="flex-box two-items container">
-                    <div class="item right">
+                    <div className="item right">
                         <img src={tempimg} alt="temporary img" />
                         {/* TODO: replace image later */}
                     </div>
-                    <div class="item left">
+                    <div className="item left">
                         <h2>
                             <div style={{ padding: 0 }}>Short Term Loans</div>
                             <div style={{ padding: 0 }}>Reinvented</div>
