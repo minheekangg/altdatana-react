@@ -22,11 +22,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,5 +51,5 @@
   "bugs": {
     "url": "https://github.com/minheekangg/altdatana-react/issues"
   },
-  "homepage": "http://minheekangg.github.io/altdatana"
+  "homepage": "http://minheekangg.github.io/altdatana-react"
 }
