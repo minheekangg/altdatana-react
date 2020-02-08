@@ -1,10 +1,11 @@
-@import './variables.scss';
-@import './app.scss';
-@import './navbar.scss';
+@import './partials/variables';
+@import './partials/typography';
+@import './app';
+@import './navbar';
 
-@import './welcome/main.scss';
-@import './welcome/call-to-action.scss';
-@import './welcome/stepper.scss';
+@import './welcome/main';
+@import './welcome/call-to-action';
+@import './welcome/stepper';
 
 body {
     margin: 10px, 40px, 0px;

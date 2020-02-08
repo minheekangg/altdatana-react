@@ -5,20 +5,13 @@
     }
 
     h2 {
-        font-size: 55px;
-        font-weight: 900;
         display: block;
         
         div {
             padding: 0!important;
         }
-
-         @media screen and (max-width: 900px) {
-            font-size: 3em;
-        }
-
+        
         @media screen and (max-width: 400px){
-            font-size: 30px;
             margin-bottom: 20px;
         }
     }
