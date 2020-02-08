@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu, Button, Icon, Sidebar, Segment } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
     state = { 
@@ -15,6 +16,8 @@ class NavBar extends React.Component {
             <nav class="sticky" id="navbar">
                 <Menu secondary id="primary-menu">
                     <Menu.Item
+                        as={Link}
+                        to='/'
                         active={activeItem === "home"}
                         onClick={this.handleItemClick}
                         id="home"
@@ -23,18 +26,24 @@ class NavBar extends React.Component {
                         <h1>Altdatana</h1>
                     </Menu.Item>
                     <Menu.Item
+                        as={Link}
+                        to="/about"
                         name="about"
                         active={activeItem === "about"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name="questions"
-                        active={activeItem === "questions"}
+                        as={Link}
+                        to="how-it-works"
+                        name="how it works"
+                        active={activeItem === "how it works"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name="contact us"
-                        active={activeItem === "contact us"}
+                        as={Link}
+                        to="products"
+                        name="products"
+                        active={activeItem === "products"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position="right">
@@ -81,18 +90,24 @@ class NavBar extends React.Component {
                         width="thin"
                     >
                         <Menu.Item
+                            as={Link}
+                            to="about"
                             name="about"
                             active={activeItem === "about"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name="questions"
-                            active={activeItem === "questions"}
+                            as={Link}
+                            to="how-it-works"
+                            name="how it works"
+                            active={activeItem === "how it works"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name="contact"
-                            active={activeItem === "contact"}
+                            as={Link}
+                            to="products"
+                            name="products"
+                            active={activeItem === "products"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item

@@ -12,6 +12,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/welcome" />} />
             <Route exact path="/welcome" component={Welcome} />
+            {/* <Route exact path="/about" component={About} /> */}
           </Switch>
         </Fragment>
     );
