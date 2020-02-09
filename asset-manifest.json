@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/altdatana-react/static/css/main.d2043a5d.chunk.css",
-    "main.js": "/altdatana-react/static/js/main.f60b3fe3.chunk.js",
-    "main.js.map": "/altdatana-react/static/js/main.f60b3fe3.chunk.js.map",
+    "main.js": "/altdatana-react/static/js/main.59759d49.chunk.js",
+    "main.js.map": "/altdatana-react/static/js/main.59759d49.chunk.js.map",
     "runtime-main.js": "/altdatana-react/static/js/runtime-main.a86efc98.js",
     "runtime-main.js.map": "/altdatana-react/static/js/runtime-main.a86efc98.js.map",
     "static/js/2.9a5de713.chunk.js": "/altdatana-react/static/js/2.9a5de713.chunk.js",
     "static/js/2.9a5de713.chunk.js.map": "/altdatana-react/static/js/2.9a5de713.chunk.js.map",
     "index.html": "/altdatana-react/index.html",
-    "precache-manifest.60119a3fe5a104a09dc464a6328d0447.js": "/altdatana-react/precache-manifest.60119a3fe5a104a09dc464a6328d0447.js",
+    "precache-manifest.5c41f6e381ce255c690d1077056e0089.js": "/altdatana-react/precache-manifest.5c41f6e381ce255c690d1077056e0089.js",
     "service-worker.js": "/altdatana-react/service-worker.js",
     "static/css/main.d2043a5d.chunk.css.map": "/altdatana-react/static/css/main.d2043a5d.chunk.css.map",
     "static/js/2.9a5de713.chunk.js.LICENSE": "/altdatana-react/static/js/2.9a5de713.chunk.js.LICENSE",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.a86efc98.js",
     "static/js/2.9a5de713.chunk.js",
     "static/css/main.d2043a5d.chunk.css",
-    "static/js/main.f60b3fe3.chunk.js"
+    "static/js/main.59759d49.chunk.js"
   ]
 }
