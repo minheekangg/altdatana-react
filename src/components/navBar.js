@@ -2,6 +2,8 @@ import React from 'react'
 import { Menu, Button, Icon, Sidebar, Segment } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 
+import { ROUTE_ROOT } from "../utils/constants";
+
 class NavBar extends React.Component {
     state = { 
         activeItem: 'home', 
@@ -17,7 +19,7 @@ class NavBar extends React.Component {
                 <Menu secondary id="primary-menu">
                     <Menu.Item
                         as={Link}
-                        to='/'
+                        to={`${ROUTE_ROOT}/`}
                         active={activeItem === "home"}
                         onClick={this.handleItemClick}
                         id="home"
@@ -27,21 +29,21 @@ class NavBar extends React.Component {
                     </Menu.Item>
                     <Menu.Item
                         as={Link}
-                        to="/about"
+                        to={`${ROUTE_ROOT}/about`}
                         name="about"
                         active={activeItem === "about"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
                         as={Link}
-                        to="how-it-works"
+                        to={`${ROUTE_ROOT}/how-it-works`}
                         name="how it works"
                         active={activeItem === "how it works"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
                         as={Link}
-                        to="products"
+                        to={`${ROUTE_ROOT}/products`}
                         name="products"
                         active={activeItem === "products"}
                         onClick={this.handleItemClick}
@@ -91,21 +93,21 @@ class NavBar extends React.Component {
                     >
                         <Menu.Item
                             as={Link}
-                            to="about"
+                            to={`${ROUTE_ROOT}/about`}
                             name="about"
                             active={activeItem === "about"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
                             as={Link}
-                            to="how-it-works"
+                            to={`${ROUTE_ROOT}/how-it-works`}
                             name="how it works"
                             active={activeItem === "how it works"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
                             as={Link}
-                            to="products"
+                            to={`${ROUTE_ROOT}/products`}
                             name="products"
                             active={activeItem === "products"}
                             onClick={this.handleItemClick}
@@ -124,7 +126,9 @@ class NavBar extends React.Component {
 
                     <Sidebar.Pusher
                         dimmed={mobileNavVisible}
-                        onClick={() => this.setState({ mobileNavVisible: false})}
+                        onClick={() =>
+                            this.setState({ mobileNavVisible: false })
+                        }
                     ></Sidebar.Pusher>
                 </Sidebar.Pushable>
             </nav>
