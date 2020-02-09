@@ -6,17 +6,19 @@ import NavBar from './components/navBar';
 import About from './components/about';
 import Products from './components/products';
 
+import { ROUTE_ROOT } from './utils/constants';
+
 class App extends Component {
   render() {
     return (
       <Fragment>
           <NavBar />
           <Switch>
-            <Route exact path="/" render={() => <Redirect to="/welcome" />} />
-            <Route exact path="/welcome" component={Welcome} />
-            <Route exact path="/about" component={About} />
+            <Route exact path={`${ROUTE_ROOT}/`} render={() => <Redirect to={`${ROUTE_ROOT}/welcome`} />} />
+            <Route exact path={`${ROUTE_ROOT}/welcome`} component={Welcome} />
+            <Route exact path={`${ROUTE_ROOT}/about`} component={About} />
             {/* <Route exact path="/how-it-works" component={HowItWorks} /> */}
-            <Route exact path="/products" component={Products} />
+            <Route exact path={`${ROUTE_ROOT}/products`} component={Products} />
           </Switch>
         </Fragment>
     );
