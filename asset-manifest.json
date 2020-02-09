@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/altdatana-react/static/css/main.a1cc997d.chunk.css",
-    "main.js": "/altdatana-react/static/js/main.489a27c5.chunk.js",
-    "main.js.map": "/altdatana-react/static/js/main.489a27c5.chunk.js.map",
-    "runtime-main.js": "/altdatana-react/static/js/runtime-main.a86efc98.js",
-    "runtime-main.js.map": "/altdatana-react/static/js/runtime-main.a86efc98.js.map",
-    "static/js/2.2a7ed143.chunk.js": "/altdatana-react/static/js/2.2a7ed143.chunk.js",
-    "static/js/2.2a7ed143.chunk.js.map": "/altdatana-react/static/js/2.2a7ed143.chunk.js.map",
-    "index.html": "/altdatana-react/index.html",
-    "precache-manifest.fcbf30f80fe0b537aaa4a41f2a5d4108.js": "/altdatana-react/precache-manifest.fcbf30f80fe0b537aaa4a41f2a5d4108.js",
-    "service-worker.js": "/altdatana-react/service-worker.js",
-    "static/css/main.a1cc997d.chunk.css.map": "/altdatana-react/static/css/main.a1cc997d.chunk.css.map",
-    "static/js/2.2a7ed143.chunk.js.LICENSE": "/altdatana-react/static/js/2.2a7ed143.chunk.js.LICENSE",
-    "static/media/temp.png": "/altdatana-react/static/media/temp.f2907374.png"
+    "main.css": "/altdatana/static/css/main.a1cc997d.chunk.css",
+    "main.js": "/altdatana/static/js/main.489a27c5.chunk.js",
+    "main.js.map": "/altdatana/static/js/main.489a27c5.chunk.js.map",
+    "runtime-main.js": "/altdatana/static/js/runtime-main.bbef78b5.js",
+    "runtime-main.js.map": "/altdatana/static/js/runtime-main.bbef78b5.js.map",
+    "static/js/2.2a7ed143.chunk.js": "/altdatana/static/js/2.2a7ed143.chunk.js",
+    "static/js/2.2a7ed143.chunk.js.map": "/altdatana/static/js/2.2a7ed143.chunk.js.map",
+    "index.html": "/altdatana/index.html",
+    "precache-manifest.c3943d53cb6b0ad3bd92d0185a636237.js": "/altdatana/precache-manifest.c3943d53cb6b0ad3bd92d0185a636237.js",
+    "service-worker.js": "/altdatana/service-worker.js",
+    "static/css/main.a1cc997d.chunk.css.map": "/altdatana/static/css/main.a1cc997d.chunk.css.map",
+    "static/js/2.2a7ed143.chunk.js.LICENSE": "/altdatana/static/js/2.2a7ed143.chunk.js.LICENSE",
+    "static/media/temp.png": "/altdatana/static/media/temp.f2907374.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a86efc98.js",
+    "static/js/runtime-main.bbef78b5.js",
     "static/js/2.2a7ed143.chunk.js",
     "static/css/main.a1cc997d.chunk.css",
     "static/js/main.489a27c5.chunk.js"
