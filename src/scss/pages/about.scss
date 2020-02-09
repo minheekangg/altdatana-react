@@ -3,4 +3,44 @@
         padding-top: calc(50vh - 250px);
         padding-bottom: calc(50vh - 300px);
     }
+
+    .about-list {
+        justify-content: space-between;
+
+        .right {
+            text-align: right;
+            flex-basis: 10%;
+            border-top: 10px solid $primary-blue;
+            padding-top: 12px;
+            height: 100%;
+            position: sticky;
+            top: 80px;
+        }
+
+        .left {
+            text-align: left;
+ 
+            .mission-list {
+                .mission-card {
+                    border: 1px solid;
+                    padding: 20px 15px;
+                }
+
+                .mission-card ~ .mission-card {
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .flex-box {
+                display: block;
+                
+                .right {
+                    position: initial;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
 }

@@ -5,7 +5,7 @@ import dollarPicture from '../../images/lock.png';
 export default class Stepper extends React.Component {
     render() {
         return (
-            <section id="stepper">
+            <section id="stepper" className="bg-grey">
                 <div className="container">
                     <h2>Why we're better</h2>
                     <div className="flex-box four-items">

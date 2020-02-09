@@ -2,7 +2,7 @@ import React from 'react';
 
 import Intro from './introduction';
 import Mission from './mission';
-import CallToAction from './call-to-action';
+import CallToAction from '../call-to-action';
 import Stepper from './stepper';
 
 const Welcome = () => (

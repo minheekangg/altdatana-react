@@ -26,7 +26,7 @@ export default class Mission extends React.Component {
                                         totalProgress={progress}
                                         paused
                                     >
-                                        <h2>The End of Predatory Finance.</h2>
+                                        <h2 className="white">The End of Predatory Finance.</h2>
                                     </Tween>
                                 )}
                             </Scene>
