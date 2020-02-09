@@ -10,7 +10,7 @@ const Welcome = () => (
                 <Intro />
                 <Mission />
                 <Stepper />
-                <CallToAction />
+                <CallToAction type="apply" />
         </div>
 );
 

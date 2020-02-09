@@ -5,11 +5,40 @@ import { Button } from "semantic-ui-react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
-export default class CallToAction extends React.Component {
+const header = {
+    'apply': 'Ready to get started?',
+    'question': 'Questions?'
+}
+
+const content = {
+    'apply': [`Give us a try and check your rate. No credit score checks.`, `No commitments until you accept the loan terms.`],
+    'question': [`If you have questions about applying for a cash advance or what else we offer, please get in touch with us!`]
+}
+
+const action = {
+    'apply': (
+        <Button className="primary-button bigger">
+            Apply Now
+        </Button>
+    ),
+    'question': (
+        <Button className="primary-button bigger">
+            Email Now
+        </Button>
+    )
+}
+
+export default class CTA extends React.Component {
     render() {
+        const { type } = this.props;
+
+        if ( !type ) {
+            return null;
+        }
+
         return (
             <section className="call-to-action">
-                <div className="container tightest">
+                <div className="container tighter">
                     <Controller>
                         <Scene triggerElement=".call-to-action " duration={200}>
                             {progress => (
@@ -26,7 +55,7 @@ export default class CallToAction extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <h2>Ready to get started?</h2>
+                                <h2>{!!header[type] && header[type]}</h2>
                                 </Tween>
                             )}
                         </Scene>
@@ -45,14 +74,9 @@ export default class CallToAction extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <p>
-                                        Give us a try and check your rate. No
-                                        credit score checks.
-                                    </p>
-                                    <p>
-                                        No commitments until you accept the loan
-                                        terms.
-                                    </p>
+                                    {!!content[type] && content[type].map(t=> {
+                                        return <p>{t}</p>
+                                    })}
                                 </Tween>
                             )}
                         </Scene>
@@ -71,9 +95,7 @@ export default class CallToAction extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <Button className="primary-button bigger">
-                                        Apply Now
-                                    </Button>
+                                   {!!action[type] && action[type]}
                                 </Tween>
                             )}
                         </Scene>

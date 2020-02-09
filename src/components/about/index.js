@@ -40,7 +40,7 @@ const About = () => (
                 </section>
             </div>
         </div>
-        <CallToAction />    
+        <CallToAction type="question"/>
     </div>
 );
 
