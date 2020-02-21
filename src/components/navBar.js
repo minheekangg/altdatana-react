@@ -36,13 +36,6 @@ class NavBar extends React.Component {
                     />
                     <Menu.Item
                         as={Link}
-                        to={`${ROUTE_ROOT}/how-it-works`}
-                        name="how it works"
-                        active={activeItem === "how it works"}
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                        as={Link}
                         to={`${ROUTE_ROOT}/products`}
                         name="products"
                         active={activeItem === "products"}
@@ -96,13 +89,6 @@ class NavBar extends React.Component {
                             to={`${ROUTE_ROOT}/about`}
                             name="about"
                             active={activeItem === "about"}
-                            onClick={this.handleItemClick}
-                        />
-                        <Menu.Item
-                            as={Link}
-                            to={`${ROUTE_ROOT}/how-it-works`}
-                            name="how it works"
-                            active={activeItem === "how it works"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item

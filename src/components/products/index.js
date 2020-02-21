@@ -41,23 +41,45 @@ const Products = () => (
                 </section>
             </div>
         </div>
-        <div >
+        <div class="step-by-step">
             <div className="container tight">
-                <section class="product-deeper">
-
-                </section>
-                <section class="product-deeper">
-
-                        <div class="img-wrapper">
-                            <img src={TempImg2} alt='phone in hand' />
-                            <p class="img-tag">Photo by Balázs Kétyi on Unsplash</p>
+                    <p className="section-tag" style={{marginTop: "60px", color: 'white'}}>start here</p>
+                    <h2 style={{ color: "white", marginBottom: '60px' }}>I am looking to finance...</h2>
+                <section className="steps">
+                    <div className="step-one">
+                        <h4 className="number">01</h4>
+                        <h3 ><strong>Where do I start?&nbsp;</strong></h3>
+                        <p class="center-align">It only takes moments to see your new rate. No commitment, no documents, no impact on your credit score.
+                        </p>
+                    </div>
+                    <div className="step-two">
+                        <h4 className="number">02</h4>
+                        <h3 ><strong>Where do I start?&nbsp;</strong></h3>
+                        <p class="center-align">It only takes moments to see your new rate. No commitment, no documents, no impact on your credit score.
+                        </p>
+                    </div>
+                        <div class="timeline-dotted-line">
+                            <div class="line">
+                                <div class="dots">
+                                    <div class="dot-wrapper-2">
+                                        <div class="dot dot-top"></div>
+                                    </div>
+                                    <div class="dot-wrapper-2">
+                                        <div class="dot dot-middle"></div>
+                                    </div>
+                                    <div class="dot-wrapper-2">
+                                        <div class="dot dot-bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            Our home equity line allows you to consolidate debt
-                                    at a lower rate compared to credit cards and
-                                    personal loans.
-                        </div>
-
+                    
+                    <div className="step-three">
+                        <h4 className="number">03</h4>
+                        <h3 ><strong>Where do I start?&nbsp;</strong></h3>
+                        <p class="center-align">It only takes moments to see your new rate. No commitment, no documents, no impact on your credit score.
+                        </p>
+                    </div>
                 </section>
       
                 <section class="product-deeper">
