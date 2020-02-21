@@ -59,8 +59,7 @@
     .product-deeper {
         display: flex;
         justify-content: space-between;
-
-        height: 500px;
+        margin: 100px 0;
 
         .img-wrapper img { 
             max-width: 300px;
@@ -69,6 +68,7 @@
 
         .desc {
             flex-basis: 50%;
+            color: white;
         }
 
         

@@ -88,11 +88,11 @@ const Products = () => (
                             <img src={TempImg2} alt='phone in hand' />
                             <p class="img-tag">Photo by Balázs Kétyi on Unsplash</p>
                         </div>
-                        <div class="desc">
+                        <h3 class="desc">
                             Our home equity line allows you to consolidate debt
                                     at a lower rate compared to credit cards and
                                     personal loans.
-                        </div>
+                        </h3>
 
                 </section>
             </div>
