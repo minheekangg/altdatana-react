@@ -2,6 +2,9 @@
     height: 100vh;
     text-align: left;
 
+    background-image: linear-gradient(white, 70%, $primary-blue);
+    height: 100%;
+
     .products-list {
         margin-top: 30px;
 
@@ -40,6 +43,21 @@
             .learn-more {
                 margin-top: 30px;
             }
+        }
+    }
+
+
+    .product-deeper {
+        display: flex;
+        justify-content: space-between;
+
+        .img-wrapper img { 
+            max-width: 300px;
+            box-shadow: 40px -40px $primary-blue;
+        }
+
+        .desc {
+            flex-basis: 50%;
         }
     }
     

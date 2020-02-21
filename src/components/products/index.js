@@ -2,6 +2,7 @@ import React from 'react';
 
 import CallToAction from '../call-to-action';
 import TempImg from '../../images/lock.png';
+import TempImg2 from '../../images/temptyg6.jpg';
 import { ROUTE_ROOT } from "../../utils/constants";
 
 const Products = () => (
@@ -37,9 +38,21 @@ const Products = () => (
                     </div>
                 </div>
             </section>
+            <section class="product-deeper">
+                <div class="img-wrapper">
+                    <img src={TempImg2} alt='phone in hand' />
+                    <p class="img-tag">Photo by Balázs Kétyi on Unsplash</p>
+                </div>
+                <div class="desc">
+                    Our home equity line allows you to consolidate debt
+                            at a lower rate compared to credit cards and
+                            personal loans.
+                </div>
+            </section>
         </div>
         <CallToAction type="apply" />
     </div>
+
 );
 
 export default Products;
