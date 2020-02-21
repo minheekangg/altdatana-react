@@ -2,8 +2,17 @@
     height: 100vh;
     text-align: left;
 
-    background-image: linear-gradient(white, 70%, $primary-blue);
+    &.gradient {
+        background-image: linear-gradient($primary-blue, 30%, $primary-purple);
+    }
     height: 100%;
+
+    .curvy-border {
+        height: 90%;  
+        border-radius: 100%/0 0 100px 100px;
+        box-shadow: 0px 6px 0px white;
+        background-color: white;
+    }
 
     .products-list {
         margin-top: 30px;
@@ -51,6 +60,8 @@
         display: flex;
         justify-content: space-between;
 
+        height: 500px;
+
         .img-wrapper img { 
             max-width: 300px;
             box-shadow: 40px -40px $primary-blue;
@@ -59,6 +70,15 @@
         .desc {
             flex-basis: 50%;
         }
+
+        
+    }
+
+    .call-to-action {
+        background: none;
+        color: white;
+
+        h2 { color: white;}
     }
     
 }
