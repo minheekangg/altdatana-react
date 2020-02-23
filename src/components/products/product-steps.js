@@ -45,7 +45,7 @@ export default class ProductSteps extends React.Component {
                                     <Tween
                                         from={{
                                             opacity: 0,
-                                            xPercent: 10
+                                            yPercent: 10
                                         }}
                                         to={{
                                             opacity: 1
