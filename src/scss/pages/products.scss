@@ -64,6 +64,7 @@
         .img-wrapper img { 
             max-width: 300px;
             box-shadow: 40px -40px $primary-blue;
+            margin-right: 40px;
         }
 
         .desc {
@@ -72,7 +73,14 @@
             align-self: center;
         }
 
-        
+        @media screen and (max-width: $mobileBP) {
+            display: block;
+
+            .img-wrapper img {
+                width: calc(100% - 40px);
+                max-width: none
+            }
+        }
     }
 
     .call-to-action {
