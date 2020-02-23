@@ -69,6 +69,7 @@
         .desc {
             flex-basis: 50%;
             color: white;
+            align-self: center;
         }
 
         
@@ -104,7 +105,7 @@
                 font-size: 18px;
             }
 
-            .step-one {
+            .step-one, .step-three {
                 max-width: 40%;
                 margin: 60px auto;
             }
@@ -112,7 +113,7 @@
             .step-two {
                 position: absolute;
                 right: 0;
-                top: calc(50% - 50px);
+                top: calc(50% - 100px);
                 width: 50%;
                 padding-left: 50px;
             }
