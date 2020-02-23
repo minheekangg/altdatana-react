@@ -15,7 +15,7 @@ class NavBar extends React.Component {
     render() {
         const { activeItem, mobileNavVisible } = this.state;
         return (
-            <nav class="sticky" id="navbar">
+            <nav className="sticky" id="navbar">
                 <Menu secondary id="primary-menu">
                     <Menu.Item
                         as={Link}
