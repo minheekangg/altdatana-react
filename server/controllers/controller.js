@@ -1,10 +1,10 @@
 var plaid = require("plaid");
 var moment = require("moment");
+require("dotenv").config();
 
 var PLAID_CLIENT_ID = process.env.PLAID_CLIENT_ID;
 var PLAID_SECRET = process.env.PLAID_SECRET;
 var PLAID_PUBLIC_KEY = process.env.PLAID_PUBLIC_KEY;
-console.log('inside controller', process.env.PLAID_CLIENT_ID);
 var PLAID_ENV = "sandbox";
 
 var ACCESS_TOKEN = null;

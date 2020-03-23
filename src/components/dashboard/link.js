@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlaidLink from "react-plaid-link";
+import { PlaidLink } from "react-plaid-link";
 import axios from "axios";
 
 class Link extends Component {
@@ -43,7 +43,7 @@ class Link extends Component {
                     onSuccess={this.handleOnSuccess}
                     className="test"
                 >
-                    Open Link and connect your bank!
+                Open Link and connect your bank!
                 </PlaidLink>
                 <div>
                     <button onClick={this.handleClick}>Get Transactions</button>
