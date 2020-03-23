@@ -35,6 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy":"http://localhost:4090",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -57,6 +58,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/minheekangg/altdatana-react/issues"
-  },
-  "proxy": "http://localhost:4090"
+  }
 }

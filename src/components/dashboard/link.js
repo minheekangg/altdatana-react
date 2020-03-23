@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { PlaidLink } from "react-plaid-link";
 import axios from "axios";
 
+const API = process.env.REACT_APP_API_ENDPOINT;
+console.log('api', API);
+
 class Link extends Component {
     constructor() {
         super();
@@ -15,7 +18,7 @@ class Link extends Component {
 
     handleOnSuccess(public_token, metadata) {
         // send token to client server
-        axios.post("/auth/public_token", {
+        axios.post(`${API}/auth/public_token`, {
             public_token: public_token
         });
     }
@@ -26,8 +29,10 @@ class Link extends Component {
     }
 
     handleClick(res) {
-        axios.get("/transactions").then(res => {
-            this.setState({ transactions: res.data });
+        axios.get(`${API}/transactions`).then(res => {
+            this.setState({ transactions: res.data }, ()=> {
+                console.log('state', this.state);
+            });
         });
     }
 

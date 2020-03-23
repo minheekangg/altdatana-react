@@ -9,6 +9,7 @@ const {
 
 app.use(express.json());
 
+
 // Get the public token and exchange it for an access token
 app.post("/auth/public_token", receivePublicToken);
 // Get Transactions
