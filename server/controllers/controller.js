@@ -21,20 +21,25 @@ var client = new plaid.Client(
     { version: "2019-05-29", clientApp: "Plaid Quickstart" }
 );
 
-const receivePublicToken = (req, res) => {
+const receivePublicToken = async (req, res) => {
     console.log('req', req.body);
-    // First, receive the public token and set it to a variable
-    let PUBLIC_TOKEN = req.body.public_token;
-    // Second, exchange the public token for an access token
-    client.exchangePublicToken(PUBLIC_TOKEN, function(error, tokenResponse) {
-        ACCESS_TOKEN = tokenResponse.access_token;
-        ITEM_ID = tokenResponse.item_id;
-        
-        res.json({
-            access_token: ACCESS_TOKEN,
-            item_id: ITEM_ID
+    try {
+        const { public_token } = req.body;
+        // First, receive the public token and set it to a variable
+        client.exchangePublicToken(public_token, function (error, tokenResponse) {
+        // Second, exchange the public token for an access token
+            ACCESS_TOKEN = tokenResponse.access_token;
+            ITEM_ID = tokenResponse.item_id;
+
+            res.json({
+                access_token: ACCESS_TOKEN,
+                item_id: ITEM_ID
+            });
         });
-    });
+    } catch (e) {
+        console.error(e);
+    }
+    
 };
 
 // const tokenExchange = async (req, res) => {
@@ -117,5 +122,5 @@ const getTransactions = (req, res, next) => {
 module.exports = {
     receivePublicToken,
     getTransactions,
-    tokenExchange
+    // tokenExchange
 };

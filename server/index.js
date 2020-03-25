@@ -34,14 +34,11 @@ var client = new plaid.Client(
 const {
     receivePublicToken,
     getTransactions,
-    tokenExchange
 } = require("./controllers/controller");
 
 // Get the public token and exchange it for an access token
 app.post("/auth/public_token", receivePublicToken);
 
-// test
-app.post("/plaid_token_exchange", tokenExchange);
 // Get Transactions
 app.get("/transactions", getTransactions);
 

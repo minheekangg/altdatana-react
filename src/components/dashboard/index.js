@@ -3,12 +3,14 @@ import React from 'react';
 import { connect } from "react-redux";
 
 import Link from './link';
+import DashboardMain from './dashboard-main';
 
 class Dashboard extends React.Component {
     render(){
         return (
             <div>
                 <Link />
+                <DashboardMain />
             </div>
         )
     }

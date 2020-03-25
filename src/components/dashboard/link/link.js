@@ -3,8 +3,6 @@ import { PlaidLink } from "react-plaid-link";
 import axios from "axios";
 
 const API = process.env.REACT_APP_API_ENDPOINT;
-console.log('api', API);
-
 const headers = {
     'Content-Type': 'application/json',
 }
@@ -28,13 +26,13 @@ class Link extends Component {
         axios(
             {
                 method: "POST",
-                url: "http://localhost:4090/auth/public_token",
+                url: `${API}/auth/public_token`,
                 data: param
             },
             headers
         )
         .then(success=>{
-            this.setState({authenticatedUser: true}, ()=> console.log('done', success))
+            this.setState({authenticatedUser: true})
         })
         .catch(err => {
             console.log("error", err);
@@ -47,6 +45,8 @@ class Link extends Component {
 
     handleClick(res) {
         axios.get(`${API}/transactions`).then(res => {
+            this.setState({ authenticatedUser: true })
+            console.log(res);
             this.props.fetchTransactions( res.data && res.data.transactions);
         });
     }
