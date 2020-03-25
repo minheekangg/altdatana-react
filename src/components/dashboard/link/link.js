@@ -14,7 +14,7 @@ class Link extends Component {
         super();
 
         this.state = {
-            transactions: []
+            authenticatedUser: false,
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -33,24 +33,21 @@ class Link extends Component {
             },
             headers
         )
-            .then(success => {
-                debugger;
-            })
-            .catch(err => {
-                console.log("error", err);
-            });
+        .then(success=>{
+            this.setState({authenticatedUser: true}, ()=> console.log('done', success))
+        })
+        .catch(err => {
+            console.log("error", err);
+        });
     }
 
     handleOnExit() {
-        // handle the case when your user exits Link
-        // For the sake of this tutorial, we're not going to be doing anything here.
+        // this.setState({authenticatedUser: false});
     }
 
     handleClick(res) {
         axios.get(`${API}/transactions`).then(res => {
-            this.setState({ transactions: res.data }, ()=> {
-                console.log('state', this.state);
-            });
+            this.props.fetchTransactions( res.data && res.data.transactions);
         });
     }
 
@@ -66,11 +63,11 @@ class Link extends Component {
                     onSuccess={this.handleOnSuccess}
                     className="test"
                 >
-                Open Link and connect your bank!
+                    Open Link and connect your bank!
                 </PlaidLink>
-                <div>
-                    <button onClick={this.handleClick}>Get Transactions</button>
-                </div>
+                <button onClick={this.handleClick}>
+                    Get Transactions
+                </button>
             </div>
         );
     }

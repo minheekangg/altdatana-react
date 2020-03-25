@@ -1,9 +1,10 @@
 import React from 'react';
 
+import { connect } from "react-redux";
+
 import Link from './link';
 
-
-export default class Dashboard extends React.Component {
+class Dashboard extends React.Component {
     render(){
         return (
             <div>
@@ -12,3 +13,9 @@ export default class Dashboard extends React.Component {
         )
     }
 }
+const mapStateToProps = (state, ownProps) => ({
+    dashboard: state.dashboard.transactions || [],
+    ...ownProps
+});
+
+export default connect(mapStateToProps)(Dashboard);
