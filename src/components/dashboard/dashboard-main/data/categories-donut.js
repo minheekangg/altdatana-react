@@ -3,6 +3,14 @@ import { Doughnut } from "react-chartjs-2";
 
 import { COLORS } from '../variables';
 
+const options= {
+        legend: {
+            display: true,
+            position: "bottom",
+            align: "start",
+        }
+    }
+
 function CategoriesDonut(props) {
 
     if (!props.data) {
@@ -11,7 +19,7 @@ function CategoriesDonut(props) {
     
     return (
         <div className="graph-container">
-            <Doughnut data={formatData(props.data)} />
+            <Doughnut data={formatData(props.data)} options={options} />
         </div>
     );
 }
