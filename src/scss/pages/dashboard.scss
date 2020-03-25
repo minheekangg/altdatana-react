@@ -1,7 +1,7 @@
-.recap-banner {
-    background-color: lavender;
+#recap-banner {
+    background-color: lavender!important;
     flex-basis: 100%;
-    padding: 50px 20px;
+    padding: 30px 20px;
     font-size: 18px;
     border-radius: 8px;
 
@@ -88,14 +88,9 @@
         -moz-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
         box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
-        .graph-container {
-            margin: 0 -10px;
-
-            canvas {
-                max-width: 100%;
-                height: auto;
-               
-            }
+        .recharts-wrapper { //piechart
+            text-align: center;
+            margin: -80px auto;
         }
         
         h3 {

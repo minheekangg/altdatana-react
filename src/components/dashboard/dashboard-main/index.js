@@ -16,7 +16,7 @@ export default class DashboardMain extends React.Component {
     render(){
         return (
             <div className="dashboard-main container">
-                <div className="recap-banner">
+                <div className="data-container" id="recap-banner">
                     During this month you spent <strong>$1000</strong>, which is <span>+15%</span> from last year.
                 </div>
                 <div className="box-fourty">
