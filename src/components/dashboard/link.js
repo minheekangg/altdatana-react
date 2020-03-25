@@ -5,6 +5,10 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_ENDPOINT;
 console.log('api', API);
 
+const headers = {
+    'Content-Type': 'application/json',
+}
+
 class Link extends Component {
     constructor() {
         super();
@@ -16,11 +20,22 @@ class Link extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleOnSuccess(public_token, metadata) {
+    handleOnSuccess(publicToken, metadata) {
         // send token to client server
-        axios.post(`${API}/auth/public_token`, {
-            public_token: public_token
-        });
+        console.log('header', headers);
+        const param = {
+            public_token: publicToken,
+            ...metadata
+        };
+        console.log('param', param);
+        axios(
+            {
+                method: "POST",
+                url: "http://localhost:4090/plaid_token_exchange",
+                data: param
+            },
+            headers
+        );
     }
 
     handleOnExit() {

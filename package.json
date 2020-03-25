@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "moment": "^2.24.0",
@@ -35,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy":"http://localhost:4090",
+  "proxy": "http://localhost:4090",
   "eslintConfig": {
     "extends": "react-app"
   },

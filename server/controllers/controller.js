@@ -5,7 +5,7 @@ require("dotenv").config();
 var PLAID_CLIENT_ID = process.env.PLAID_CLIENT_ID;
 var PLAID_SECRET = process.env.PLAID_SECRET;
 var PLAID_PUBLIC_KEY = process.env.PLAID_PUBLIC_KEY;
-console.log("env", PLAID_SECRET);
+
 var PLAID_ENV = "sandbox";
 
 var ACCESS_TOKEN = null;
@@ -22,23 +22,72 @@ var client = new plaid.Client(
 );
 
 const receivePublicToken = (req, res) => {
-    console.log('received', req);
+    console.log('received', res);
+    console.log('req', req.body);
     // First, receive the public token and set it to a variable
-    let PUBLIC_TOKEN = req.body.public_token;
-    console.log('public token is', req.body.public_token);
-    // Second, exchange the public token for an access token
-    client.exchangePublicToken(PUBLIC_TOKEN, function(error, tokenResponse) {
-        console.log('response', tokenResponse, 'error?', error )
-        ACCESS_TOKEN = tokenResponse.access_token;
-        ITEM_ID = tokenResponse.item_id;
-        res.json({
-            access_token: ACCESS_TOKEN,
-            item_id: ITEM_ID
-        });
-        console.log("access token below");
-        console.log(ACCESS_TOKEN);
-    });
+    // let PUBLIC_TOKEN = req.body.public_token;
+    // console.log('public token is', req.body.public_token);
+    // // Second, exchange the public token for an access token
+    // client.exchangePublicToken(PUBLIC_TOKEN, function(error, tokenResponse) {
+    //     console.log('response', tokenResponse, 'error?', error )
+    //     ACCESS_TOKEN = tokenResponse.access_token;
+    //     ITEM_ID = tokenResponse.item_id;
+    //     res.json({
+    //         access_token: ACCESS_TOKEN,
+    //         item_id: ITEM_ID
+    //     });
+    //     console.log("access token below");
+    //     console.log(ACCESS_TOKEN);
+    // });
 };
+
+const tokenExchange = async (req, res) => {
+    console.log('here', req);
+    try {
+        const { publicToken } = req.body;
+
+        const { access_token } = await client
+            .exchangePublicToken(publicToken)
+            .catch(console.error);
+
+        const { accounts, item } = await client
+            .getAccounts(access_token)
+            .catch(console.error);
+
+        const user = await User.findOne().exec();
+
+        const plaidItem = await new PlaidItem({
+            userId: user._id,
+            availableProducts: item.available_products,
+            billedProducts: item.billed_products,
+            institutionId: item.institution_id,
+            itemId: item.item_id,
+            webhook: item.webhook
+        }).save();
+
+        console.log({ user, plaidItem });
+
+        const savedAccounts = accounts.map(
+            async account =>
+                await new PlaidAccount({
+                    plaidItemId: plaidItem._id,
+                    accountId: account.account_id,
+                    mask: account.mask,
+                    balances: account.balances,
+                    name: account.name,
+                    officialName: account.official_name,
+                    subtype: account.subtype,
+                    type: account.type
+                }).save()
+        );
+
+        console.log({
+            savedAccounts
+        });
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 const getTransactions = (req, res, next) => {
     // Pull transactions for the last 30 days
@@ -57,20 +106,21 @@ const getTransactions = (req, res, next) => {
             offset: 0
         },
         function(error, transactionsResponse) {
-            res.json({ transactions: transactionsResponse });
+            if (error) {
+                console.log('error', error);
+                return next;
+            }
+            
             // TRANSACTIONS LOGGED BELOW!
             // They will show up in the terminal that you are running nodemon in.
             console.log('success', transactionsResponse);
-
-            if (error) {
-                console.log('error', error);
-                next;
-            }
+            res.json({ transactions: transactionsResponse });
         }
     );
 };
 
 module.exports = {
     receivePublicToken,
-    getTransactions
+    getTransactions,
+    tokenExchange
 };

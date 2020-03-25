@@ -18,7 +18,6 @@ class App extends Component {
             <Route exact path={`${ROUTE_ROOT}/`} render={() => <Redirect to={`${ROUTE_ROOT}/welcome`} />} />
             <Route exact path={`${ROUTE_ROOT}/welcome`} component={Welcome} />
             <Route exact path={`${ROUTE_ROOT}/about`} component={About} />
-            {/* <Route exact path="/how-it-works" component={HowItWorks} /> */}
             <Route exact path={`${ROUTE_ROOT}/products`} component={Products} />
             <Route exact path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
           </Switch>
