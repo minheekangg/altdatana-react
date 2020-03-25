@@ -1,6 +1,8 @@
 import React from 'react';
 import {response} from './response';
 
+import CategoriesDonut from "./data/categories-donut";
+
 export default class DashboardMain extends React.Component {
     constructor(props) {
         super(props);
@@ -11,8 +13,10 @@ export default class DashboardMain extends React.Component {
 
     render(){
         console.log('inside dashboard main transaction is', this.state.transactions);
-        return <div className="dashboard container">
-            dashboard goes here
-        </div>
+        return (
+            <div className="dashboard container">
+                <CategoriesDonut />
+            </div>
+        );
     }
 }
