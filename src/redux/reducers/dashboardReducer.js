@@ -8,10 +8,11 @@ export default function dashboardReducer(state = initialState, action) {
     console.log('%c userReducer', 'color: yellow', state, action);
     switch (action.type) {
         case ActionTypes.FETCH_TRANSACTIONS: {
-            debugger
+            const {transactions, ...info} = action.payload;
             return {
                 ...state,
-                transactions: action.payload,
+                transactions,
+                info
             }
         }
         case ActionTypes.RESET:
