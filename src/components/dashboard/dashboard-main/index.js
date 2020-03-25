@@ -11,6 +11,8 @@ export default class DashboardMain extends React.Component {
 
     render(){
         console.log('inside dashboard main transaction is', this.state.transactions);
-        return <div>Dashboard goes here</div>
+        return <div className="dashboard container">
+            dashboard goes here
+        </div>
     }
 }
