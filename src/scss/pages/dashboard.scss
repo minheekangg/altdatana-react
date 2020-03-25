@@ -32,6 +32,10 @@
         flex-basis: 48%;
         background-color: white;
 
+        -webkit-box-shadow: 3px 10px 5px 0px rgba(163,161,163,0.66);
+        -moz-box-shadow: 3px 10px 5px 0px rgba(163,161,163,0.66);
+        box-shadow: 3px 10px 5px 0px rgba(163,161,163,0.66);
+
         .graph-container {
             margin: 0 -30px;
 
