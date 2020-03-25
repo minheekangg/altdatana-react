@@ -20,16 +20,40 @@
     }
 }
 
+.btn-subtle {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover { transform: scale(.9)}
+    &:focus {outline:0;}
+}
+
 .dashboard-main {
     // border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
+    .box-sixty {
+        flex-basis: 58%;
+    }
+    .box-eighty {
+        flex-basis: 78%;
+    }
+    .box-half {
+        flex-basis: 48%;
+    }
+    .box-fourty {
+        flex-basis: 38%;
+    }
+    .box-twenty {
+        flex-basis: 18%;
+    }
+
     .data-container {
         padding: 30px;
         margin: 10px 0;
-        flex-basis: 48%;
         background-color: white;
 
         -webkit-box-shadow: 3px 10px 5px 0px rgba(163,161,163,0.66);
@@ -37,7 +61,7 @@
         box-shadow: 3px 10px 5px 0px rgba(163,161,163,0.66);
 
         .graph-container {
-            margin: 0 -30px;
+            margin: 0 -10px;
 
             canvas {
                 max-width: 100%;

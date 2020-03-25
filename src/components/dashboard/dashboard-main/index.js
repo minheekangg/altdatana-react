@@ -16,13 +16,23 @@ export default class DashboardMain extends React.Component {
     render(){
         return (
             <div className="dashboard-main container">
-                <div className="data-container">
-                    <h3>Total Spending</h3>
-                    <p>description of categories</p>
-                    <CategoriesDonut data={altData} />
-                    <List data={altData} />
+                <div className="box-fourty">
+                    <div className="data-container">
+                        <h3>Largest Spending</h3>
+                        <p>Restaurants</p>
+                        <p>$</p>
+                    </div>
+                    <div className="data-container">
+                        <h3>Smallest Expense</h3>
+                        <p>Sporting Goods</p>
+                        <p>$</p>
+                    </div>
+                    <div className="data-container">
+                        <h3>Largest Spending</h3>
+                        <p>Restaurants</p>
+                    </div>
                 </div>
-                <div className="data-container">
+                <div className="data-container box-sixty">
                     <h3>Total Spending</h3>
                     <p>description of categories</p>
                     <CategoriesDonut data={altData} />
