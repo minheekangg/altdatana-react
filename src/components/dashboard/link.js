@@ -22,20 +22,23 @@ class Link extends Component {
 
     handleOnSuccess(publicToken, metadata) {
         // send token to client server
-        console.log('header', headers);
         const param = {
-            public_token: publicToken,
-            ...metadata
+            public_token: publicToken
         };
-        console.log('param', param);
         axios(
             {
                 method: "POST",
-                url: "http://localhost:4090/plaid_token_exchange",
+                url: "http://localhost:4090/auth/public_token",
                 data: param
             },
             headers
-        );
+        )
+            .then(success => {
+                debugger;
+            })
+            .catch(err => {
+                console.log("error", err);
+            });
     }
 
     handleOnExit() {
