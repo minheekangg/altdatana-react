@@ -10,7 +10,6 @@ const options = {
         align: "start"
     },
     responsive: true,
-    // maintainAspectRatio: false
 };
 
 

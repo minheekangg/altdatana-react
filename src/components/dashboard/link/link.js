@@ -53,7 +53,7 @@ class Link extends Component {
 
     render() {
         return (
-            <div>
+            <div className="plaid-buttons">
                 <PlaidLink
                     clientName="React Plaid Setup"
                     env="sandbox"
@@ -63,10 +63,10 @@ class Link extends Component {
                     onSuccess={this.handleOnSuccess}
                     className="test"
                 >
-                    Open Link and connect your bank!
+                    Plaid
                 </PlaidLink>
                 <button onClick={this.handleClick}>
-                    Get Transactions
+                    +
                 </button>
             </div>
         );

@@ -15,7 +15,7 @@ export default class DashboardMain extends React.Component {
 
     render(){
         return (
-            <div className="dashboard container">
+            <div className="dashboard-main container">
                 <div className="data-container">
                     <h3>Total Spending</h3>
                     <p>description of categories</p>

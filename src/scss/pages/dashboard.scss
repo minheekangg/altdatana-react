@@ -1,13 +1,36 @@
-.dashboard {
-    border: 1px solid red;
+.plaid-buttons {
+    text-align: right;
+    padding: 10px 50px 0;
+
+    button {
+        width: 100px;
+        margin: 0 10px;
+        height: 30px;
+        padding: 6px 4px;
+        outline: none;
+        background: rgb(255, 255, 255);
+        border: 2px solid rgb(241, 241, 241);
+        border-radius: 4px;
+        cursor: pointer;
+        pointer-events: all;
+
+        &:hover {
+            background-color: darken(rgb(255, 255, 255),10);
+        }
+    }
+}
+
+.dashboard-main {
+    // border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     .data-container {
-        border: 1px solid blue;
         padding: 30px;
-        flex-basis: 50%;
+        margin: 10px 0;
+        flex-basis: 48%;
+        background-color: white;
 
         .graph-container {
             margin: 0 -30px;
@@ -19,7 +42,6 @@
             }
         }
         
-
         h3 {
             font-size: 20px;
         }
