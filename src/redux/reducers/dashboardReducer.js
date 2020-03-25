@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export default function dashboardReducer(state = initialState, action) {
-    console.log('%c userReducer', 'color: yellow', state, action);
+    // console.log('%c userReducer', 'color: yellow', state, action); 
     switch (action.type) {
         case ActionTypes.FETCH_TRANSACTIONS: {
             const {transactions, ...info} = action.payload;
