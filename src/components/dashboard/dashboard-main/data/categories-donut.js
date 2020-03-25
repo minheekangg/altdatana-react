@@ -3,13 +3,15 @@ import { Doughnut } from "react-chartjs-2";
 
 import { COLORS } from '../variables';
 
-const options= {
-        legend: {
-            display: true,
-            position: "bottom",
-            align: "start",
-        }
-    }
+const options = {
+    legend: {
+        display: true,
+        position: "bottom",
+        align: "start"
+    },
+    responsive: true,
+    maintainAspectRatio: false
+};
 
 function CategoriesDonut(props) {
 

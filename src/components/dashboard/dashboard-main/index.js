@@ -22,6 +22,18 @@ export default class DashboardMain extends React.Component {
                     <CategoriesDonut data={altData} />
                     <List data={altData} />
                 </div>
+                <div className="data-container">
+                    <h3>Total Spending</h3>
+                    <p>description of categories</p>
+                    <CategoriesDonut data={altData} />
+                    <List data={altData} />
+                </div>
+                <div className="data-container">
+                    <h3>Total Spending</h3>
+                    <p>description of categories</p>
+                    <CategoriesDonut data={altData} />
+                    <List data={altData} />
+                </div>
             </div>
         );
     }

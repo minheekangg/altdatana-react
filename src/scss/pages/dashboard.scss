@@ -1,6 +1,8 @@
 .dashboard {
     border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .data-container {
         border: 1px solid blue;
@@ -21,6 +23,21 @@
         }
         p {
             font-size: 16px;
+        }
+
+    }
+    @media screen and (max-width: 800px) {
+        .data-container {
+            flex-basis: 100%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .data-container {
+            padding: 30px 0;
+            .graph-container { margin: 0;}
+            .chartjs-render-monitor{
+                height: 300px !important;
+            }
         }
     }
 }
