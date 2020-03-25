@@ -1,3 +1,26 @@
 .dashboard {
     border: 1px solid red;
+    // display: flex;
+
+    .data-container {
+        border: 1px solid blue;
+        padding: 30px;
+        max-width: 50%;
+
+        .graph-container {
+            margin: 0 -30px;
+        }
+        
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
 }

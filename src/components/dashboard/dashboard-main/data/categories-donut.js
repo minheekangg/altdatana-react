@@ -11,8 +11,6 @@ function CategoriesDonut(props) {
     
     return (
         <div className="graph-container">
-            <h3>Total Spending</h3>
-            <p>description of categories</p>
             <Doughnut data={formatData(props.data)} />
         </div>
     );
