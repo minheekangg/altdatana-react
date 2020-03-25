@@ -11,12 +11,14 @@
 
         .graph-container {
             margin: 0 -30px;
+
+            canvas {
+                max-width: 100%;
+                height: auto;
+               
+            }
         }
         
-        canvas {
-            max-width: 100%;
-            height: auto;
-        }
 
         h3 {
             font-size: 20px;
