@@ -1,11 +1,11 @@
 .dashboard {
     border: 1px solid red;
-    // display: flex;
+    display: flex;
 
     .data-container {
         border: 1px solid blue;
         padding: 30px;
-        max-width: 50%;
+        flex-basis: 50%;
 
         .graph-container {
             margin: 0 -30px;

@@ -45,5 +45,5 @@ export const CATEGORIES_ICON = {
            gyms: "heart",
            payment: "check square outline",
            restaurants: "utensils",
-           sportrs: "trophy"
+           sports: "trophy"
        };
