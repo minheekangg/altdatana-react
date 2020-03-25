@@ -22,3 +22,28 @@ export const COLORS = {
            sevenOfEightHover: "#E6632A",
            eightOfEightHover: "#CD4A11"
        };
+
+
+export const CATEGORIES = {
+           "Airlines and Aviation Services": "airlines",
+           "Car Service": "car",
+           "Credit Card": "credit",
+           Debit: "debit",
+           Deposit: "deposit",
+           "Gyms and Fitness Centers": "gyms",
+           Payment: "payment",
+           Restaurants: "restaurants",
+           "Sporting Goods": "sports"
+       };
+
+export const CATEGORIES_ICON = {
+           airlines: "plane",
+           car: "car",
+           credit: "credit card",
+           debit: "money",
+           deposit: "money bill alternate outline",
+           gyms: "heart",
+           payment: "check square outline",
+           restaurants: "utensils",
+           sportrs: "trophy"
+       };

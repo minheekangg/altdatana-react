@@ -1,36 +1,35 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
-import {COLORS} from '../variables';
+import { COLORS } from '../variables';
 
 function CategoriesDonut(props) {
 
     if (!props.data) {
         return <div>nothing</div>
     }
+    
     return (
-        <div>
-            <h3>Categories</h3>
+        <div className="graph-container">
+            <h3>Total Spending</h3>
             <p>description of categories</p>
-            <Doughnut data={formatData(props)} />
+            <Doughnut data={formatData(props.data)} />
         </div>
     );
 }
 
 export default CategoriesDonut;
 
-const formatData = ({data}) => {
-    console.log('props are', data)
+const formatData = (input) => {
 
-    const labels = data.map(d=> {
-        return d.name
-    })
+    const labels = Object.keys(input);
+    const data = Object.values(input);
 
     return {
         labels,
         datasets: [
             {
-                data: [300, 50, 100, 300, 40, 20, 1, 90],
+                data,
                 backgroundColor: [
                     COLORS.oneOfEight,
                     COLORS.twoOfEight,
@@ -52,8 +51,7 @@ const formatData = ({data}) => {
                     COLORS.eightOfEightHover
                 ]
             }
-        ],
-        
+        ]
     };
 
 }

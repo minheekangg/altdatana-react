@@ -2,6 +2,19 @@
 // import React from 'react';
 // import DashboardMain from "./dashboard-main";
 
+export const altData = {
+    Debit: 28966.53,
+    Deposit: 22019.66,
+    Restaurants: 51338.19,
+    "Car Service": 18221.78,
+    "Sporting Goods": 10721.83,
+    Payment: 10767.37,
+    "Airlines and Aviation Services": 20675.22,
+    "Credit Card": 11270.72,
+    "Gyms and Fitness Centers": 12158.46
+};
+
+
 export const response = {
     accounts: [
         {
