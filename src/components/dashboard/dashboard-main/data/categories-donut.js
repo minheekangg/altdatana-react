@@ -112,24 +112,26 @@ export default class CategoriesDonut extends React.Component {
             return <div>nothing to see</div>
         }
         return (
-            <PieChart width={400} height={400}>
-                <Pie
-                    activeIndex={this.state.activeIndex}
-                    activeShape={renderActiveShape}
-                    data={this.state.data}
-                    cx={200}
-                    cy={200}
-                    innerRadius={100}
-                    outerRadius={120}
-                    fill="#8884d8"
-                    dataKey="value"
-                    onMouseEnter={this.onPieEnter}
-                >
-                    {
-                        this.state.data.map((entry, index) => <Cell fill={COLOR_ARR[index]} />)
-                    }
-                </Pie>
-            </PieChart>
+            <div className="data-pie">
+                <PieChart width={400} height={400}>
+                    <Pie
+                        activeIndex={this.state.activeIndex}
+                        activeShape={renderActiveShape}
+                        data={this.state.data}
+                        cx={200}
+                        cy={200}
+                        innerRadius={100}
+                        outerRadius={120}
+                        fill="#8884d8"
+                        dataKey="value"
+                        onMouseEnter={this.onPieEnter}
+                    >
+                        {
+                            this.state.data.map((entry, index) => <Cell fill={COLOR_ARR[index]} />)
+                        }
+                    </Pie>
+                </PieChart>
+            </div>
         );
     }
 }

@@ -88,10 +88,17 @@
         -moz-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
         box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
-        .recharts-wrapper { //piechart
-            text-align: center;
-            margin: -80px auto;
+        .recharts-wrapper {
+            margin: auto;
         }
+
+        .data-pie {
+            .recharts-wrapper { //piechart
+                text-align: center;
+                margin: -80px auto;
+            }
+        }
+
         
         h3 {
             font-size: 20px;

@@ -3,6 +3,7 @@ import { Progress } from "semantic-ui-react";
 
 import { response, altData } from "./response";
 import CategoriesDonut from "./data/categories-donut";
+import BarChart from "./data/barchart";
 import List from './data/list';
 
 export default class DashboardMain extends React.Component {
@@ -39,16 +40,16 @@ export default class DashboardMain extends React.Component {
                         <Progress percent={99} progress />
                     </div>
                 </div>
-                <div className="data-container box-sixty">
+                <div className="data-container box-sixty" style={{height:'100%'}}>
                     <h3>Total Spending</h3>
                     <p>description of categories</p>
                     <CategoriesDonut data={altData} />
                     <List data={altData} />
                 </div>
-                <div className="data-container">
+                <div className="data-container box-full">
                     <h3>Total Spending</h3>
                     <p>description of categories</p>
-                   
+                    <BarChart />
                 </div>
             </div>
         );
