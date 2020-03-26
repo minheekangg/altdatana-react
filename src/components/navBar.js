@@ -10,7 +10,7 @@ class NavBar extends React.Component {
         mobileNavVisible: false,
     }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name, mobileNavVisible: false })
 
     render() {
         const { activeItem, mobileNavVisible } = this.state;
@@ -80,57 +80,57 @@ class NavBar extends React.Component {
                     </Menu.Menu>
                 </Menu>
 
-                <Sidebar.Pushable as={Segment}>
-                    <Sidebar
-                        as={Menu}
-                        animation="overlay"
-                        icon="labeled"
-                        inverted
-                        vertical
-                        direction="right"
-                        visible={mobileNavVisible}
-                        width="thin"
-                    >
-                        <Menu.Item
-                            as={Link}
-                            to={`${ROUTE_ROOT}/about`}
-                            name="about"
-                            active={activeItem === "about"}
-                            onClick={this.handleItemClick}
-                        />
-                        <Menu.Item
-                            as={Link}
-                            to={`${ROUTE_ROOT}/products`}
-                            name="products"
-                            active={activeItem === "products"}
-                            onClick={this.handleItemClick}
-                        />
-                        <Menu.Item
-                            as={Link}
-                            to={`${ROUTE_ROOT}/dashboard`}
-                            name="dashboard"
-                            active={activeItem === "dashboard"}
-                            onClick={this.handleItemClick}
-                        />
-                        <Menu.Item
-                            name="login"
-                            active={activeItem === "login"}
-                            onClick={this.handleItemClick}
-                        />
-                        <Menu.Item
-                            name="signup"
-                            active={activeItem === "signup"}
-                            onClick={this.handleItemClick}
-                        />
-                    </Sidebar>
+                <div className="mobile-nav">
+                        <Sidebar
+                            as={Menu}
+                            animation="overlay"
+                            icon="labeled"
+                            inverted
+                            vertical
+                            direction="right"
+                            visible={mobileNavVisible}
+                            width="very wide"
+                        >
+                            <Menu.Item
+                                as={Link}
+                                to={`${ROUTE_ROOT}/about`}
+                                name="about"
+                                active={activeItem === "about"}
+                                onClick={this.handleItemClick}
+                            />
+                            <Menu.Item
+                                as={Link}
+                                to={`${ROUTE_ROOT}/products`}
+                                name="products"
+                                active={activeItem === "products"}
+                                onClick={this.handleItemClick}
+                            />
+                            <Menu.Item
+                                as={Link}
+                                to={`${ROUTE_ROOT}/dashboard`}
+                                name="dashboard"
+                                active={activeItem === "dashboard"}
+                                onClick={this.handleItemClick}
+                            />
+                            <Menu.Item
+                                name="login"
+                                active={activeItem === "login"}
+                                onClick={this.handleItemClick}
+                            />
+                            <Menu.Item
+                                name="signup"
+                                active={activeItem === "signup"}
+                                onClick={this.handleItemClick}
+                            />
+                        </Sidebar>
 
-                    <Sidebar.Pusher
-                        dimmed={mobileNavVisible}
-                        onClick={() =>
-                            this.setState({ mobileNavVisible: false })
-                        }
-                    ></Sidebar.Pusher>
-                </Sidebar.Pushable>
+                        <Sidebar.Pusher
+                            dimmed={mobileNavVisible}
+                            onClick={() =>
+                                this.setState({ mobileNavVisible: false })
+                            }
+                        ></Sidebar.Pusher>
+                    </div>
             </nav>
         );
     }
