@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResponsiveContainer, RadialBar, RadialBarChart, Legend, Tooltip } from 'recharts';
+import { ResponsiveContainer, RadialBar, RadialBarChart, Tooltip } from 'recharts';
 
 const data = [
     { uv: 100, fill: '#ffff00' },
