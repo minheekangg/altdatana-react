@@ -8,7 +8,7 @@ import DashboardMain from './dashboard-main';
 class Dashboard extends React.Component {
     render(){
         return (
-            <div className="dashboard bg-grey">
+            <div className="bg-grey" id="dashboard">
                 <Link />
                 <DashboardMain />
             </div>
