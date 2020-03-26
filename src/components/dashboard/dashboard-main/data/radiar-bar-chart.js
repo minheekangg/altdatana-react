@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResponsiveContainer, RadialBar, RadialBarChart, Legend } from 'recharts';
+import { ResponsiveContainer, RadialBar, RadialBarChart, Legend, Tooltip } from 'recharts';
 
 const data = [
     { uv: 100, fill: '#ffff00' },
@@ -8,11 +8,16 @@ const data = [
 ];
 const SimpleRadialBarChart = () => {
     return (
-        <ResponsiveContainer width={200} height={200}>
-            <RadialBarChart className="radial" cx="50%" cy="50%" innerRadius='20%' outerRadius="80%" data={data}>
-                <RadialBar minAngle={15} background clockWise={true} dataKey='uv' />
-            </RadialBarChart>
-        </ResponsiveContainer>
+        <div className="data-radiar-bar">
+            <ResponsiveContainer width={200} height={200}>
+                <RadialBarChart className="radial" cx="50%" cy="50%" innerRadius='20%' outerRadius="80%" data={data}>
+                    <RadialBar minAngle={15} background clockWise={true} dataKey='uv' />
+                    <Tooltip/>
+                </RadialBarChart>
+            </ResponsiveContainer>
+            <p style={{marginBottom: '10px'}}>Category</p>
+            <p style={{marginBottom: '30px'}}>Category</p>
+        </div>
     );
 };
 
