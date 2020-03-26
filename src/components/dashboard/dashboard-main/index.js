@@ -25,19 +25,19 @@ export default class DashboardMain extends React.Component {
                     <div className="data-container stat-card">
                         <h3>Largest Spending</h3>
                         <p>Restaurants</p>
-                        <p>$51,338</p>
-                        <Progress percent={44} progress />
+                        <p className="money">$51,338</p>
+                        <Progress percent={44} progress color="blue"/>
                     </div>
                     <div className="data-container stat-card">
                         <h3>Smallest Spending</h3>
                         <p>Sporting Goods</p>
-                        <p>$12,158</p>
-                        <Progress percent={10} progress />
+                        <p className="money">$12,158</p>
+                        <Progress percent={10} progress color="yellow" />
                     </div>
                     <div className="data-container stat-card">
                         <h3>One more Spending</h3>
                         <p>Sporting Goods</p>
-                        <p>$12,158</p>
+                        <p className="money">$12,158</p>
                         <Progress percent={99} progress />
                     </div>
                 </div>
@@ -60,6 +60,9 @@ export default class DashboardMain extends React.Component {
                     </div>
                 </div>
                 <div className="data-container box-full">
+                    <h3>Total Spending</h3>
+                    <p>description of categories</p>
+                    <BarChart />
                     <h3>Total Spending</h3>
                     <p>description of categories</p>
                     <BarChart />
