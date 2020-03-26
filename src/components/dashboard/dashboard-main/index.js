@@ -3,7 +3,8 @@ import { Progress } from "semantic-ui-react";
 
 import { response, altData } from "./response";
 import CategoriesDonut from "./data/categories-donut";
-import BarChart from "./data/barchart";
+import BarChart from "./data/bar-chart";
+import RadiarBarChart from './data/radiar-bar-chart';
 import List from './data/list';
 
 export default class DashboardMain extends React.Component {
@@ -45,6 +46,18 @@ export default class DashboardMain extends React.Component {
                     <p>description of categories</p>
                     <CategoriesDonut data={altData} />
                     <List data={altData} />
+                </div>
+                <div className="data-container box-full">
+                    <h3>TY/LY Spending</h3>
+                    <p>description of categories</p>
+                    <div className="inline-charts">
+                        <RadiarBarChart />
+                        <RadiarBarChart />
+                        <RadiarBarChart />
+                        <RadiarBarChart />
+                        <RadiarBarChart />
+                        <RadiarBarChart />
+                    </div>
                 </div>
                 <div className="data-container box-full">
                     <h3>Total Spending</h3>
