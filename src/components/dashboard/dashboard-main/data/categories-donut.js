@@ -1,6 +1,6 @@
 import React from "react";
-import { PieChart, Pie, Sector } from "recharts";
-
+import { PieChart, Pie, Sector, Cell } from "recharts";
+import { COLOR_ARR } from '../variables';
 /*
 expected data format: 
 
@@ -39,8 +39,14 @@ const renderActiveShape = props => {
 
     return (
         <g>
-            <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+            <text x={cx} y={cy-20} dy={8} textAnchor="middle" fill={fill}>
                 {payload.name}
+            </text>
+            <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+                {value}
+            </text>
+            <text x={cx} y={cy+20} dy={8} textAnchor="middle" fill={fill}>
+                {`(${(percent * 100).toFixed(2)}%)`}
             </text>
             <Sector
                 cx={cx}
@@ -60,7 +66,7 @@ const renderActiveShape = props => {
                 outerRadius={outerRadius + 10}
                 fill={fill}
             />
-            <path
+            {/* <path
                 d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
                 stroke={fill}
                 fill="none"
@@ -80,7 +86,7 @@ const renderActiveShape = props => {
                 fill="#999"
             >
                 {`(Rate ${(percent * 100).toFixed(2)}%)`}
-            </text>
+            </text> */}
         </g>
     );
 };
@@ -113,12 +119,16 @@ export default class CategoriesDonut extends React.Component {
                     data={this.state.data}
                     cx={200}
                     cy={200}
-                    innerRadius={60}
-                    outerRadius={80}
+                    innerRadius={100}
+                    outerRadius={120}
                     fill="#8884d8"
                     dataKey="value"
                     onMouseEnter={this.onPieEnter}
-                />
+                >
+                    {
+                        this.state.data.map((entry, index) => <Cell fill={COLOR_ARR[index]} />)
+                    }
+                </Pie>
             </PieChart>
         );
     }
