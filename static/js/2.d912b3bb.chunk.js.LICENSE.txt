@@ -1,3 +1,15 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+  Copyright (c) 2015 Jed Watson.
+  Based on code that is Copyright 2013-2015, Facebook, Inc.
+  All rights reserved.
+*/
+
 /*!
   Copyright (c) 2017 Jed Watson.
   Licensed under the MIT License (MIT), see
@@ -5,12 +17,12 @@
 */
 
 /*!
- * ScrollMagic v2.0.5 (2015-04-29)
+ * ScrollMagic v2.0.7 (2019-05-07)
  * The javascript library for magical scroll interactions.
- * (c) 2015 Jan Paepke (@janpaepke)
+ * (c) 2019 Jan Paepke (@janpaepke)
  * Project Website: http://scrollmagic.io
- *
- * @version 2.0.5
+ * 
+ * @version 2.0.7
  * @license Dual licensed under MIT license and GPL.
  * @author Jan Paepke - e-mail@janpaepke.de
  *
@@ -18,19 +30,7 @@
  */
 
 /*!
- * VERSION: 2.0.2
- * DATE: 2018-08-27
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- *
- * @author: Jack Doyle, jack@greensock.com
- */
-
-/*!
- * VERSION: 2.0.2
+ * VERSION: 0.3.1
  * DATE: 2018-08-27
  * UPDATES AND DOCS AT: http://greensock.com
  *
@@ -40,18 +40,6 @@
  * 
  * @author: Jack Doyle, jack@greensock.com
  **/
-
-/*!
- * VERSION: 2.0.2
- * DATE: 2018-08-27
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- * 
- * @author: Jack Doyle, jack@greensock.com
- */
 
 /*!
  * VERSION: 0.6.1
@@ -66,7 +54,19 @@
  */
 
 /*!
- * VERSION: 0.3.1
+ * VERSION: 0.6.2
+ * DATE: 2018-05-30
+ * UPDATES AND DOCS AT: http://greensock.com
+ *
+ * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
+ * This work is subject to the terms at http://greensock.com/standard-license or for
+ * Club GreenSock members, the software agreement that was issued with your membership.
+ *
+ * @author: Jack Doyle, jack@greensock.com
+ */
+
+/*!
+ * VERSION: 1.16.1
  * DATE: 2018-08-27
  * UPDATES AND DOCS AT: http://greensock.com
  *
@@ -90,7 +90,19 @@
  **/
 
 /*!
- * VERSION: 1.16.1
+ * VERSION: 2.0.2
+ * DATE: 2018-08-27
+ * UPDATES AND DOCS AT: http://greensock.com
+ *
+ * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
+ * This work is subject to the terms at http://greensock.com/standard-license or for
+ * Club GreenSock members, the software agreement that was issued with your membership.
+ *
+ * @author: Jack Doyle, jack@greensock.com
+ */
+
+/*!
+ * VERSION: 2.0.2
  * DATE: 2018-08-27
  * UPDATES AND DOCS AT: http://greensock.com
  *
@@ -102,42 +114,20 @@
  **/
 
 /*!
- * VERSION: 0.6.2
- * DATE: 2018-05-30
+ * VERSION: 2.0.2
+ * DATE: 2018-08-27
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
- *
+ * 
  * @author: Jack Doyle, jack@greensock.com
  */
 
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
+/*! decimal.js-light v2.5.0 https://github.com/MikeMcl/decimal.js-light/LICENCE */
 
-/** @license React v16.12.0
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/** @license React v16.12.0
- * react-dom.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/** @license React v0.18.0
+/** @license React v0.19.1
  * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -146,14 +136,26 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/*!
-  Copyright (c) 2015 Jed Watson.
-  Based on code that is Copyright 2013-2015, Facebook, Inc.
-  All rights reserved.
-*/
+/** @license React v16.13.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-/** @license React v16.12.0
+/** @license React v16.13.1
  * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
