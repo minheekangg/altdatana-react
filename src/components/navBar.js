@@ -41,6 +41,13 @@ class NavBar extends React.Component {
                         active={activeItem === "products"}
                         onClick={this.handleItemClick}
                     />
+                    <Menu.Item
+                        as={Link}
+                        to={`${ROUTE_ROOT}/dashboard`}
+                        name="dashboard"
+                        active={activeItem === "dashboard"}
+                        onClick={this.handleItemClick}
+                    />
                     <Menu.Menu position="right">
                         <Menu.Item
                             name="logout"
@@ -96,6 +103,13 @@ class NavBar extends React.Component {
                             to={`${ROUTE_ROOT}/products`}
                             name="products"
                             active={activeItem === "products"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            as={Link}
+                            to={`${ROUTE_ROOT}/dashboard`}
+                            name="dashboard"
+                            active={activeItem === "dashboard"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
