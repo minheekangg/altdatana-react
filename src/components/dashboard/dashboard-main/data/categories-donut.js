@@ -82,9 +82,14 @@ const renderActiveShape = props => {
 };
 
 export default class CategoriesDonut extends React.Component {
-    state = {
-        activeIndex: 0
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeIndex: 0,
+            data: props && formatProps(props),
+        };
+    }
+    
 
     onPieEnter = (data, index) => {
         this.setState({
@@ -93,12 +98,15 @@ export default class CategoriesDonut extends React.Component {
     };
 
     render() {
+        if (!this.state.data || this.state.data.length <1) {
+            return <div>nothing to see</div>
+        }
         return (
             <PieChart width={400} height={400}>
                 <Pie
                     activeIndex={this.state.activeIndex}
                     activeShape={renderActiveShape}
-                    data={data}
+                    data={this.state.data}
                     cx={200}
                     cy={200}
                     innerRadius={60}
@@ -110,4 +118,17 @@ export default class CategoriesDonut extends React.Component {
             </PieChart>
         );
     }
+}
+
+const formatProps = ({data}) => {
+    const result = [];
+
+    Object.keys(data).map((key) => {
+        let obj = {};
+        obj.name = key;
+        obj.value = data[key];
+        return result.push(obj)
+    });
+
+    return result;
 }
