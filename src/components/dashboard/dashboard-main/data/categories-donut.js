@@ -1,12 +1,16 @@
 import React from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
+/*
+expected data format: 
+
 const data = [
     { name: "Group A", value: 400 },
     { name: "Group B", value: 300 },
     { name: "Group C", value: 300 },
     { name: "Group D", value: 200 }
 ];
+*/
 
 const renderActiveShape = props => {
     const RADIAN = Math.PI / 180;
