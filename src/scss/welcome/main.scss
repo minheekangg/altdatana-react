@@ -110,8 +110,38 @@
 
         h3 {
             font-size: 40px;
-
+            margin-bottom:0;
         }
+
+        ul{
+            list-style: none;
+            padding-left: 10px;
+
+            li {
+                cursor: pointer;
+            }
+
+            i {
+                font-size: 30px;
+                margin-right: 10px;
+            }
+
+            p {
+                margin: 10px;
+
+                
+            }
+
+            li.open p{
+                    opacity: 1;
+                    height: auto;
+                }
+            li.closed p{
+                opacity:0;
+                height: 0;
+            }
+        }
+
         @media screen and (max-width: 900px) {
             .container {
                 max-width: 600px;

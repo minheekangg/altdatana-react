@@ -1,6 +1,5 @@
 import React from 'react';
 import tempimg from '../../images/temp.png';
-import { Button } from 'semantic-ui-react';
 
 export default class Intro extends React.Component {
     render() {
