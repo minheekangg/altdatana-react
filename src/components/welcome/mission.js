@@ -5,10 +5,10 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
 export default class Mission extends React.Component {
-    state = { openOne: false, openTwo: false }
+    state = { openOne: false, openTwo: false, openThree : false }
     
     render() {
-        const { openOne, openTwo } = this.state
+        const { openOne, openTwo, openThree } = this.state
         return (
             <section className="mission" >
                 <div className="container tight">
@@ -73,27 +73,30 @@ export default class Mission extends React.Component {
                                         <li onClick={() => this.setState({openOne: !openOne})} className={openOne ? 'open' : 'closed'}>
                                             <h3>
                                                 <Icon name={openOne ? 'minus circle' : 'plus circle'} />
-                                                Moral Lending</h3>
+                                                Borrower Behavioral Analysis</h3>
                                             <p>
-                                                No more triple-digit APR for emergency advances
-                                                and financing. Everyone faces cash flow issues,
-                                                and we are here to provide support without
-                                                impossible commitments.
+                                                Analyze your borrower’s payment history to predict their creditworthiness.
                                             </p>
                                         </li>
                                         <li onClick={() => this.setState({ openTwo: !openTwo })} className={openTwo ? 'open' : 'closed'}>
                                             
                                             <h3> 
                                                 <Icon name={openTwo ? 'minus circle' : 'plus circle'}  />
-                                                Fostering Stability
+                                                Seamless Integration 
                                                 </h3>
                                             <p>
-                                                Your financial troubles are our problem to
-                                                solve. We are here to put you on the path to
-                                                financial freedom. We promise transparent terms,
-                                                no hard credit checks, and support to enhance
-                                                your financial well-being
-                                    </p>
+                                                We stay behind the scenes, so you can build the client relationship directly
+                                             </p>
+                                        </li>
+                                        <li onClick={() => this.setState({ openThree: !openThree })} className={openThree ? 'open' : 'closed'}>
+                                            
+                                            <h3> 
+                                                <Icon name={openThree ? 'minus circle' : 'plus circle'}  />
+                                                Stochastic Simulations
+                                                </h3>
+                                            <p>
+                                                Model a borrower’s behavior against your loan terms, giving you confidence in your underwrite
+                                             </p>
                                         </li>
                                     </ul>
                                     
