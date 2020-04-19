@@ -103,6 +103,16 @@
         color: white;
         text-align: left;
 
+        .left {
+            align-self: center;
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 300px;
+            margin: 0 30px;
+        }
+
         .mission-header {
             overflow: hidden;
             margin-bottom: 20px;
