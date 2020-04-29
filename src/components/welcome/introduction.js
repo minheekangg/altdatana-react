@@ -1,5 +1,6 @@
 import React from 'react';
 import tempimg from '../../images/temp.png';
+import styled from "styled-components";
 
 export default class Intro extends React.Component {
     render() {

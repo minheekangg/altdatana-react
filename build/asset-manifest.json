@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/altdatana-react/static/css/main.950e687d.chunk.css",
-    "main.js": "/altdatana-react/static/js/main.b17dd4f7.chunk.js",
-    "main.js.map": "/altdatana-react/static/js/main.b17dd4f7.chunk.js.map",
+    "main.css": "/altdatana-react/static/css/main.295f060c.chunk.css",
+    "main.js": "/altdatana-react/static/js/main.6e698e1c.chunk.js",
+    "main.js.map": "/altdatana-react/static/js/main.6e698e1c.chunk.js.map",
     "runtime-main.js": "/altdatana-react/static/js/runtime-main.441cc14c.js",
     "runtime-main.js.map": "/altdatana-react/static/js/runtime-main.441cc14c.js.map",
-    "static/js/2.d912b3bb.chunk.js": "/altdatana-react/static/js/2.d912b3bb.chunk.js",
-    "static/js/2.d912b3bb.chunk.js.map": "/altdatana-react/static/js/2.d912b3bb.chunk.js.map",
+    "static/js/2.de3d5238.chunk.js": "/altdatana-react/static/js/2.de3d5238.chunk.js",
+    "static/js/2.de3d5238.chunk.js.map": "/altdatana-react/static/js/2.de3d5238.chunk.js.map",
     "index.html": "/altdatana-react/index.html",
-    "precache-manifest.fa8d8763219429471fb1f3aab85906b7.js": "/altdatana-react/precache-manifest.fa8d8763219429471fb1f3aab85906b7.js",
+    "precache-manifest.f1765a71b3d3cbe3f1e0866ed03377f2.js": "/altdatana-react/precache-manifest.f1765a71b3d3cbe3f1e0866ed03377f2.js",
     "service-worker.js": "/altdatana-react/service-worker.js",
-    "static/css/main.950e687d.chunk.css.map": "/altdatana-react/static/css/main.950e687d.chunk.css.map",
-    "static/js/2.d912b3bb.chunk.js.LICENSE.txt": "/altdatana-react/static/js/2.d912b3bb.chunk.js.LICENSE.txt",
+    "static/css/main.295f060c.chunk.css.map": "/altdatana-react/static/css/main.295f060c.chunk.css.map",
+    "static/js/2.de3d5238.chunk.js.LICENSE.txt": "/altdatana-react/static/js/2.de3d5238.chunk.js.LICENSE.txt",
+    "static/media/shark.png": "/altdatana-react/static/media/shark.f98ceefc.png",
     "static/media/temp.png": "/altdatana-react/static/media/temp.f2907374.png",
     "static/media/temptyg6.jpg": "/altdatana-react/static/media/temptyg6.6c4c4e7a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.441cc14c.js",
-    "static/js/2.d912b3bb.chunk.js",
-    "static/css/main.950e687d.chunk.css",
-    "static/js/main.b17dd4f7.chunk.js"
+    "static/js/2.de3d5238.chunk.js",
+    "static/css/main.295f060c.chunk.css",
+    "static/js/main.6e698e1c.chunk.js"
   ]
 }

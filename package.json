@@ -29,7 +29,7 @@
     "redux-thunk": "^2.3.0",
     "semantic-ui": "^2.4.2",
     "semantic-ui-react": "^0.88.2",
-    "styled-components": "^5.0.0",
+    "styled-components": "^5.1.0",
     "thunk": "0.0.1"
   },
   "scripts": {
