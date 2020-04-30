@@ -42,6 +42,20 @@
             padding: 20px 70px 20px 25px;
             font-size: 14px;
             width: 100%;
+            position: relative;
+
+            &::after{
+                content: "";
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                background-image: url("../images/nav-btn-arrow.png");
+                background-size: cover;
+                background-position: center;
+                right: 20px;
+                top: 48%;
+                transform: translateY(-50%);
+            }
         }
     }
   
