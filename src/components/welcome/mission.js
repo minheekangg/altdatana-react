@@ -1,6 +1,7 @@
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
 import styled from "styled-components";
+
+import { Button } from "semantic-ui-react";
 
 const IntroMissionSection = styled.section`
     display: flex;
@@ -8,18 +9,23 @@ const IntroMissionSection = styled.section`
     justify-content: center;
     color: black;
 
-    .mission {
-        height: 100vh;
-        width: 100%;
-        text-align: left;
+    text-align: left;
 
-        h2 { font-size: 42px; }
+    height: 100vh;
+    width: 100%;
+    text-align: left;
 
-        .left {
-            align-self: center;
-            margin-bottom: 30px;
-        }
+    h2 {
+        font-size: 42px;
+    }
 
+    .left {
+        align-self: center;
+        margin-bottom: 30px;
+        margin-right: 10%;
+    }
+    .right {
+        align-self: center;
     }
 `;
 
@@ -38,7 +44,7 @@ const StyledList = styled.ul`
         width: 30px;
         height: 30px;
         position: absolute;
-        background-image: url("../../images/list-icon.png");
+        background-image: url('images/list-icon.png');
         background-size: cover;
         background-position: center;
         left: 0;
@@ -50,71 +56,32 @@ const StyledList = styled.ul`
         margin-bottom: 10px;
     }
 
-    li.open p {
-        opacity: 1;
-        height: auto;
-        pointer-events: all;
-    }
-    // li.closed p {
-    //     opacity: 0;
-    //     height: 0;
-    //     pointer-events: none;
-    // }
 `;
 
 export default class Mission extends React.Component {
-    state = { openOne: false, openTwo: false, openThree : false }
     
     render() {
-        const { openOne, openTwo, openThree } = this.state
         return (
             <IntroMissionSection class="mission">
                 <div className="flex-box container">
                     <div className="item left">
                         <StyledList>
-                            <li
-                                onClick={() =>
-                                    this.setState({
-                                        openOne: !openOne,
-                                    })
-                                }
-                                className={openOne ? "open" : "closed"}
-                            >
-                                <h6>
-                                    Borrower Behavioral Analysis
-                                </h6>
+                            <li>
+                                <h6>Borrower Behavioral Analysis</h6>
                                 <p>
                                     Analyze your borrower’s payment history to
                                     predict their creditworthiness.
                                 </p>
                             </li>
-                            <li
-                                onClick={() =>
-                                    this.setState({
-                                        openTwo: !openTwo,
-                                    })
-                                }
-                                className={openTwo ? "open" : "closed"}
-                            >
-                                <h6>
-                                    Seamless Integration
-                                </h6>
+                            <li>
+                                <h6>Seamless Integration</h6>
                                 <p>
                                     We stay behind the scenes, so you can build
                                     the client relationship directly
                                 </p>
                             </li>
-                            <li
-                                onClick={() =>
-                                    this.setState({
-                                        openThree: !openThree,
-                                    })
-                                }
-                                className={openThree ? "open" : "closed"}
-                            >
-                                <h6>
-                                    Stochastic Simulations
-                                </h6>
+                            <li>
+                                <h6>Stochastic Simulations</h6>
                                 <p>
                                     Model a borrower’s behavior against your
                                     loan terms, giving you confidence in your
@@ -130,6 +97,9 @@ export default class Mission extends React.Component {
                             paystubs? Modernize your business with advanced
                             analytics on your client’s payment behavior.
                         </p>
+                        <Button className="primary-button">
+                            Get Started
+                        </Button>
                     </div>
                 </div>
             </IntroMissionSection>

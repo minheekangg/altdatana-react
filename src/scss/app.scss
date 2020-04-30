@@ -89,31 +89,25 @@ section {
     padding: 80px 0;
 }
 
-p {
-    line-height: 1.4em;
-
-}
 
 .ui.button.primary-button {
-    background-color: $primary-blue;
+    background-color: $orange;
     color: white;
-    padding: 8px 20px;
+    padding: 20px;
+    width: 200px;
+    font-size: 16px;
 
-    border-radius: 16px;
+    border-radius: 30px;
 
     &:hover, &.active {
-        background-color: $darken-blue;
+        background-color: darken($orange, 10);
     }
 
-    &.bigger {
-        margin: 30px 0;
-        padding: 15px 30px;
-        border-radius: 30px;
-        font-size: 1.5em;
-
-        @media screen and (max-width: $mobileBP) {
-            width: 80%;
-            font-size: 16px;
-        }
+    &.white {
+        background-color: white;
+        color: $orange;
+    }
+    @media screen and (max-width: $mobileBP) {
+        width: 80%;
     }
 }
