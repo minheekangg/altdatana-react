@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CallToAction from '../call-to-action';
-import TempImg from '../../images/lock.png';
+import TempImg from '../../images/temp.png';
 
 import { ROUTE_ROOT } from "../../utils/constants";
 import ProductSteps from './product-steps';

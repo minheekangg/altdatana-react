@@ -3,7 +3,7 @@ import React from 'react';
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
-import TempImg2 from '../../images/temptyg6.jpg';
+import TempImg2 from '../../images/temp.png';
 
 export default class ProductSteps extends React.Component {
 
