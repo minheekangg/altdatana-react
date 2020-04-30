@@ -17,6 +17,29 @@ h2 {
     }
 }
 
+h3 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 0;
+    line-height: normal;
+    color: $black; 
+    font-family: 'Poppins', sans-serif;
+    line-height: 70px;
+    
+    @media screen and (max-width: 900px) {
+        font-size: 2.5em;
+        line-height: 1;
+    }
+    
+    @media screen and (max-width: 400px){
+        font-size: 20px;
+    }
+}
+
+h6 {
+    font-size: 22px;
+}
+
 .white { color: white; }
 
 .section-tag {
