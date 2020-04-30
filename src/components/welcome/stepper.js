@@ -45,6 +45,9 @@ const StepperDiv = styled.section`
         padding: 130px 30px 90px;
         position: relative;
 
+        flex-basis: 20%;
+        margin: 15px;
+
         color: black;
 
         .stepper-img {
@@ -54,8 +57,36 @@ const StepperDiv = styled.section`
         }
 
         &:hover {
-            // border: 1px solid grey;
             box-shadow: 10px 10px 8px $hover-grey;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .step-box {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .step {
+            padding: 40px 30px 50px;
+            flex-basis: 45%;
+        }
+
+        a {
+            bottom: 25px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        h5 {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        .step-box {
+            display: inline-block !important;
+        }
+        .step {
+            margin: 15px 0;
         }
     }
 `; 
@@ -66,7 +97,7 @@ export default class Stepper extends React.Component {
             <StepperDiv className="bg-navy">
                 <div className="container">
                     <h3 className="white">Smarter Decisions, <br/>Backed By Powerful Data</h3>
-                    <div className="flex-box four-items">
+                    <div className="flex-box step-box">
                         <div className="step item">
                             <div className="stepper-img">
                             </div>
