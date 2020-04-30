@@ -1,4 +1,6 @@
 #navbar {
+
+    background-color: white;
     h1 { 
         font-size: 24px;
         align-self: center;
@@ -10,7 +12,6 @@
         max-width: $maxwidth;
         margin: 0 auto;
         padding: 10px 50px 5px;
-        background-color: white;
     }
 
     .active.item{

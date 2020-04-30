@@ -45,7 +45,7 @@ const StepperDiv = styled.section`
         padding: 130px 30px 90px;
         position: relative;
 
-        flex-basis: 20%;
+        flex-basis: 33.3%;
         margin: 15px;
 
         color: black;
@@ -78,6 +78,7 @@ const StepperDiv = styled.section`
     }
 
     @media screen and (max-width: 650px) {
+        
         h5 {
             font-size: 16px;
             margin: 20px 0;
