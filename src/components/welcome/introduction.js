@@ -14,37 +14,28 @@ const IntroductionWrapper = styled.section`
 
     .left {
         text-align: left;
-        color: $primary-blue;
-
-        p {
-            font-size: 20px;
-            font-weight: 600;
-            line-height: normal;
-            margin-bottom: 5px
-        }
-    
+        color: $primary-blue;    
     }
 
     .right {
         img { width: 100%}
+        flex-basis: 40%;
     }
 
     @media screen and (max-width: 900px) {
         .item.left {
             flex-basis: 60%;
-
         }
         .item.right {
             margin-left: 0;
         }
     }
 
-    @media screen and (max-width: $mobileBP) {
+    @media screen and (max-width: 600px) {
         padding-top: 0;
 
         .flex-box {
-
-            display: block;
+            display: block!important;
         }
 
         .item {
@@ -52,7 +43,6 @@ const IntroductionWrapper = styled.section`
         }
 
         .item.right {
-            width: 95%;
             margin: auto;
 
             img {
@@ -63,8 +53,6 @@ const IntroductionWrapper = styled.section`
 
         .item.left {
             text-align: center;
-            width: 100%;
-
         }
     }
 
@@ -85,13 +73,9 @@ export default class Intro extends React.Component {
                     </div>
                     <div className="item left">
                         <h2>
-                            <div style={{ padding: 0 }}>We Are</div>
-                            <div style={{ padding: 0 }}>
-                                Underwriting The Future
-                            </div>
+                            We Are Underwriting The Future
                         </h2>
-                        <p>Introducing alternative data </p>
-                        <p>to lenders small or large.</p>
+                        <p>Introducing alternative data to lenders small or large.</p>
                     </div>
                 </div>
             </IntroductionWrapper>
