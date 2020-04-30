@@ -2,14 +2,14 @@
     h1 { 
         font-size: 24px;
         align-self: center;
-        margin: 0 50px;
+        margin: 0 50px 0 0;
     }
 
     >div:first-child {
         border: none;
         max-width: $maxwidth;
         margin: 0 auto;
-        padding: 10px 10px 5px;
+        padding: 10px 50px 5px;
         background-color: white;
     }
 
@@ -32,8 +32,8 @@
         padding-left: 0;
         padding-right: 0;
 
-        &:nth-child(2){
-            margin: 0 50px 0 30px;
+        &.login{
+            margin: 0 0 0 30px;
             color: $orange;
         }
 
@@ -60,13 +60,13 @@
         display: none;
     }
 
-    @media screen and (max-width: $mobileBP) {
-        #primary-menu .item:not(#home) {
+    @media screen and (max-width: 990px) {
+        #primary-menu .item:not(h1) {
             display: none;
         }
         .menu .item.mobile-btn {
             display: inline-block!important;
-
+            i { font-size: 20px;}
         }
 
         .sidebar.menu {
@@ -76,7 +76,7 @@
                 padding: 25px 20px;
 
                 &:hover, &.active {
-                    background-color: $primary-purple;
+                    background-color: $navy;
                     color: white;
                 }
             }

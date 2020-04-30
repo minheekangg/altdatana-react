@@ -55,12 +55,15 @@ class NavBar extends React.Component {
                             active={activeItem === "signup"}
                             onClick={this.handleItemClick}
                         >
-                            <Button className="primary-button">Get Started</Button>
+                            <Button className="primary-button">
+                                Get Started
+                            </Button>
                         </Menu.Item>
                         <Menu.Item
                             name="logout"
                             active={activeItem === "logout"}
                             onClick={this.handleItemClick}
+                            className="login"
                         >
                             Log In
                         </Menu.Item>
