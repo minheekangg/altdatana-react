@@ -1,35 +1,30 @@
 #navbar {
-    background-color: $background-grey!important;
+    h1 { 
+        font-size: 24px;
+        align-self: center;
+        margin: 0 50px;
+    }
 
     >div:first-child {
-        background-color: $background-grey!important;
         border: none;
         max-width: $maxwidth;
         margin: 0 auto;
         padding: 10px 10px 5px;
+        background-color: white;
+    }
 
-        #home {
-            color: $primary-blue;
-            background-color: $background-grey;
-            margin-right: 10px;
-
-            h1 {
-                font-size: 20px;
-                text-transform: none;
-            }
-
-            h1:hover {
-                color: $primary-purple;
-            }
-        }
-      
+    .active.item{
+        background: none;
     }
 
     .item  {
-      text-transform: capitalize;
+      text-transform: uppercase;
+    //   font-size: 16px;
+      font-family: 'Poppins', sans-serif;
 
         &:hover {
-            color: $primary-blue;
+            color: $navy;
+            background: none;
         }
     }
 
@@ -37,13 +32,16 @@
         padding-left: 0;
         padding-right: 0;
 
+        &:nth-child(2){
+            margin: 0 50px 0 30px;
+            color: $orange;
+        }
 
-      &:hover, &.active {
-            background-color: $background-grey;
-    
-            button {
-              background-color: $darken-blue;
-            }
+        .button {
+            text-transform: uppercase;
+            padding: 20px 70px 20px 25px;
+            font-size: 14px;
+            width: 100%;
         }
     }
   
