@@ -12,6 +12,10 @@ const IntroductionWrapper = styled.section`
         margin: auto;
     }
 
+    h2 {
+        text-transform: capitalize;
+    }
+
     .left {
         text-align: left;
         color: $primary-blue;    
@@ -73,7 +77,7 @@ export default class Intro extends React.Component {
                     </div>
                     <div className="item left">
                         <h2>
-                            We Are Underwriting The Future
+                            We are underwriting the future
                         </h2>
                         <p>Introducing alternative data to lenders small or large.</p>
                     </div>

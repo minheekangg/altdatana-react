@@ -9,7 +9,7 @@ h2 {
     
     @media screen and (max-width: 900px) {
         font-size: 3em;
-        line-height: 1;
+        line-height: 1.2;
     }
     
     @media screen and (max-width: 400px){
@@ -38,6 +38,9 @@ h3 {
 
 h6 {
     font-size: 22px;
+    @media screen and (max-width: 400px){
+        font-size: 16px;
+    }
 }
 
 .white { color: white; }

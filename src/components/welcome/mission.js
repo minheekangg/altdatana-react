@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-
+import icon from "../../images/list-icon.png";
 import { Button } from "semantic-ui-react";
 
 const IntroMissionSection = styled.section`
@@ -19,6 +19,10 @@ const IntroMissionSection = styled.section`
         font-size: 42px;
     }
 
+    h3 {
+        text-transform: capitalize;
+    }
+
     .left {
         align-self: center;
         margin-bottom: 30px;
@@ -27,16 +31,47 @@ const IntroMissionSection = styled.section`
     .right {
         align-self: center;
     }
+
+    .button {
+        margin: 20px 0;
+    }
+
+    .tablet-btn {
+        display: none;
+    }
+
+    @media screen and (max-width: 850px) {
+        padding-left: 30px;
+        padding-right: 30px;
+        
+        .flex-box {
+            flex-direction: column-reverse;
+        }
+        .tablet-btn {
+            display: block;
+            margin-top: 50px;
+        }
+        .fullscreen-btn {
+            display: none;
+        }
+
+        .left { margin: -20px 0 0; }
+    }
+
+    @media screen and (max-width: 450px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 `;
 
 const StyledList = styled.ul`
     list-style: none;
-    position: relative;
     text-align: left;
     padding-left: 60px;
 
     li {
         cursor: pointer;
+        position: relative;
     }
 
     li:before {
@@ -44,25 +79,28 @@ const StyledList = styled.ul`
         width: 30px;
         height: 30px;
         position: absolute;
-        background-image: url('images/list-icon.png');
+        background-image: url(${icon});
         background-size: cover;
         background-position: center;
-        left: 0;
-        top: 50%;
+        left: -50px;
+        top: 25%;
         transform: translateY(-50%);
     }
 
     h6 {
         margin-bottom: 10px;
+        line-height: 1.2;
     }
-
+    @media screen and (max-width: 850px) {
+        padding-left: 45px;
+    }
 `;
 
 export default class Mission extends React.Component {
     
     render() {
         return (
-            <IntroMissionSection class="mission">
+            <IntroMissionSection className="mission">
                 <div className="flex-box container">
                     <div className="item left">
                         <StyledList>
@@ -89,6 +127,9 @@ export default class Mission extends React.Component {
                                 </p>
                             </li>
                         </StyledList>
+                        <Button className="primary-button tablet-btn">
+                            Get Started
+                        </Button>
                     </div>
                     <div className="item right">
                         <h3>What we offer</h3>
@@ -97,9 +138,7 @@ export default class Mission extends React.Component {
                             paystubs? Modernize your business with advanced
                             analytics on your client’s payment behavior.
                         </p>
-                        <Button className="primary-button">
-                            Get Started
-                        </Button>
+                        <Button className="primary-button fullscreen-btn">Get Started</Button>
                     </div>
                 </div>
             </IntroMissionSection>
