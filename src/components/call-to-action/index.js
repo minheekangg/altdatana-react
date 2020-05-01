@@ -23,6 +23,15 @@ const CtaBtnWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin: auto;
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+        justify-content: space-around;
+
+        button {
+            width: 130px!important;
+        }
+    }
 `;
 
 export default class CTA extends React.Component {
@@ -76,8 +85,7 @@ export default class CTA extends React.Component {
                                     </CtaBtnWrapper>
                                 </Tween>
                             )}
-                        </Scene>
-                        
+                        </Scene>   
                     </Controller>
                 </div>
             </CallToActionSection>
