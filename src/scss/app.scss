@@ -92,26 +92,3 @@
 section {
     padding: 80px 0;
 }
-
-
-.ui.button.primary-button {
-    background-color: $orange;
-    color: white;
-    padding: 20px;
-    width: 200px;
-    font-size: 16px;
-
-    border-radius: 30px;
-
-    &:hover, &.active {
-        background-color: darken($orange, 10);
-    }
-
-    &.white {
-        background-color: white;
-        color: $orange;
-    }
-    @media screen and (max-width: $mobileBP) {
-        width: 80%;
-    }
-}

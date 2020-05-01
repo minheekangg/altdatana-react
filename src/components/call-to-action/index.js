@@ -7,15 +7,22 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
 const CallToActionSection = styled.section`
-    background-color: $background-grey;
-    color: $primary-blue;
+    background-color: #384586;
     margin: auto;
 
     padding: 25vh 0;
 
     h3 {
         margin-bottom: 40px;
+        text-transform: capitalize;
     }
+`;
+
+const CtaBtnWrapper = styled.div`
+    width: 425px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 `;
 
 export default class CTA extends React.Component {
@@ -40,7 +47,7 @@ export default class CTA extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                <h3>Have more questions?</h3>
+                                <h3 className="white">Have more questions?</h3>
                                 </Tween>
                             )}
                         </Scene>
@@ -59,9 +66,14 @@ export default class CTA extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <Button className="primary-button bigger">
-                                        Apply Now
-                                    </Button>
+                                    <CtaBtnWrapper>
+                                        <Button className="primary-button bigger">
+                                            Apply Now
+                                        </Button>
+                                        <Button className="secondary-button bigger">
+                                            Learn More
+                                        </Button>
+                                    </CtaBtnWrapper>
                                 </Tween>
                             )}
                         </Scene>
