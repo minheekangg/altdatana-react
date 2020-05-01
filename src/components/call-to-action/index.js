@@ -1,46 +1,31 @@
 import React from "react";
+import styled from "styled-components";
 
 import { Button } from "semantic-ui-react";
 
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
-const header = {
-    'apply': 'Ready to get started?',
-    'question': 'Questions?'
-}
+const CallToActionSection = styled.section`
+    background-color: $background-grey;
+    color: $primary-blue;
+    margin: auto;
 
-const content = {
-    'apply': [`Give us a try and check your rate. No credit score checks.`, `No commitments until you accept the loan terms.`],
-    'question': [`If you have questions about applying for a cash advance or what else we offer, please get in touch with us!`]
-}
+    padding: 25vh 0;
 
-const action = {
-    'apply': (
-        <Button className="primary-button bigger">
-            Apply Now
-        </Button>
-    ),
-    'question': (
-        <Button className="primary-button bigger">
-            Email Now
-        </Button>
-    )
-}
+    h3 {
+        margin-bottom: 40px;
+    }
+`;
 
 export default class CTA extends React.Component {
     render() {
-        const { type } = this.props;
-
-        if ( !type ) {
-            return null;
-        }
 
         return (
-            <section className="call-to-action">
-                <div className="container tighter">
+            <CallToActionSection id="call-to-action">
+                <div className="container">
                     <Controller>
-                        <Scene triggerElement=".call-to-action " duration={200}>
+                        <Scene triggerElement="#call-to-action" duration={200}>
                             {progress => (
                                 <Tween
                                     from={{
@@ -55,11 +40,11 @@ export default class CTA extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                <h2>{!!header[type] && header[type]}</h2>
+                                <h3>Have more questions?</h3>
                                 </Tween>
                             )}
                         </Scene>
-                        <Scene triggerElement=".call-to-action " duration={400} pin={false}>
+                        <Scene triggerElement="#call-to-action" duration={200}>
                             {progress => (
                                 <Tween
                                     from={{
@@ -74,35 +59,16 @@ export default class CTA extends React.Component {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    {!!content[type] && content[type].map(t=> {
-                                        return <p>{t}</p>
-                                    })}
-                                </Tween>
-                            )}
-                        </Scene>
-                        <Scene duration={200}>
-                            {progress => (
-                                <Tween
-                                    from={{
-                                        opacity: 0,
-                                        yPercent: 50
-                                    }}
-                                    to={{
-                                        yPercent:0,
-                                        opacity: 1
-                                    }}
-                                    ease="Back.easeOut"
-                                    totalProgress={progress}
-                                    paused
-                                >
-                                   {!!action[type] && action[type]}
+                                    <Button className="primary-button bigger">
+                                        Apply Now
+                                    </Button>
                                 </Tween>
                             )}
                         </Scene>
                         
                     </Controller>
                 </div>
-            </section>
+            </CallToActionSection>
         );
     }
 }
