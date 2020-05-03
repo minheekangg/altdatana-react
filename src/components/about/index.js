@@ -19,6 +19,10 @@ const AboutSectionMid = styled.section`
     margin: auto;
 
     h3 { font-size: 48px;}
+
+    @media screen and (max-width: 900px) {
+        h3 { font-size: 2.5em; }
+    }    
 `;
 const AboutSectionContent = styled.section`
     text-align: left;
@@ -40,6 +44,27 @@ const AboutSectionContent = styled.section`
     &last-child {
      margin-bottom: 100px;   
     }
+
+    @media screen and (max-width: 900px) {
+        .content-header { font-size: 2em; }
+    }
+    @media screen and (max-width: 750px) {
+        text-align: center;
+        &~& {
+            padding-top: 0;
+        }
+        .flex-box {
+            flex-wrap: wrap;
+
+            &.flip { flex-wrap: wrap-reverse; }
+        }
+
+        .item { 
+            flex-basis: 100%;
+
+            img { max-width: 300px;}
+        }
+    }
 `;
 
 const About = () => (
@@ -60,7 +85,7 @@ const About = () => (
                 <h3> We love data, and we think the world should too.</h3>
             </AboutSectionMid>
             <AboutSectionContent>
-                <div className="flex-box">
+                <div className="flex-box flip">
                     <div className="item left">
                         <h3 className="content-header">Our Goals</h3>
                         <p>While large institutions spend millions of dollars on development and underwriting technology, small lenders and credit unions are left to continue using credit scores, W2s, and pay stubs, to understand a borrower’s financial risk.</p>
