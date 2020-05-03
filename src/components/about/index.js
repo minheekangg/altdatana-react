@@ -4,13 +4,44 @@ import styled from "styled-components";
 import CallToAction from '../call-to-action';
 
 import tempimg from '../../images/temp.png';
+import blob from '../../images/about-blob.png';
+
+const AboutWrapper = styled.div`
+    position: relative;
+    overflow: hidden;
+    margin-top: -70px;
+
+    .blob {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+`;
 
 const AboutSectionTitle = styled.section`
+    margin-top: 70px;
     .flex-box { align-items: center; }
     .item.right {
         flex-basis: 50%;
         img {
             width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        text-align: center;
+        &~& {
+            padding-top: 0;
+        }
+        .flex-box {
+            flex-wrap: wrap-reverse;
+        }
+
+        .item { 
+            flex-basis: 100%;
+
+            img { max-width: 300px;}
         }
     }
 `;
@@ -68,9 +99,9 @@ const AboutSectionContent = styled.section`
 `;
 
 const About = () => (
-    <div id="about">
+    <AboutWrapper id="about">
+        <img src={blob} className="blob" />
         <div className="container">
-
             <AboutSectionTitle>
                 <div className="flex-box two-items container">
                     <div className="item left">
@@ -109,7 +140,7 @@ const About = () => (
             </AboutSectionContent>
         </div>
         <CallToAction type="question"/>
-    </div>
+    </AboutWrapper>
 );
 
 export default About;
