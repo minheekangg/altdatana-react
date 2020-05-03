@@ -98,6 +98,13 @@ class NavBar extends React.Component {
                     >
                         <Menu.Item
                             as={Link}
+                            to={`${ROUTE_ROOT}/home`}
+                            name="home"
+                            active={activeItem === "home"}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            as={Link}
                             to={`${ROUTE_ROOT}/about`}
                             name="about"
                             active={activeItem === "about"}
