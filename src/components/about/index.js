@@ -21,7 +21,9 @@ const AboutWrapper = styled.div`
 
 const AboutSectionTitle = styled.section`
     margin-top: 70px;
+
     .flex-box { align-items: center; }
+
     .item.right {
         flex-basis: 50%;
         img {
@@ -31,6 +33,7 @@ const AboutSectionTitle = styled.section`
 
     @media screen and (max-width: 750px) {
         text-align: center;
+
         &~& {
             padding-top: 0;
         }
@@ -57,6 +60,7 @@ const AboutSectionMid = styled.section`
 `;
 const AboutSectionContent = styled.section`
     text-align: left;
+
     .flex-box {
         justify-content: space-between;
         align-items: center;
@@ -65,25 +69,21 @@ const AboutSectionContent = styled.section`
         flex-basis: 50%;
         padding: 20px;
     }
-    .content-header {
-        font-size: 30px;
-    }
-    img {
-        width: 100%;
-    }
 
-    &last-child {
-     margin-bottom: 100px;   
-    }
+    .content-header { font-size: 30px; }
+
+    img { width: 100%;}
 
     @media screen and (max-width: 900px) {
         .content-header { font-size: 2em; }
     }
     @media screen and (max-width: 750px) {
         text-align: center;
+
         &~& {
             padding-top: 0;
         }
+        
         .flex-box {
             flex-wrap: wrap;
 
