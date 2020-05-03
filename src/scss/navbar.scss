@@ -76,6 +76,8 @@
     }
 
     @media screen and (max-width: 990px) {
+        background-color: white;
+        
         #primary-menu .item:not(h1) {
             display: none;
         }

@@ -4,24 +4,35 @@ import styled from "styled-components";
 import CallToAction from '../call-to-action';
 
 import tempimg from '../../images/temp.png';
-import blob from '../../images/about-blob.png';
+import blob from '../../images/how-blob.png';
 
-const AboutWrapper = styled.div`
+const HowItWorksWrapper = styled.div`
     position: relative;
     overflow: hidden;
     margin-top: -70px;
 
-    .blob {
+    .blob-bump {
+        width: 100%;
+        height: 150px;
         position: absolute;
         top: 0;
+        background-color: #FEE6D4;
+    }
+
+    .blob {
+        position: absolute;
+        top: 150px;
         right: 0;
         z-index: -1;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+        margin-top: 0;
     }
 `;
 
-const AboutSectionTitle = styled.section`
-    margin-top: 70px;
-
+const HowItWorksSectionTitle = styled.section`
     .flex-box { align-items: center; }
 
     .item.right {
@@ -34,31 +45,19 @@ const AboutSectionTitle = styled.section`
     @media screen and (max-width: 750px) {
         text-align: center;
 
-        &~& {
-            padding-top: 0;
-        }
         .flex-box {
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
         }
 
         .item { 
             flex-basis: 100%;
 
-            img { max-width: 300px;}
+            img { display: none; }
         }
     }
 `;
-const AboutSectionMid = styled.section`
-    max-width: 700px;
-    margin: auto;
 
-    h3 { font-size: 48px;}
-
-    @media screen and (max-width: 900px) {
-        h3 { font-size: 2.5em; }
-    }    
-`;
-const AboutSectionContent = styled.section`
+const HowItWorksSectionContent = styled.section`
     text-align: left;
 
     .flex-box {
@@ -98,24 +97,22 @@ const AboutSectionContent = styled.section`
     }
 `;
 
-const About = () => (
-    <AboutWrapper id="about">
-        <img src={blob} className="blob" alt="blob for background"/>
+const HowItWorks = () => (
+    <HowItWorksWrapper id="how-it-works">
+        <div className="blob-bump"></div>
+        <img src={blob} className="blob" />
         <div className="container">
-            <AboutSectionTitle>
+            <HowItWorksSectionTitle>
                 <div className="flex-box two-items container">
                     <div className="item left">
-                        <h2> About us</h2>
+                        <h2>How It Works</h2>
                     </div>
                     <div className="item right">
                         <img src={tempimg} alt="temporary img" />
                     </div>
                 </div>
-            </AboutSectionTitle>
-            <AboutSectionMid>
-                <h3> We love data, and we think the world should too.</h3>
-            </AboutSectionMid>
-            <AboutSectionContent>
+            </HowItWorksSectionTitle>
+            <HowItWorksSectionContent>
                 <div className="flex-box flip">
                     <div className="item left">
                         <h3 className="content-header">Our Goals</h3>
@@ -126,8 +123,8 @@ const About = () => (
                         <img src={tempimg} alt="temporary img" />
                     </div>
                 </div>
-            </AboutSectionContent>
-            <AboutSectionContent>
+            </HowItWorksSectionContent>
+            <HowItWorksSectionContent>
                 <div className="flex-box">
                     <div className="item right">
                         <img src={tempimg} alt="temporary img" />
@@ -137,10 +134,10 @@ const About = () => (
                         <p>We are a team made up of credit analysts, risk managers, actuaries, attorneys, data scientists, and investment bankers. We’ve been at the forefront of institutional risk management on all sides of the street. </p>
                     </div>
                 </div>
-            </AboutSectionContent>
+            </HowItWorksSectionContent>
         </div>
         <CallToAction type="question"/>
-    </AboutWrapper>
+    </HowItWorksWrapper>
 );
 
-export default About;
+export default HowItWorks;
