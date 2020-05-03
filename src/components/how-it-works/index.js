@@ -5,6 +5,7 @@ import CallToAction from '../call-to-action';
 
 import tempimg from '../../images/temp.png';
 import blob from '../../images/how-blob.png';
+import circle from '../../images/how-circle.png';
 
 const HowItWorksWrapper = styled.div`
     position: relative;
@@ -59,30 +60,43 @@ const HowItWorksSectionTitle = styled.section`
 
 const HowItWorksSectionContent = styled.section`
     text-align: left;
+    max-width: 900px;
+    margin: auto;
 
     .flex-box {
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        margin: 40px 80px 40px 0;
+
+        &.flip {
+            text-align: right;
+            margin: 40px 0 40px 80px;
+        }
     }
+
     .item { 
-        flex-basis: 50%;
         padding: 20px;
     }
+    
+    .step-header { 
+        font-size: 24px; 
+        margin: 0;
+        line-height: 2;
+    }
 
-    .content-header { font-size: 30px; }
-
-    img { width: 100%;}
+    img { 
+        width: 150px;
+        height: 150px;
+    }
 
     @media screen and (max-width: 900px) {
-        .content-header { font-size: 2em; }
-    }
-    @media screen and (max-width: 750px) {
-        text-align: center;
-
-        &~& {
-            padding-top: 0;
+        .step-header { font-size: 1.75em; }
+        .flex-box, .flex-box.flip {
+            margin: 40px auto;
+            justify-content: start;
         }
-        
+    }
+    @media screen and (max-width: 600px) {
         .flex-box {
             flex-wrap: wrap;
 
@@ -91,7 +105,7 @@ const HowItWorksSectionContent = styled.section`
 
         .item { 
             flex-basis: 100%;
-
+            text-align: center;
             img { max-width: 300px;}
         }
     }
@@ -113,25 +127,41 @@ const HowItWorks = () => (
                 </div>
             </HowItWorksSectionTitle>
             <HowItWorksSectionContent>
-                <div className="flex-box flip">
+                <div className="flex-box">
                     <div className="item left">
-                        <h3 className="content-header">Our Goals</h3>
-                        <p>While large institutions spend millions of dollars on development and underwriting technology, small lenders and credit unions are left to continue using credit scores, W2s, and pay stubs, to understand a borrower’s financial risk.</p>
-                        <p>We are here to provide a solution to modernize underwriting in a big way, without needing to develop an R&D department, for every institution that faces lending risk.</p>
+                        <img src={circle} alt="temporary img" />
                     </div>
                     <div className="item right">
-                        <img src={tempimg} alt="temporary img" />
+                        <h3 className="step-header">Step 1</h3>
+                        <p>Generate and send a unique link to your borrower/client to get their approval.</p>
                     </div>
                 </div>
-            </HowItWorksSectionContent>
-            <HowItWorksSectionContent>
-                <div className="flex-box">
-                    <div className="item right">
-                        <img src={tempimg} alt="temporary img" />
-                    </div>
+                <div className="flex-box flip">
                     <div className="item left">
-                        <h3 className="content-header">Our Experience</h3>
-                        <p>We are a team made up of credit analysts, risk managers, actuaries, attorneys, data scientists, and investment bankers. We’ve been at the forefront of institutional risk management on all sides of the street. </p>
+                        <h3 className="step-header">Step 2</h3>
+                        <p>Your borrower/client logs into their normal accounts, fully encrypted. <br/>
+                         We don’t see or keep the password and usernames.</p>
+                    </div>
+                    <div className="item right">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                </div>
+                <div className="flex-box">
+                    <div className="item left">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                    <div className="item right">
+                        <h3 className="step-header">Step 3</h3>
+                        <p>The raw data enters our platform, and we give you the results.</p>
+                    </div>
+                </div>
+                <div className="flex-box flip">
+                    <div className="item left">
+                        <h3 className="step-header">Step 4</h3>
+                        <p>Link our API with your internal underwriting systems, or manually observe and customize your dashboards. </p>
+                    </div>
+                    <div className="item right">
+                        <img src={circle} alt="temporary img" />
                     </div>
                 </div>
             </HowItWorksSectionContent>
