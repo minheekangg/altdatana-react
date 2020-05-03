@@ -96,53 +96,49 @@ const StyledList = styled.ul`
     }
 `;
 
-export default class Mission extends React.Component {
-    
-    render() {
-        return (
-            <IntroMissionSection className="mission">
-                <div className="flex-box container">
-                    <div className="item left">
-                        <StyledList>
-                            <li>
-                                <h6>Borrower Behavioral Analysis</h6>
-                                <p>
-                                    Analyze your borrower’s payment history to
-                                    predict their creditworthiness.
-                                </p>
-                            </li>
-                            <li>
-                                <h6>Seamless Integration</h6>
-                                <p>
-                                    We stay behind the scenes, so you can build
-                                    the client relationship directly
-                                </p>
-                            </li>
-                            <li>
-                                <h6>Stochastic Simulations</h6>
-                                <p>
-                                    Model a borrower’s behavior against your
-                                    loan terms, giving you confidence in your
-                                    underwrite
-                                </p>
-                            </li>
-                        </StyledList>
-                        <Button className="primary-button tablet-btn">
-                            Get Started
-                        </Button>
-                    </div>
-                    <div className="item right">
-                        <h3>What we offer</h3>
+const Mission = () => (
+    <IntroMissionSection className="mission">
+        <div className="flex-box container">
+            <div className="item left">
+                <StyledList>
+                    <li>
+                        <h6>Borrower Behavioral Analysis</h6>
                         <p>
-                            Still underwriting your borrowers with W2s and
-                            paystubs? Modernize your business with advanced
-                            analytics on your client’s payment behavior.
+                            Analyze your borrower’s payment history to
+                            predict their creditworthiness.
                         </p>
-                        <Button className="primary-button fullscreen-btn">Get Started</Button>
-                    </div>
-                </div>
-            </IntroMissionSection>
-        );
-    }
-}
+                    </li>
+                    <li>
+                        <h6>Seamless Integration</h6>
+                        <p>
+                            We stay behind the scenes, so you can build
+                            the client relationship directly
+                        </p>
+                    </li>
+                    <li>
+                        <h6>Stochastic Simulations</h6>
+                        <p>
+                            Model a borrower’s behavior against your
+                            loan terms, giving you confidence in your
+                            underwrite
+                        </p>
+                    </li>
+                </StyledList>
+                <Button className="primary-button tablet-btn">
+                    Get Started
+                </Button>
+            </div>
+            <div className="item right">
+                <h3>What we offer</h3>
+                <p>
+                    Still underwriting your borrowers with W2s and
+                    paystubs? Modernize your business with advanced
+                    analytics on your client’s payment behavior.
+                </p>
+                <Button className="primary-button fullscreen-btn">Get Started</Button>
+            </div>
+        </div>
+    </IntroMissionSection>
+);
 
+export default Mission;

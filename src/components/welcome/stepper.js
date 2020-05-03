@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import icon from "../../images/btn-arrow-orange.png";
 
-
 const StepperDiv = styled.section`
     h3 {
         text-align: left;
@@ -92,45 +91,43 @@ const StepperDiv = styled.section`
     }
 `; 
 
-export default class Stepper extends React.Component {
-    render() {
-        return (
-            <StepperDiv className="bg-navy">
-                <div className="container">
-                    <h3 className="white">Smarter Decisions, <br/>Backed By Powerful Data</h3>
-                    <div className="flex-box step-box">
-                        <div className="step item">
-                            <div className="stepper-img">
-                            </div>
-                            <h5>Easy Setup and Onboarding</h5>
-                            <p>
-                                Whether you integrate our API into your business ecosystem, or use our interface to face your client, our onboarding team is here for you.
-                            </p>
-                            <Link >Get Started</Link>
-                        </div>
-                        <div className="step item">
-                            <div className="stepper-img">
-                            </div>
-                            <h5>Encryption and Security</h5>
-                            <p>
-                                We don’t keep the borrower’s data, and we encrypt everything to ensure only your team has access. 
-                            </p>
-                            <Link >Get Started</Link>
-                        </div>
-                        <div className="step item">
-                            <div className="stepper-img">
-                            </div>
-
-                            <h5>Complete Customization</h5>
-                            <p>
-                                Create a credit application through us, or simply use our analyticals for your underwriting 
-                            </p>
-                            <Link >Get Started</Link>
-                        </div>
+const Stepper = () => ( 
+    <StepperDiv className="bg-navy">
+        <div className="container">
+            <h3 className="white">Smarter Decisions, <br/>Backed By Powerful Data</h3>
+            <div className="flex-box step-box">
+                <div className="step item">
+                    <div className="stepper-img">
                     </div>
+                    <h5>Easy Setup and Onboarding</h5>
+                    <p>
+                        Whether you integrate our API into your business ecosystem, or use our interface to face your client, our onboarding team is here for you.
+                    </p>
+                    <Link >Get Started</Link>
                 </div>
-            </StepperDiv>
-        );
-    }
-}
+                <div className="step item">
+                    <div className="stepper-img">
+                    </div>
+                    <h5>Encryption and Security</h5>
+                    <p>
+                        We don’t keep the borrower’s data, and we encrypt everything to ensure only your team has access. 
+                    </p>
+                    <Link >Get Started</Link>
+                </div>
+                <div className="step item">
+                    <div className="stepper-img">
+                    </div>
+
+                    <h5>Complete Customization</h5>
+                    <p>
+                        Create a credit application through us, or simply use our analyticals for your underwriting 
+                    </p>
+                    <Link >Get Started</Link>
+                </div>
+            </div>
+        </div>
+    </StepperDiv>
+);
+
+export default Stepper;
 

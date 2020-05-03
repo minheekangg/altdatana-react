@@ -67,23 +67,20 @@ const IntroductionWrapper = styled.section`
     }
 `;
 
-export default class Intro extends React.Component {
-    render() {
-        return (
-            <IntroductionWrapper>
-                <div className="flex-box two-items container">
-                    <div className="item right">
-                        <img src={tempimg} alt="temporary img" />
-                    </div>
-                    <div className="item left">
-                        <h2>
-                            We are underwriting the future
-                        </h2>
-                        <p>Introducing alternative data to lenders small or large.</p>
-                    </div>
-                </div>
-            </IntroductionWrapper>
-        );
-    }
-}
+const Intro = () => (
+    <IntroductionWrapper>
+        <div className="flex-box two-items container">
+            <div className="item right">
+                <img src={tempimg} alt="temporary img" />
+            </div>
+            <div className="item left">
+                <h2>
+                    We are underwriting the future
+                </h2>
+                <p>Introducing alternative data to lenders small or large.</p>
+            </div>
+        </div>
+    </IntroductionWrapper>
+);
 
+export default Intro;
