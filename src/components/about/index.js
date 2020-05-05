@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
 
 import CallToAction from '../call-to-action';
@@ -25,7 +25,6 @@ const AboutWrapper = styled.div`
         max-width: 60vw;
     }
     @media screen and (max-width: 750px) { 
-        // background-image: linear-gradient(##384586,30%,white);
 
         .bg-blob { display: none; }
     }
@@ -118,7 +117,13 @@ const AboutSectionContent = styled.section`
     }
 `;
 
-const About = () => (
+const About = () => {
+    useEffect(() => {
+        console.log('scrolling')
+        window.scrollTo(0, 0)
+    }, [])
+
+    return (
     <AboutWrapper id="about">
         <div className="bg-blob"></div>
         <div className="container">
@@ -161,6 +166,7 @@ const About = () => (
         </div>
         <CallToAction type="question"/>
     </AboutWrapper>
-);
+    )
+};
 
 export default About;
