@@ -18,8 +18,8 @@ const ProductWrapper = styled.div`
         position: absolute;
         margin-top: -60px;
         left: 4%;
-        width: 115px;
-        height: 115px;
+        width: 100px;
+        height: 100px;
         background-image: url(${triangle});
         background-position: center;
         background-size: cover;
@@ -119,6 +119,7 @@ const ProductSectionContent = styled.section`
         padding: 35px;
         border-radius: 10px;
         flex-grow: 1;
+        background-color: white;
 
         flex: 1 0 80px;
         margin: 15px;
@@ -138,7 +139,7 @@ const ProductSectionContent = styled.section`
         }
     }
 
-    .leftg-img {
+    .leftg-img{
         position: absolute;
         top: 0;
         left: 0;
@@ -146,10 +147,22 @@ const ProductSectionContent = styled.section`
         height: 245px;
         background-image: url(${leftg});
         background-position: center;
-        background-size: cover;
-        opacity: 0.8;
+        background-size: contain;
         z-index: -1;
-        tran
+        transform: translate(-40%, -25%);
+    }
+
+    .rightg-img {
+        position: absolute;
+        width: 230px;
+        height: 245px;
+        background-position: center;
+        background-size: contain;
+        z-index: -1;
+        transform: translate(40%, 25%);
+        background-image: url(${rightg});
+        bottom: 0;
+        right: 0;
     }
 
     @media screen and (max-width: 900px) {
@@ -209,6 +222,7 @@ const Product = () => (
                         <h3>Product 2</h3>
                         <p>Loan simulations, stochastic stresses, and machine learning. We learn your borrower’s behavior and provide you the limits of their payment probability. </p>
                     </div>
+                    <div className="rightg-img"></div>
                 </div>
             </div>
         </ProductSectionContent>
