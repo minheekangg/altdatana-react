@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/altdatana-react/precache-manifest.0d7699d30095014cd9c31ae10ba3ee6a.js"
+  "/altdatana-react/precache-manifest.0496afd1ee79ff038fa10c13e2ef8daf.js"
 );
 
 self.addEventListener('message', (event) => {
