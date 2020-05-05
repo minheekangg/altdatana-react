@@ -112,26 +112,44 @@ const ProductSectionContent = styled.section`
     .flex-box {
         justify-content: space-evenly;
         align-items: center;
-        // margin: 40px 80px 40px 0;
+        position: relative;
     }
 
     .item { 
         padding: 35px;
-        border: 1px solid;
         border-radius: 10px;
         flex-grow: 1;
-        margin: auto 30px
-    }
-    
-    .step-header { 
-        font-size: 24px; 
-        margin: 0;
-        line-height: 2;
+
+        flex: 1 0 80px;
+        margin: 15px;
+        padding: 30px;
+
+        box-shadow: -2px 18px 27px -19px rgba(107,107,107,1);
+
+        h3 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.2
+        }
+
+        img { 
+            width: 300px;
+            height: 300px;
+        }
     }
 
-    img { 
-        width: 150px;
-        height: 150px;
+    .leftg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 230px;
+        height: 245px;
+        background-image: url(${leftg});
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        z-index: -1;
+        tran
     }
 
     @media screen and (max-width: 900px) {
@@ -179,14 +197,16 @@ const Product = () => (
             <div className="container">
                 <h3>Our Products</h3>
                 <div className="flex-box">
+                    <div className="leftg-img"></div>
                     <div className="item">
                         <img src={tempimg} alt="temporary img" />
-                        <h4>Product 1</h4>
+                        <h3>Product 1</h3>
                         <p>Whether you integrate our API into your business ecosystem, or use our interface to face your client, our onboarding team is here for you.</p>
                     </div>
                     <div className="item">
+                        <div className="rightg-img"></div>
                         <img src={tempimg} alt="temporary img" />
-                        <h4>Product 2</h4>
+                        <h3>Product 2</h3>
                         <p>Loan simulations, stochastic stresses, and machine learning. We learn your borrower’s behavior and provide you the limits of their payment probability. </p>
                     </div>
                 </div>
