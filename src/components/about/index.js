@@ -107,13 +107,14 @@ const AboutSectionContent = styled.section`
             flex-wrap: wrap;
 
             &.flip { flex-wrap: wrap-reverse; }
+            
+            .item { 
+                flex-basis: 100%;
+    
+                img { max-width: 300px;}
+            }
         }
 
-        .item { 
-            flex-basis: 100%;
-
-            img { max-width: 300px;}
-        }
     }
 `;
 
