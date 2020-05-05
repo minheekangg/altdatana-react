@@ -1,19 +1,24 @@
 import React from 'react'
 import { Menu, Button, Icon, Sidebar } from 'semantic-ui-react';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import { ROUTE_ROOT } from "../utils/constants";
 
 class NavBar extends React.Component {
-    state = { 
-        activeItem: 'home', 
-        mobileNavVisible: false,
+    constructor(props) {
+        super(props);
+
+        this.state = { 
+            activeItem: (props && props.location && props.location.pathname && this.props.location.pathname.replace("/altdatana-react/", "")) || 'home', 
+            mobileNavVisible: false,
+        }
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name, mobileNavVisible: false })
 
     render() {
         const { activeItem, mobileNavVisible } = this.state;
+ 
         return (
             <nav className="sticky" id="navbar">
                 <Menu secondary id="primary-menu">
@@ -38,8 +43,8 @@ class NavBar extends React.Component {
                     <Menu.Item
                         as={Link}
                         to={`${ROUTE_ROOT}/how-it-works`}
-                        name="how it works"
-                        active={activeItem === "how it works"}
+                        name="how-it-works"
+                        active={activeItem === "how-it-works"}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
@@ -105,7 +110,7 @@ class NavBar extends React.Component {
                     >
                         <Menu.Item
                             as={Link}
-                            to={`${ROUTE_ROOT}/home`}
+                            to={`${ROUTE_ROOT}/`}
                             name="home"
                             active={activeItem === "home"}
                             onClick={this.handleItemClick}
@@ -120,8 +125,8 @@ class NavBar extends React.Component {
                         <Menu.Item
                             as={Link}
                             to={`${ROUTE_ROOT}/how-it-works`}
-                            name="how it works"
-                            active={activeItem === "how it works"}
+                            name="how-it-works"
+                            active={activeItem === "how-it-works"}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
@@ -164,4 +169,4 @@ class NavBar extends React.Component {
 }
 
 
-export default NavBar
+export default withRouter(NavBar);
