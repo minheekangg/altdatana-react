@@ -16,7 +16,7 @@ const ProductWrapper = styled.div`
 
     .triangle-img {
         position: absolute;
-        top: calc(90vh - 72px);
+        margin-top: -60px;
         left: 4%;
         width: 115px;
         height: 115px;
@@ -25,6 +25,7 @@ const ProductWrapper = styled.div`
         background-size: cover;
         opacity: 0.8;
         z-index: 2;
+        display: block;
     }
 `;
 
@@ -65,11 +66,13 @@ const ProductSectionTitle = styled.section`
 
     .flex-box { 
         align-items: center; 
-        margin-top: 70px;
+        margin: 70px auto 0;
+        width: 100%;
     }
 
     .item.right {
         flex-basis: 30%;
+
         img {
             width: 100%;
         }
@@ -81,6 +84,12 @@ const ProductSectionTitle = styled.section`
         z-index: 2;
     }
 
+    @media screen and (max-width: 1020px) {
+        h2 { 
+            font-size: 3em; 
+            line-height: 1.2
+        }
+    }
     @media screen and (max-width: 750px) {
         text-align: center;
 
@@ -89,10 +98,9 @@ const ProductSectionTitle = styled.section`
         }
 
         .item { 
-            flex-basis: 100%;
-
-            img { display: none; }
+            flex-basis: 100%!important;
         }
+        .hero-right-img { display: none; }
     }
 `;
 
@@ -151,7 +159,6 @@ const ProductSectionContent = styled.section`
 
 const Product = () => (
     <ProductWrapper id="product">
-        <div className="triangle-img"></div>
         <ProductSectionTitle>
             <div className="circle-img"></div>
             <div className="hero-right-img"></div>
@@ -168,6 +175,7 @@ const Product = () => (
                 </div>
             </div>
         </ProductSectionTitle>
+        <div className="triangle-img"></div>
         <ProductSectionContent>
             <div className="container">
                 <div className="flex-box">
