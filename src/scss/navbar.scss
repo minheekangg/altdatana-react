@@ -9,7 +9,7 @@
         border: none;
         max-width: $maxwidth;
         margin: 0 auto;
-        padding: 10px 50px 5px;
+        padding: 10px 10px 5px;
     }
 
     .active.item{
@@ -81,17 +81,18 @@
         #primary-menu .item:not(h1) {
             display: none;
         }
+
+        #primary-menu {
+            justify-content: space-between;
+        }
+
         .menu .item.mobile-btn {
             display: inline-block!important;
             i { font-size: 20px;}
         }
-
-        >div:first-child {
-            padding: 10px 10px 5px;
-        }
-
+        
         .sidebar.menu {
-            top: 62px;
+            top: 57px;
             width: 100%;
 
             .item {
