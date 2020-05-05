@@ -91,9 +91,12 @@ const HowItWorksSectionContent = styled.section`
         line-height: 2;
     }
 
-    img { 
+    .how-circle { 
         width: 150px;
         height: 150px;
+        background-image: url(${circle});
+        background-position: center;
+        background-size: contain
     }
 
     @media screen and (max-width: 900px) {
@@ -106,14 +109,16 @@ const HowItWorksSectionContent = styled.section`
     @media screen and (max-width: 600px) {
         .flex-box {
             flex-wrap: wrap;
-
             &.flip { flex-wrap: wrap-reverse; }
         }
 
         .item { 
             flex-basis: 100%;
             text-align: center;
-            img { max-width: 300px;}
+
+            .how-circle  { 
+                margin: auto;
+            }
         }
     }
 `;
@@ -136,7 +141,7 @@ const HowItWorks = () => (
             <HowItWorksSectionContent>
                 <div className="flex-box">
                     <div className="item left">
-                        <img src={circle} alt="temporary img" />
+                        <div className="how-circle"></div>
                     </div>
                     <div className="item right">
                         <h3 className="step-header">Step 1</h3>
@@ -150,12 +155,12 @@ const HowItWorks = () => (
                          We don’t see or keep the password and usernames.</p>
                     </div>
                     <div className="item right">
-                        <img src={circle} alt="temporary img" />
+                        <div className="how-circle"></div>
                     </div>
                 </div>
                 <div className="flex-box">
                     <div className="item left">
-                        <img src={circle} alt="temporary img" />
+                        <div className="how-circle"></div>
                     </div>
                     <div className="item right">
                         <h3 className="step-header">Step 3</h3>
@@ -168,7 +173,7 @@ const HowItWorks = () => (
                         <p>Link our API with your internal underwriting systems, or manually observe and customize your dashboards. </p>
                     </div>
                     <div className="item right">
-                        <img src={circle} alt="temporary img" />
+                        <div className="how-circle"></div>
                     </div>
                 </div>
             </HowItWorksSectionContent>
