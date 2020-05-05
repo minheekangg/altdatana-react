@@ -99,8 +99,11 @@ const ProductSectionTitle = styled.section`
 
         .item { 
             flex-basis: 100%!important;
+            margin: 20px auto;
         }
         .hero-right-img { display: none; }
+
+        h2 { font-size: 35px; }
     }
 `;
 
