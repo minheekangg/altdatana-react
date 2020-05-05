@@ -105,23 +105,22 @@ const ProductSectionTitle = styled.section`
 `;
 
 const ProductSectionContent = styled.section`
-    text-align: left;
+    text-align: center;
     max-width: 900px;
     margin: auto;
 
     .flex-box {
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
-        margin: 40px 80px 40px 0;
-
-        &.flip {
-            text-align: right;
-            margin: 40px 0 40px 80px;
-        }
+        // margin: 40px 80px 40px 0;
     }
 
     .item { 
-        padding: 20px;
+        padding: 35px;
+        border: 1px solid;
+        border-radius: 10px;
+        flex-grow: 1;
+        margin: auto 30px
     }
     
     .step-header { 
@@ -178,41 +177,17 @@ const Product = () => (
         <div className="triangle-img"></div>
         <ProductSectionContent>
             <div className="container">
+                <h3>Our Products</h3>
                 <div className="flex-box">
-                    <div className="item left">
-                        <img src={circle} alt="temporary img" />
+                    <div className="item">
+                        <img src={tempimg} alt="temporary img" />
+                        <h4>Product 1</h4>
+                        <p>Whether you integrate our API into your business ecosystem, or use our interface to face your client, our onboarding team is here for you.</p>
                     </div>
-                    <div className="item right">
-                        <h3 className="step-header">Step 1</h3>
-                        <p>Generate and send a unique link to your borrower/client to get their approval.</p>
-                    </div>
-                </div>
-                <div className="flex-box flip">
-                    <div className="item left">
-                        <h3 className="step-header">Step 2</h3>
-                        <p>Your borrower/client logs into their normal accounts, fully encrypted. <br/>
-                         We don’t see or keep the password and usernames.</p>
-                    </div>
-                    <div className="item right">
-                        <img src={circle} alt="temporary img" />
-                    </div>
-                </div>
-                <div className="flex-box">
-                    <div className="item left">
-                        <img src={circle} alt="temporary img" />
-                    </div>
-                    <div className="item right">
-                        <h3 className="step-header">Step 3</h3>
-                        <p>The raw data enters our platform, and we give you the results.</p>
-                    </div>
-                </div>
-                <div className="flex-box flip">
-                    <div className="item left">
-                        <h3 className="step-header">Step 4</h3>
-                        <p>Link our API with your internal underwriting systems, or manually observe and customize your dashboards. </p>
-                    </div>
-                    <div className="item right">
-                        <img src={circle} alt="temporary img" />
+                    <div className="item">
+                        <img src={tempimg} alt="temporary img" />
+                        <h4>Product 2</h4>
+                        <p>Loan simulations, stochastic stresses, and machine learning. We learn your borrower’s behavior and provide you the limits of their payment probability. </p>
                     </div>
                 </div>
             </div>
