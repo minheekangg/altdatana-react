@@ -13,34 +13,60 @@ import tempimg from '../../images/temp.png';
 
 const ProductWrapper = styled.div`
     position: relative;
+
+    .triangle-img {
+        position: absolute;
+        top: calc(90vh - 72px);
+        left: 4%;
+        width: 115px;
+        height: 115px;
+        background-image: url(${triangle});
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        z-index: 2;
+    }
+`;
+
+const ProductSectionTitle = styled.section`
+    position: relative;
     overflow: hidden;
     margin-top: -70px;
     background-color: #EFF9FB;
     z-index: 1;
+    min-height: 90vh;
 
     .circle-img {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -250px;
+        left: -300px;
         width: 600px;
         height: 600px;
         background-image: url(${circle});
-        transform: translate(-40%, -30%);
         background-position: center;
         background-size: cover;
         opacity: 0.8;
         z-index: -1;
     }
 
-    @media screen and (max-width: 750px) {
-        margin-top: 0;
+    .hero-right-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 650px;
+        height: 666px;
+        background-image: url(${heroRight});
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        z-index: -1;
     }
-`;
 
-const ProductSectionTitle = styled.section`
-    margin-top: 70px;
 
-    .flex-box { align-items: center; }
+    .flex-box { 
+        align-items: center; 
+        margin-top: 70px;
+    }
 
     .item.right {
         flex-basis: 30%;
@@ -125,9 +151,11 @@ const ProductSectionContent = styled.section`
 
 const Product = () => (
     <ProductWrapper id="product">
-        <div img={circle} className="circle-img"></div>
-        <div className="container">
-            <ProductSectionTitle>
+        <div className="triangle-img"></div>
+        <ProductSectionTitle>
+            <div className="circle-img"></div>
+            <div className="hero-right-img"></div>
+            <div className="container">
                 <div className="flex-box two-items container">
                     <div className="item left">
                         <h2>
@@ -138,8 +166,10 @@ const Product = () => (
                         <img src={tempimg} alt="temporary img" />
                     </div>
                 </div>
-            </ProductSectionTitle>
-            <ProductSectionContent>
+            </div>
+        </ProductSectionTitle>
+        <ProductSectionContent>
+            <div className="container">
                 <div className="flex-box">
                     <div className="item left">
                         <img src={circle} alt="temporary img" />
@@ -177,8 +207,8 @@ const Product = () => (
                         <img src={circle} alt="temporary img" />
                     </div>
                 </div>
-            </ProductSectionContent>
-        </div>
+            </div>
+        </ProductSectionContent>
         <CallToAction type="question"/>
     </ProductWrapper>
 );
