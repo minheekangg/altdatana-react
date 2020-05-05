@@ -9,13 +9,25 @@ import blob from '../../images/about-blob.png';
 const AboutWrapper = styled.div`
     position: relative;
     overflow: hidden;
-    margin-top: -70px;
+    margin-top: -85px;
 
-    .blob {
+    .bg-blob {
         position: absolute;
         top: 0;
         right: 0;
         z-index: -1;
+        background-image: url(${blob});
+        width: 700px;
+        height: 700px;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        max-width: 60vw;
+    }
+    @media screen and (max-width: 750px) { 
+        // background-image: linear-gradient(##384586,30%,white);
+
+        .bg-blob { display: none; }
     }
 `;
 
@@ -46,6 +58,14 @@ const AboutSectionTitle = styled.section`
 
             img { max-width: 300px;}
         }
+
+        h2 { color: white; }
+
+        border-radius: 100%/0 0 100px 100px;
+        box-shadow: 0 6px 0 #384586;
+        background-color: #384586;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 `;
 const AboutSectionMid = styled.section`
@@ -100,7 +120,7 @@ const AboutSectionContent = styled.section`
 
 const About = () => (
     <AboutWrapper id="about">
-        <img src={blob} className="blob" alt="blob for background"/>
+        <div className="bg-blob"></div>
         <div className="container">
             <AboutSectionTitle>
                 <div className="flex-box two-items container">

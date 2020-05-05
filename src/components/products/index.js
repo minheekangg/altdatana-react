@@ -31,7 +31,7 @@ const ProductWrapper = styled.div`
 const ProductSectionTitle = styled.section`
     position: relative;
     overflow: hidden;
-    margin-top: -70px;
+    margin-top: -75px;
     background-color: #EFF9FB;
     z-index: 1;
     min-height: 90vh;

@@ -10,7 +10,7 @@ import circle from '../../images/how-circle.png';
 const HowItWorksWrapper = styled.div`
     position: relative;
     overflow: hidden;
-    margin-top: -75px;
+    margin-top: -85px;
 
     .blob-bump {
         width: 100%;
