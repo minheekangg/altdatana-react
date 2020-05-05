@@ -7,6 +7,7 @@ import About from './components/about';
 import Products from './components/products';
 import Dashboard from './components/dashboard';
 import HowItWorks from './components/how-it-works';
+import Footer from './components/footer';
 
 import { ROUTE_ROOT } from './utils/constants';
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path={`${ROUTE_ROOT}/products`} component={Products} />
             <Route exact path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
           </Switch>
+          <Footer/>
         </Fragment>
     );
   }
