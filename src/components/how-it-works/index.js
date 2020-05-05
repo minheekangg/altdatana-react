@@ -114,7 +114,7 @@ const HowItWorksSectionContent = styled.section`
 const HowItWorks = () => (
     <HowItWorksWrapper id="how-it-works">
         <div className="blob-bump"></div>
-        <img src={blob} className="blob" />
+        <img src={blob} className="blob" alt="blob for background"/>
         <div className="container">
             <HowItWorksSectionTitle>
                 <div className="flex-box two-items container">

@@ -1,51 +1,174 @@
 import React from 'react';
+import styled from "styled-components";
 
 import CallToAction from '../call-to-action';
-import TempImg from '../../images/temp.png';
 
-import { ROUTE_ROOT } from "../../utils/constants";
-import ProductSteps from './product-steps';
+import tempimg from '../../images/temp.png';
+import blob from '../../images/how-blob.png';
+import circle from '../../images/how-circle.png';
 
-const Products = () => (
-    <div id="products" className="gradient">
-        <div className="curvy-border">
-            <div className="container tight">
-                <section>
-                    <p className="section-tag">Products</p>
-                    <h2 style={{ color: "black" }}>I am looking to finance...</h2>
-                    <div className="products-list flex-box four-items">
-                        <a className="product item" href={`${ROUTE_ROOT}/products/1`}>
-                            <img src={TempImg} alt="school" />
-                            <div className="product-title">Loan for School</div>
-                            <p>
-                                Our home equity line allows you to consolidate debt
-                                at a lower rate compared to credit cards and
-                                personal loans.
-                            </p>
+const ProductWrapper = styled.div`
+    position: relative;
+    overflow: hidden;
+    margin-top: -70px;
+    background-color: #EFF9FB;
 
-                            <div className="learn-more">+ Learn more</div>
-                        </a>
-                        <div className="product item">
-                            <img src={TempImg} alt="school" />
-                            <div className="product-title">Refinance</div>
-                            <p>
-                                Our home equity line allows you to consolidate debt
-                                at a lower rate compared to credit cards and
-                                personal loans.
-                            </p>
-                        </div>
-                        <div className="product item">
-                            <img src={TempImg} alt="school" />
-                            <div className="product-title">Home</div>
-                        </div>
+    .blob-bump {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        background-color: #FEE6D4;
+    }
+
+    .blob {
+        position: absolute;
+        top: 150px;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+        margin-top: 0;
+    }
+`;
+
+const ProductSectionTitle = styled.section`
+    .flex-box { align-items: center; }
+
+    .item.right {
+        flex-basis: 50%;
+        img {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        text-align: center;
+
+        .flex-box {
+            flex-wrap: wrap;
+        }
+
+        .item { 
+            flex-basis: 100%;
+
+            img { display: none; }
+        }
+    }
+`;
+
+const ProductSectionContent = styled.section`
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+
+    .flex-box {
+        justify-content: space-around;
+        align-items: center;
+        margin: 40px 80px 40px 0;
+
+        &.flip {
+            text-align: right;
+            margin: 40px 0 40px 80px;
+        }
+    }
+
+    .item { 
+        padding: 20px;
+    }
+    
+    .step-header { 
+        font-size: 24px; 
+        margin: 0;
+        line-height: 2;
+    }
+
+    img { 
+        width: 150px;
+        height: 150px;
+    }
+
+    @media screen and (max-width: 900px) {
+        .step-header { font-size: 1.75em; }
+        .flex-box, .flex-box.flip {
+            margin: 40px auto;
+            justify-content: start;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .flex-box {
+            flex-wrap: wrap;
+
+            &.flip { flex-wrap: wrap-reverse; }
+        }
+
+        .item { 
+            flex-basis: 100%;
+            text-align: center;
+            img { max-width: 300px;}
+        }
+    }
+`;
+
+const Product = () => (
+    <ProductWrapper id="how-it-works">
+        <div className="blob-bump"></div>
+        <img src={blob} className="blob" alt="blob for background"/>
+        <div className="container">
+            <ProductSectionTitle>
+                <div className="flex-box two-items container">
+                    <div className="item left">
+                        <h2>How It Works</h2>
                     </div>
-                </section>
-            </div>
+                    <div className="item right">
+                        <img src={tempimg} alt="temporary img" />
+                    </div>
+                </div>
+            </ProductSectionTitle>
+            <ProductSectionContent>
+                <div className="flex-box">
+                    <div className="item left">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                    <div className="item right">
+                        <h3 className="step-header">Step 1</h3>
+                        <p>Generate and send a unique link to your borrower/client to get their approval.</p>
+                    </div>
+                </div>
+                <div className="flex-box flip">
+                    <div className="item left">
+                        <h3 className="step-header">Step 2</h3>
+                        <p>Your borrower/client logs into their normal accounts, fully encrypted. <br/>
+                         We don’t see or keep the password and usernames.</p>
+                    </div>
+                    <div className="item right">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                </div>
+                <div className="flex-box">
+                    <div className="item left">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                    <div className="item right">
+                        <h3 className="step-header">Step 3</h3>
+                        <p>The raw data enters our platform, and we give you the results.</p>
+                    </div>
+                </div>
+                <div className="flex-box flip">
+                    <div className="item left">
+                        <h3 className="step-header">Step 4</h3>
+                        <p>Link our API with your internal underwriting systems, or manually observe and customize your dashboards. </p>
+                    </div>
+                    <div className="item right">
+                        <img src={circle} alt="temporary img" />
+                    </div>
+                </div>
+            </ProductSectionContent>
         </div>
-        <ProductSteps />
-        <CallToAction type="apply" />
-    </div>
-
+        <CallToAction type="question"/>
+    </ProductWrapper>
 );
 
-export default Products;
+export default Product;
