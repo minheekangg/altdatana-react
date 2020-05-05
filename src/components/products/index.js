@@ -3,30 +3,33 @@ import styled from "styled-components";
 
 import CallToAction from '../call-to-action';
 
+import circle from '../../images/product-circle.png';
+import leftg from '../../images/product-leftg.png';
+import rightg from '../../images/product-rightg.png';
+import triangle from '../../images/product-triangle.png';
+import heroRight from '../../images/product-right.png';
 import tempimg from '../../images/temp.png';
-import blob from '../../images/how-blob.png';
-import circle from '../../images/how-circle.png';
+
 
 const ProductWrapper = styled.div`
     position: relative;
     overflow: hidden;
     margin-top: -70px;
     background-color: #EFF9FB;
+    z-index: 1;
 
-    .blob-bump {
-        width: 100%;
-        height: 150px;
+    .circle-img {
         position: absolute;
         top: 0;
-        background-color: #FEE6D4;
-    }
-
-    .blob {
-        position: absolute;
-        top: 150px;
-        right: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        background-image: url(${circle});
+        transform: translate(-40%, -30%);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
         z-index: -1;
-        width: 100%;
     }
 
     @media screen and (max-width: 750px) {
@@ -35,13 +38,21 @@ const ProductWrapper = styled.div`
 `;
 
 const ProductSectionTitle = styled.section`
+    margin-top: 70px;
+
     .flex-box { align-items: center; }
 
     .item.right {
-        flex-basis: 50%;
+        flex-basis: 30%;
         img {
             width: 100%;
         }
+    }
+
+    h2 { 
+        font-size: 50px; 
+        text-align: left;
+        z-index: 2;
     }
 
     @media screen and (max-width: 750px) {
@@ -113,14 +124,15 @@ const ProductSectionContent = styled.section`
 `;
 
 const Product = () => (
-    <ProductWrapper id="how-it-works">
-        <div className="blob-bump"></div>
-        <img src={blob} className="blob" alt="blob for background"/>
+    <ProductWrapper id="product">
+        <div img={circle} className="circle-img"></div>
         <div className="container">
             <ProductSectionTitle>
                 <div className="flex-box two-items container">
                     <div className="item left">
-                        <h2>How It Works</h2>
+                        <h2>
+                            Modernizing the underwriting formula, by understanding velocity and volatility.
+                        </h2>
                     </div>
                     <div className="item right">
                         <img src={tempimg} alt="temporary img" />
