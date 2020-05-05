@@ -10,14 +10,15 @@ import circle from '../../images/how-circle.png';
 const HowItWorksWrapper = styled.div`
     position: relative;
     overflow: hidden;
-    margin-top: -70px;
+    margin-top: -75px;
 
     .blob-bump {
         width: 100%;
-        height: 150px;
+        height: 200px;
         position: absolute;
         top: 0;
         background-color: #FEE6D4;
+        z-index: -1;
     }
 
     .blob {
@@ -26,6 +27,12 @@ const HowItWorksWrapper = styled.div`
         right: 0;
         z-index: -1;
         width: 100%;
+        background-image: url(${blob});
+        width: 100vw;
+        height: 2000px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain
     }
 
     @media screen and (max-width: 750px) {
@@ -114,7 +121,7 @@ const HowItWorksSectionContent = styled.section`
 const HowItWorks = () => (
     <HowItWorksWrapper id="how-it-works">
         <div className="blob-bump"></div>
-        <img src={blob} className="blob" alt="blob for background"/>
+        <div className="blob"></div>
         <div className="container">
             <HowItWorksSectionTitle>
                 <div className="flex-box two-items container">
