@@ -76,6 +76,13 @@ const AboutSectionMid = styled.section`
     @media screen and (max-width: 900px) {
         h3 { font-size: 2.5em; }
     }    
+    @media screen and (max-width: 400px) {
+        h3 { 
+            font-size: 25px; 
+            margin: 50px auto;
+        }
+        padding-bottom: 0;
+    }    
 `;
 const AboutSectionContent = styled.section`
     text-align: left;

@@ -38,6 +38,10 @@ const HowItWorksWrapper = styled.div`
     @media screen and (max-width: 750px) {
         margin-top: 0;
     }
+    @media screen and (max-width: 400px) {
+        .blob-bump { height: 50vh; }
+        .blob { top: 50vh; }
+    }
 `;
 
 const HowItWorksSectionTitle = styled.section`
@@ -60,8 +64,11 @@ const HowItWorksSectionTitle = styled.section`
         .item { 
             flex-basis: 100%;
 
-            img { display: none; }
+            // img { display: none; }
         }
+    }
+    @media screen and (max-width: 400px) {
+        height: 70vh;
     }
 `;
 

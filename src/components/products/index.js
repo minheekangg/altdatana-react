@@ -95,15 +95,17 @@ const ProductSectionTitle = styled.section`
 
         .flex-box {
             flex-wrap: wrap;
+            margin-top: 50px;
         }
 
         .item { 
             flex-basis: 100%!important;
-            margin: 20px auto;
+            margin: 10px 0!important;
         }
+        
         .hero-right-img { display: none; }
 
-        h2 { font-size: 35px; }
+        h2 { font-size: 30px; }
     }
 `;
 
