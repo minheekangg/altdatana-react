@@ -66,6 +66,7 @@ class NavBar extends React.Component {
                             name="sign up"
                             active={activeItem === "signup"}
                             onClick={this.handleItemClick}
+                            to={`${ROUTE_ROOT}/signup`}
                         >
                             <Button className="primary-button">
                                 Get Started
@@ -76,6 +77,7 @@ class NavBar extends React.Component {
                             active={activeItem === "logout"}
                             onClick={this.handleItemClick}
                             className="login"
+                            to={`${ROUTE_ROOT}/login`}
                         >
                             Log In
                         </Menu.Item>
@@ -146,12 +148,14 @@ class NavBar extends React.Component {
                         <Menu.Item
                             name="login"
                             active={activeItem === "login"}
+                            to={`${ROUTE_ROOT}/login`}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
                             name="signup"
                             active={activeItem === "signup"}
                             onClick={this.handleItemClick}
+                            to={`${ROUTE_ROOT}/login`}
                         />
                     </Sidebar>
 

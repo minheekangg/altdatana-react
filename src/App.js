@@ -9,6 +9,8 @@ import Dashboard from './components/dashboard';
 import HowItWorks from './components/how-it-works';
 import Footer from './components/footer';
 import ScrollIntoView from './components/scroll-into-view';
+import Login from './components/login';
+import SignUp from './components/signup';
 
 import { ROUTE_ROOT } from './utils/constants';
 
@@ -25,6 +27,8 @@ class App extends Component {
               <Route exact path={`${ROUTE_ROOT}/how-it-works`} component={HowItWorks} />
               <Route exact path={`${ROUTE_ROOT}/products`} component={Products} />
               <Route exact path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
+              <Route exact path={`${ROUTE_ROOT}/login`} component={Login} />
+              <Route exact path={`${ROUTE_ROOT}/signup`} component={SignUp} />
             </Switch>
           </ScrollIntoView>
           <Footer/>
