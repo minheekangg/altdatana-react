@@ -4,7 +4,10 @@ import styled from "styled-components";
 const FooterWrapper = styled.footer`
     padding: 10px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
     .flex-box { justify-content: space-between; }
 
