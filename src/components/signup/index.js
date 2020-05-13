@@ -10,17 +10,15 @@ const genderOptions = [
 ]
 
 const SignUpWrapper = styled.div`
-    // width: 100%;
-    // min-height: calc(100vh - 60px);
-    // max-height: 100%;
+    min-height: calc(100vh - 125px);
+    max-height: 100%;
     display: flex;
     align-items: center;
 `;
 
 const SignUpSection = styled.div`
     max-width: 600px;
-    margin: 50px auto 50px;    
-    // width: 100%;
+    margin: 50px auto 50px; 
     padding: 50px;
     box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
     border-radius: 16px;

@@ -5,7 +5,7 @@ import { Button, Form } from 'semantic-ui-react'
 
 const LoginWrapper = styled.div`
     width: 100%;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 125px);
     max-height: 100%;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@ const LoginWrapper = styled.div`
 
 const LoginSection = styled.div`
     max-width: 400px;
-    margin: -10% auto 0;    
+    margin: auto;    
     width: 100%;
     padding: 50px;
     box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
