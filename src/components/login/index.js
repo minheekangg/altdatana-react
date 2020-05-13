@@ -5,17 +5,17 @@ import { Button, Checkbox, Form } from 'semantic-ui-react'
 
 const LoginWrapper = styled.div`
     width: 100%;
-    min-height: 60vh;
+    min-height: calc(100vh - 60px);
     max-height: 100%;
-    // background-color: grey;
+    display: flex;
+    align-items: center;
 `;
 
 const LoginSection = styled.div`
     max-width: 400px;
-    margin: 10% auto 0;    
+    margin: auto;    
     width: 100%;
     padding: 50px;
-    // border: 1px solid;
     box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
     border-radius: 16px;
 
