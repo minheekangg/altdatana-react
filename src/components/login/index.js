@@ -11,28 +11,56 @@ const LoginWrapper = styled.div`
 `;
 
 const LoginSection = styled.div`
-    max-width: 300px;
+    max-width: 400px;
     margin: 10% auto 0;    
     width: 100%;
+    padding: 50px;
+    // border: 1px solid;
+    box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
+    border-radius: 16px;
+
+    h4 { 
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .ui.form .field>label {
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .ui.button.primary-button {
+        margin: 20px auto 0;
+        padding: 15px;
+        font-size: 14px;
+        width: 100%;
+        position: relative;
+    }
+
+    @media screen and (max-width: 450px) {
+        box-shadow: none;
+        border: none;
+        padding: 10% 10px;
+    }
 `;
 
 const Login = () => (
     <LoginWrapper id="login">
         <LoginSection>
             <Form>
-                <p>Login</p>
+                <h4>Login</h4>
                 <Form.Field>
-                    <label>First Name</label>
-                    <input placeholder='First Name' />
+                    <label>User Name</label>
+                    <input placeholder='User Name' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
-                    <input placeholder='Last Name' />
+                    <label>Password</label>
+                    <input placeholder='Password' type="password" />
                 </Form.Field>
-                <Form.Field>
+                {/* <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' />
-                </Form.Field>
-                <Button type='submit'>Submit</Button>
+                </Form.Field> */}
+                <Button className="primary-button" type='submit'>Submit</Button>
             </Form> 
         </LoginSection>
     </LoginWrapper>
