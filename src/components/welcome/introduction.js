@@ -2,9 +2,27 @@ import React from 'react';
 import tempimg from '../../images/temp.png';
 import styled from "styled-components";
 
+import bg from '../../images/slant-bg.png';
+
 const IntroductionWrapper = styled.section`
     height: calc(100vh - 80px);
     width: 100vw;
+    position: relative;
+
+    .blob {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url(${bg});
+        width: 100vw;
+        height: 90vh;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
     .flex-box {
         align-items: center;
         flex-direction: row-reverse;
@@ -69,6 +87,7 @@ const IntroductionWrapper = styled.section`
 
 const Intro = () => (
     <IntroductionWrapper>
+        <div className="blob"></div>
         <div className="flex-box two-items container">
             <div className="item right">
                 <img src={tempimg} alt="temporary img" />

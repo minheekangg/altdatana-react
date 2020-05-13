@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c31d0d399c67a187a538f3e606068b9c",
+    "revision": "563e7e81c1053b805229b6ea8b09bee9",
     "url": "/altdatana-react/index.html"
   },
   {
-    "revision": "4e0ae8e86ef757d2edd0",
-    "url": "/altdatana-react/static/css/main.8825bac1.chunk.css"
+    "revision": "0752d61f87dfef7c91ee",
+    "url": "/altdatana-react/static/css/main.7ecb3879.chunk.css"
   },
   {
-    "revision": "8b4109a66cb1e1a5d208",
-    "url": "/altdatana-react/static/js/2.fb166e71.chunk.js"
+    "revision": "498eefa22e07e4203a48",
+    "url": "/altdatana-react/static/js/2.e0d27a27.chunk.js"
   },
   {
     "revision": "490cf4b8a0d958640e7556da4ad12058",
-    "url": "/altdatana-react/static/js/2.fb166e71.chunk.js.LICENSE.txt"
+    "url": "/altdatana-react/static/js/2.e0d27a27.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e0ae8e86ef757d2edd0",
-    "url": "/altdatana-react/static/js/main.a4936502.chunk.js"
+    "revision": "0752d61f87dfef7c91ee",
+    "url": "/altdatana-react/static/js/main.af8136d6.chunk.js"
   },
   {
     "revision": "4c3445b3a8da292e74a5",
