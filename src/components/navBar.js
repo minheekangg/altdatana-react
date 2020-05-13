@@ -64,7 +64,7 @@ class NavBar extends React.Component {
                     <Menu.Menu position="right">
                         <Menu.Item
                             name="sign up"
-                            active={activeItem === "signup"}
+                            // active={activeItem === "signup"}
                             onClick={this.handleItemClick}
                             as={Link}
                             to={`${ROUTE_ROOT}/signup`}
@@ -74,9 +74,9 @@ class NavBar extends React.Component {
                             </Button>
                         </Menu.Item>
                         <Menu.Item
-                            name="logout"
+                            name="login"
                             as={Link}
-                            active={activeItem === "logout"}
+                            active={activeItem === "login"}
                             onClick={this.handleItemClick}
                             className="login"
                             to={`${ROUTE_ROOT}/login`}
@@ -159,7 +159,7 @@ class NavBar extends React.Component {
                             as={Link}
                             active={activeItem === "signup"}
                             onClick={this.handleItemClick}
-                            to={`${ROUTE_ROOT}/login`}
+                            to={`${ROUTE_ROOT}/signup`}
                         />
                     </Sidebar>
 

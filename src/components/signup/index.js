@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { Button, Checkbox, Form, Input, Select, TextArea } from 'semantic-ui-react';
+import { Button, Form, Input, Select } from 'semantic-ui-react';
 
 const genderOptions = [
     { key: 'm', text: 'Male', value: 'male' },
@@ -19,7 +19,7 @@ const SignUpWrapper = styled.div`
 
 const SignUpSection = styled.div`
     max-width: 600px;
-    margin: auto;    
+    margin: 50px auto 50px;    
     // width: 100%;
     padding: 50px;
     box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
@@ -47,7 +47,7 @@ const SignUpSection = styled.div`
         position: relative;
     }
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 600px) {
         box-shadow: none;
         border: none;
         padding: 10% 10px;
@@ -82,19 +82,13 @@ const SignUp = () => (
                     searchInput={{ id: 'form-select-control-gender' }}
                 />
                 <Form.Field
-                    id='form-textarea-control-opinion'
-                    control={TextArea}
-                    label='Opinion'
-                    placeholder='Opinion'
-                />
-                <Form.Field
                     id='form-input-control-error-email'
                     control={Input}
                     label='Email'
                     placeholder='joe@schmoe.com'
                     error={{
                         content: 'Please enter a valid email address',
-                        pointing: 'below',
+                        pointing: 'above',
                     }}
                 />
                 <Form.Checkbox
@@ -104,21 +98,8 @@ const SignUp = () => (
                     //     pointing: 'left',
                     // }}
                 />
-                <Form.Field
-                    id='form-button-control-public'
-                    className="primary-btn"
-                    control={Button}
-                    content='Confirm'
-                    label='Label with htmlFor'
-                />
+                <Button className="primary-button" type='submit'>Submit</Button>
             </Form>
-            <Form.Checkbox
-      label='I agree to the Terms and Conditions'
-      error={{
-        content: 'You must agree to the terms and conditions',
-        pointing: 'left',
-      }}
-    />
         </SignUpSection>
     </SignUpWrapper>
 );
