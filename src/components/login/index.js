@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
 
 const LoginWrapper = styled.div`
     width: 100%;
@@ -13,7 +13,7 @@ const LoginWrapper = styled.div`
 
 const LoginSection = styled.div`
     max-width: 400px;
-    margin: auto;    
+    margin: -10% auto 0;    
     width: 100%;
     padding: 50px;
     box-shadow: -2px 18px 50px -19px rgba(107,107,107,1);
@@ -27,6 +27,10 @@ const LoginSection = styled.div`
     .ui.form .field>label {
         font-weight: normal;
         text-align: left;
+    }
+
+    .ui.form input:focus {
+        border: 1px solid #384586;
     }
 
     .ui.button.primary-button {
@@ -57,9 +61,6 @@ const Login = () => (
                     <label>Password</label>
                     <input placeholder='Password' type="password" />
                 </Form.Field>
-                {/* <Form.Field>
-                    <Checkbox label='I agree to the Terms and Conditions' />
-                </Form.Field> */}
                 <Button className="primary-button" type='submit'>Submit</Button>
             </Form> 
         </LoginSection>

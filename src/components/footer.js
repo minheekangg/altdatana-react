@@ -4,12 +4,10 @@ import styled from "styled-components";
 const FooterWrapper = styled.footer`
     padding: 10px;
     width: 100%;
-    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: white;
     margin: auto;
-    // min-width: 100%;
     
     .flex-box { 
         justify-content: space-between; 
