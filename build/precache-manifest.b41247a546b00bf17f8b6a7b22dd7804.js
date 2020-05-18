@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e82d354570e128be78d950ed3c1218ee",
+    "revision": "a0c6ae58bcd0a397e14096e10c4dd21c",
     "url": "/altdatana-react/index.html"
   },
   {
-    "revision": "13911927c66408979e72",
+    "revision": "28d49fb88fb9255fdcc3",
     "url": "/altdatana-react/static/css/main.7ecb3879.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/altdatana-react/static/js/2.3771cf62.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "13911927c66408979e72",
-    "url": "/altdatana-react/static/js/main.4fd2ef9a.chunk.js"
+    "revision": "28d49fb88fb9255fdcc3",
+    "url": "/altdatana-react/static/js/main.c0eca7b2.chunk.js"
   },
   {
     "revision": "4c3445b3a8da292e74a5",

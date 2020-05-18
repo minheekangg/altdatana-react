@@ -1,8 +1,8 @@
 import React from 'react';
-import tempimg from '../../images/temp.png';
 import styled from "styled-components";
 
 import bg from '../../images/slant-bg.png';
+import introimg from '../../images/introimg.jpg';
 
 const IntroductionWrapper = styled.section`
     height: calc(100vh - 80px);
@@ -90,7 +90,7 @@ const Intro = () => (
         <div className="blob"></div>
         <div className="flex-box two-items container">
             <div className="item right">
-                <img src={tempimg} alt="temporary img" />
+                <img src={introimg} alt="astronaunt floating in space" />
             </div>
             <div className="item left">
                 <h2>
