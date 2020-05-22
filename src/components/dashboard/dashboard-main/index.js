@@ -86,16 +86,10 @@ const DashboardMainductionWrapper = styled.section`
 
 const DashboardMain = () => (
     <DashboardMainductionWrapper>
-        <div className="flex-box two-items container">
-            <div className="item right">
-                <div></div>
-            </div>
-            <div className="item left">
-                <h2>
-                    We are underwriting the future
-                </h2>
+        <div className="container">
+            
                 <p>DashboardMainducing alternative data to lenders small or large.</p>
-            </div>
+            
         </div>
     </DashboardMainductionWrapper>
 );

@@ -5,10 +5,15 @@ import { connect } from "react-redux";
 
 import DashboardMain from './dashboard-main';
 import DashboardNav from './dashboard-nav';
+import DashboardPanel from './dashboard-panel';
 
 const DashboardWrapper = styled.div`
     background-color: #384586;
-    color: white;
+`;
+
+const DashboardContent = styled.div`
+    display: flex;
+    max-height: calc(100vh - 125px);
 `;
 
 class Dashboard extends React.Component {
@@ -16,7 +21,10 @@ class Dashboard extends React.Component {
         return (
             <DashboardWrapper id="dashboard">
                 <DashboardNav />
-                <DashboardMain />
+                <DashboardContent className="container">
+                    <DashboardPanel />
+                    <DashboardMain />
+                </DashboardContent>
             </DashboardWrapper>
         )
     }
