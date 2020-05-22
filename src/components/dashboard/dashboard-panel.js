@@ -3,10 +3,13 @@ import styled from "styled-components";
 
 
 const DashboardPanelWrapper = styled.div`
-    margin: 20px 40px 0 30px;
+    margin: 20px 0 0 30px;
+    padding-right: 40px;
     text-align: left;
     color: white;
-    flex-basis: 25%;
+    flex-basis: 30%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     > p {
         text-transform: uppercase;

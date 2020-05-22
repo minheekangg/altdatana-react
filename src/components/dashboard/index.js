@@ -15,8 +15,7 @@ const DashboardContent = styled.div`
     display: flex;
     max-height: calc(100vh - 125px);
     padding: 10px;
-    width: 100%;
-    overflow-y: scroll;
+    
 `;
 
 class Dashboard extends React.Component {
