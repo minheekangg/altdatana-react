@@ -13,16 +13,22 @@ const DashboardMainWrapper = styled.div`
     background-color: white;
     border-radius: 15px 0 0 0;
 
-    
+    text-align: left;
+`;
+
+const DashboardContainer = styled.div`
+    margin: 40px 40px 0;
+
+    h3 { font-size: 30px; }
 `;
 
 const DashboardMain = () => (
     <DashboardMainWrapper>
-        <div className="container">
-            
-                <p>DashboardMainducing alternative data to lenders small or large.</p>
-            
-        </div>
+        <DashboardContainer>
+            <h3>The Real Real</h3>
+
+            <p>Purchase details</p>
+        </DashboardContainer>
     </DashboardMainWrapper>
 );
 
