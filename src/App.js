@@ -14,21 +14,28 @@ import SignUp from './components/signup';
 
 import { ROUTE_ROOT } from './utils/constants';
 
+const NavRoute = ({ exact, path, component: Component }) => (
+  <Route exact={exact} path={path} render={(props) => (
+    <div>
+      <NavBar />
+      <Component {...props} />
+    </div>
+  )} />
+)
+
 class App extends Component {
   render() {
     return (
       <Fragment>
-          <NavBar />
           <ScrollIntoView>
             <Switch>
-              {/* <Route exact path={`${ROUTE_ROOT}/`} render={() => <Redirect to={`${ROUTE_ROOT}/welcome`} />} /> */}
-              <Route exact path={`${ROUTE_ROOT}/`} component={Welcome} />
-              <Route exact path={`${ROUTE_ROOT}/about`} component={About} />
-              <Route exact path={`${ROUTE_ROOT}/how-it-works`} component={HowItWorks} />
-              <Route exact path={`${ROUTE_ROOT}/products`} component={Products} />
+              <NavRoute exact path={`${ROUTE_ROOT}/`} component={Welcome} />
+              <NavRoute exact path={`${ROUTE_ROOT}/about`} component={About} />
+              <NavRoute exact path={`${ROUTE_ROOT}/how-it-works`} component={HowItWorks} />
+              <NavRoute exact path={`${ROUTE_ROOT}/products`} component={Products} />
               <Route exact path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
-              <Route exact path={`${ROUTE_ROOT}/login`} component={Login} />
-              <Route exact path={`${ROUTE_ROOT}/signup`} component={SignUp} />
+              <NavRoute exact path={`${ROUTE_ROOT}/login`} component={Login} />
+              <NavRoute exact path={`${ROUTE_ROOT}/signup`} component={SignUp} />
             </Switch>
           </ScrollIntoView>
           <Footer/>

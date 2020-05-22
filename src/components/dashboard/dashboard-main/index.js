@@ -1,73 +1,103 @@
 import React from 'react';
-import { Progress } from "semantic-ui-react";
+import styled from "styled-components";
 
-import { response, altData } from "./response";
-import CategoriesDonut from "./data/categories-donut";
-import BarChart from "./data/bar-chart";
-import RadiarBarChart from './data/radiar-bar-chart';
-import List from './data/list';
 
-export default class DashboardMain extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            transactions: response.transactions,
+const DashboardMainductionWrapper = styled.section`
+    height: calc(100vh - 80px);
+    width: 100vw;
+    position: relative;
+
+
+    .main-img {
+        position: absolute;
+        bottom: 13px;
+        right: 0;
+        width: 60vw;
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .flex-box {
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100%;
+        margin: auto;
+    }
+
+    h2 {
+        text-transform: capitalize;
+    }
+
+    .left {
+        text-align: left;
+        color: $primary-blue;    
+    }
+
+    .right {
+        img { width: 100%}
+        flex-basis: 40%;
+    }
+
+    @media screen and (max-width: 900px) {
+        .item.left {
+            flex-basis: 60%;
+        }
+        .item.right {
+            margin-left: 0;
         }
     }
 
-    render(){
-        return (
-            <div className="dashboard-main container">
-                <div className="data-container" id="recap-banner">
-                    During this month you spent <strong>$1000</strong>, which is <span>+15%</span> from last year.
-                </div>
-                <div className="box-fourty">
-                    <div className="data-container stat-card">
-                        <h3>Largest Spending</h3>
-                        <p>Restaurants</p>
-                        <p className="money">$51,338</p>
-                        <Progress percent={44} progress color="blue"/>
-                    </div>
-                    <div className="data-container stat-card">
-                        <h3>Smallest Spending</h3>
-                        <p>Sporting Goods</p>
-                        <p className="money">$12,158</p>
-                        <Progress percent={10} progress color="yellow" />
-                    </div>
-                    <div className="data-container stat-card">
-                        <h3>One more Spending</h3>
-                        <p>Sporting Goods</p>
-                        <p className="money">$12,158</p>
-                        <Progress percent={99} progress />
-                    </div>
-                </div>
-                <div className="data-container box-sixty" style={{height:'100%'}}>
-                    <h3>Total Spending</h3>
-                    <p>description of categories</p>
-                    <CategoriesDonut data={altData} />
-                    <List data={altData} />
-                </div>
-                <div className="data-container box-full">
-                    <h3>TY/LY Spending</h3>
-                    <p>description of categories</p>
-                    <div className="inline-charts">
-                        <RadiarBarChart />
-                        <RadiarBarChart />
-                        <RadiarBarChart />
-                        <RadiarBarChart />
-                        <RadiarBarChart />
-                        <RadiarBarChart />
-                    </div>
-                </div>
-                <div className="data-container box-full">
-                    <h3>Total Spending</h3>
-                    <p>description of categories</p>
-                    <BarChart />
-                    <h3>Total Spending</h3>
-                    <p>description of categories</p>
-                    <BarChart />
-                </div>
-            </div>
-        );
+    @media screen and (max-width: 600px) {
+        padding-top: 0;
+
+        .flex-box {
+            display: block!important;
+        }
+
+        .item {
+            margin: 0;
+        }
+
+        .item.right {
+            margin: auto;
+
+            img {
+                max-width: 300px;
+                margin-top: 50px;
+            }
+        }
+
+        .item.left {
+            text-align: center;
+        }
     }
-}
+
+    @media screen and (max-width: 320px) {
+        padding-top: calc(50vh - 200px);
+
+        img { display: none;}
+    }
+`;
+
+// TODO: FIX BLOB LATER
+
+const DashboardMain = () => (
+    <DashboardMainductionWrapper>
+        <div className="flex-box two-items container">
+            <div className="item right">
+                <div></div>
+            </div>
+            <div className="item left">
+                <h2>
+                    We are underwriting the future
+                </h2>
+                <p>DashboardMainducing alternative data to lenders small or large.</p>
+            </div>
+        </div>
+    </DashboardMainductionWrapper>
+);
+
+export default DashboardMain;

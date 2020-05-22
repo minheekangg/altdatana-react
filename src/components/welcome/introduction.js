@@ -96,6 +96,8 @@ const IntroductionWrapper = styled.section`
     }
 `;
 
+// TODO: FIX BLOB LATER
+
 const Intro = () => (
     <IntroductionWrapper>
         <div className="blob"></div>

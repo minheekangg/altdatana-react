@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu, Button, Icon, Sidebar } from 'semantic-ui-react';
 import { Link, withRouter } from "react-router-dom";
 
-import { ROUTE_ROOT } from "../utils/constants";
+import { ROUTE_ROOT } from "../../utils/constants";
 
 class NavBar extends React.Component {
     constructor(props) {
