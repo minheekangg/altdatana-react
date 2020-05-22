@@ -9,7 +9,7 @@ const ROOT = ROUTE_ROOT + "/dashboard/";
 
 const DashboardNavWrapper = styled.nav`
     a.item { color: white!important; } 
-    a.item:hover { 
+    .dashboard-item:hover { 
         color: #F98229!important;
         border-bottom: 1px solid!important;
         border-radius: 0!important;
@@ -46,6 +46,7 @@ class DashboardNav extends React.Component {
                         as={Link}
                         to={`${ROOT}/shop`}
                         name="Shop"
+                        className="dashboard-item"
                         active={activeItem === "shop"}
                         onClick={this.handleItemClick}
                     />
@@ -53,6 +54,7 @@ class DashboardNav extends React.Component {
                         as={Link}
                         to={`${ROOT}/pay`}
                         name="Pay"
+                        className="dashboard-item"
                         active={activeItem === "pay"}
                         onClick={this.handleItemClick}
                     />
@@ -60,6 +62,7 @@ class DashboardNav extends React.Component {
                         as={Link}
                         to={`${ROOT}/save`}
                         name="Save"
+                        className="dashboard-item"
                         active={activeItem === "save"}
                         onClick={this.handleItemClick}
                     />
