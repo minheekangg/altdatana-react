@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 import bg from '../../images/slant-bg.png';
-import introimg from '../../images/introimg.jpg';
+import introimg from '../../images/introimg2.png';
 
 const IntroductionWrapper = styled.section`
     height: calc(100vh - 80px);
@@ -20,6 +20,17 @@ const IntroductionWrapper = styled.section`
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .main-img {
+        position: absolute;
+        bottom: 13px;
+        right: 0;
+        width: 60vw;
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
 
@@ -88,9 +99,10 @@ const IntroductionWrapper = styled.section`
 const Intro = () => (
     <IntroductionWrapper>
         <div className="blob"></div>
+        <img className="main-img" src={introimg} alt="astronaunt floating in space" />
         <div className="flex-box two-items container">
             <div className="item right">
-                <img src={introimg} alt="astronaunt floating in space" />
+                <div></div>
             </div>
             <div className="item left">
                 <h2>
