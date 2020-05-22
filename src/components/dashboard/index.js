@@ -1,17 +1,23 @@
 import React from 'react';
+import styled from "styled-components";
 
 import { connect } from "react-redux";
 
-import Link from './link';
 import DashboardMain from './dashboard-main';
+import DashboardNav from './dashboard-nav';
+
+const DashboardWrapper = styled.div`
+    background-color: #384586;
+    color: white;
+`;
 
 class Dashboard extends React.Component {
     render(){
         return (
-            <div className="bg-grey" id="dashboard">
-                <Link />
+            <DashboardWrapper id="dashboard">
+                <DashboardNav />
                 <DashboardMain />
-            </div>
+            </DashboardWrapper>
         )
     }
 }
