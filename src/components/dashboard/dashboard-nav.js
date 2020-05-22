@@ -5,11 +5,11 @@ import styled from "styled-components";
 
 import { ROUTE_ROOT } from "../../utils/constants";
 
-const ROOT = ROUTE_ROOT + "/dashboard/";
+const ROOT = ROUTE_ROOT + "/dashboard";
 
 const DashboardNavWrapper = styled.nav`
     a.item { color: white!important; } 
-    .dashboard-item:hover { 
+    .dashboard-item:hover, .dashboard-item.active { 
         color: #F98229!important;
         border-bottom: 1px solid!important;
         border-radius: 0!important;
@@ -21,8 +21,7 @@ class DashboardNav extends React.Component {
         super(props);
 
         this.state = {
-            activeItem: (props && props.location && props.location.pathname && this.props.location.pathname.replace("/altdatana-react/", "")) || 'home',
-            mobileNavVisible: false,
+            activeItem: (props && props.location && props.location.pathname && this.props.location.pathname.replace("/altdatana-react/dashboard/", "")) || 'shop',
         }
     }
 
@@ -30,6 +29,7 @@ class DashboardNav extends React.Component {
 
     render() {
         const { activeItem } = this.state;
+        console.log('active', activeItem)
 
         return (
             <DashboardNavWrapper className="sticky" id="dashboard-nav">

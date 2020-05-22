@@ -33,7 +33,7 @@ class App extends Component {
               <NavRoute exact path={`${ROUTE_ROOT}/about`} component={About} />
               <NavRoute exact path={`${ROUTE_ROOT}/how-it-works`} component={HowItWorks} />
               <NavRoute exact path={`${ROUTE_ROOT}/products`} component={Products} />
-              <Route exact path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
+              <Route path={`${ROUTE_ROOT}/dashboard`} component={Dashboard} />
               <NavRoute exact path={`${ROUTE_ROOT}/login`} component={Login} />
               <NavRoute exact path={`${ROUTE_ROOT}/signup`} component={SignUp} />
             </Switch>
