@@ -9,10 +9,15 @@ const ROOT = ROUTE_ROOT + "/dashboard";
 
 const DashboardNavWrapper = styled.nav`
     a.item { color: white!important; } 
+    
     .dashboard-item:hover, .dashboard-item.active { 
         color: #F98229!important;
         border-bottom: 1px solid!important;
         border-radius: 0!important;
+    }
+
+    #primary-menu {
+        max-width: none!important;
     }
 `;
 
@@ -29,7 +34,6 @@ class DashboardNav extends React.Component {
 
     render() {
         const { activeItem } = this.state;
-        console.log('active', activeItem)
 
         return (
             <DashboardNavWrapper className="sticky" id="dashboard-nav">

@@ -2,11 +2,16 @@ import React from 'react';
 import styled from "styled-components";
 
 
-const DashboardMainductionWrapper = styled.section`
-    height: calc(100vh - 80px);
-    width: 100vw;
+const DashboardMainWrapper = styled.div`
+    flex-basis: 75%;
     position: relative;
-
+    margin-top: 20px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 15px 0 0 0;
 
     .main-img {
         position: absolute;
@@ -85,13 +90,13 @@ const DashboardMainductionWrapper = styled.section`
 // TODO: FIX BLOB LATER
 
 const DashboardMain = () => (
-    <DashboardMainductionWrapper>
+    <DashboardMainWrapper>
         <div className="container">
             
                 <p>DashboardMainducing alternative data to lenders small or large.</p>
             
         </div>
-    </DashboardMainductionWrapper>
+    </DashboardMainWrapper>
 );
 
 export default DashboardMain;
